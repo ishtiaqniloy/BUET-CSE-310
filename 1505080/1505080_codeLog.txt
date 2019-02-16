@@ -1,0 +1,15344 @@
+Line No 2 -> type_specifier : INT
+
+
+Line No 2 -> declaration_list : ID
+
+
+Line No 2 -> var_declaration : type_specifier declaration_list SEMICOLON
+
+
+Line No 2 -> unit : var_declaration
+
+
+Line No 2 -> program : unit
+
+
+Line No 3 -> type_specifier : INT
+
+
+Line No 3 -> type_specifier : INT
+
+
+Line No 3 -> parameter_list : type_specifier ID
+
+
+Line No 4 -> factor : CONST_INT
+MOV TV0, 2
+
+
+Line No 4 -> unary_expression : factor
+MOV TV0, 2
+
+
+Line No 4 -> term : unary_expression
+MOV TV0, 2
+
+
+Line No 4 -> variable : ID
+
+
+Line No 4 -> factor : variable
+MOV AX, a2 
+MOV TV1, AX 
+
+
+Line No 4 -> unary_expression : factor
+MOV AX, a2 
+MOV TV1, AX 
+
+
+Line No 4 -> term : term MULOP unary_expression
+MOV TV0, 2
+ 
+MOV AX, a2 
+MOV TV1, AX 
+ 
+MOV AX, TV0 
+MUL TV1
+MOV TV2, AX 
+
+
+Line No 4 -> simple_expression : term
+MOV TV0, 2
+ 
+MOV AX, a2 
+MOV TV1, AX 
+ 
+MOV AX, TV0 
+MUL TV1
+MOV TV2, AX 
+
+
+Line No 4 -> rel_expression : simple_expression
+MOV TV0, 2
+ 
+MOV AX, a2 
+MOV TV1, AX 
+ 
+MOV AX, TV0 
+MUL TV1
+MOV TV2, AX 
+
+
+Line No 4 -> logic_expression : rel_expression
+MOV TV0, 2
+ 
+MOV AX, a2 
+MOV TV1, AX 
+ 
+MOV AX, TV0 
+MUL TV1
+MOV TV2, AX 
+
+
+Line No 4 -> expression : logic_expression
+MOV TV0, 2
+ 
+MOV AX, a2 
+MOV TV1, AX 
+ 
+MOV AX, TV0 
+MUL TV1
+MOV TV2, AX 
+
+
+Line No 4 -> statement : RETURN expression SEMICOLON
+MOV TV0, 2
+ 
+MOV AX, a2 
+MOV TV1, AX 
+ 
+MOV AX, TV0 
+MUL TV1
+MOV TV2, AX 
+ 
+MOV DX, TV2 
+RET 
+
+
+Line No 4 -> statements : statement
+MOV TV0, 2
+ 
+MOV AX, a2 
+MOV TV1, AX 
+ 
+MOV AX, TV0 
+MUL TV1
+MOV TV2, AX 
+ 
+MOV DX, TV2 
+RET 
+
+
+Line No 5 -> factor : CONST_INT
+MOV TV3, 1
+
+
+Line No 5 -> unary_expression : factor
+MOV TV3, 1
+
+
+Line No 5 -> unary_expression : ADDOP unary_expression
+MOV TV3, 1
+ 
+MOV AX, TV3 
+NEG AX 
+MOV TV4, AX 
+
+
+Line No 5 -> term : unary_expression
+MOV TV3, 1
+ 
+MOV AX, TV3 
+NEG AX 
+MOV TV4, AX 
+
+
+Line No 5 -> simple_expression : term
+MOV TV3, 1
+ 
+MOV AX, TV3 
+NEG AX 
+MOV TV4, AX 
+
+
+Line No 5 -> rel_expression : simple_expression
+MOV TV3, 1
+ 
+MOV AX, TV3 
+NEG AX 
+MOV TV4, AX 
+
+
+Line No 5 -> logic_expression : rel_expression
+MOV TV3, 1
+ 
+MOV AX, TV3 
+NEG AX 
+MOV TV4, AX 
+
+
+Line No 5 -> expression : logic_expression
+MOV TV3, 1
+ 
+MOV AX, TV3 
+NEG AX 
+MOV TV4, AX 
+
+
+Line No 5 -> statement : PRINTLN LPAREN expression RPAREN SEMICOLON
+MOV TV3, 1
+ 
+MOV AX, TV3 
+NEG AX 
+MOV TV4, AX 
+ 
+PUSH TV4 
+call ASMOUT 
+
+
+Line No 5 -> statements : statements statement
+MOV TV0, 2
+ 
+MOV AX, a2 
+MOV TV1, AX 
+ 
+MOV AX, TV0 
+MUL TV1
+MOV TV2, AX 
+ 
+MOV DX, TV2 
+RET 
+ 
+MOV TV3, 1
+ 
+MOV AX, TV3 
+NEG AX 
+MOV TV4, AX 
+ 
+PUSH TV4 
+call ASMOUT 
+ 
+
+
+Line No 6 -> variable : ID
+
+
+Line No 6 -> factor : CONST_INT
+MOV TV5, 9
+
+
+Line No 6 -> unary_expression : factor
+MOV TV5, 9
+
+
+Line No 6 -> term : unary_expression
+MOV TV5, 9
+
+
+Line No 6 -> simple_expression : term
+MOV TV5, 9
+
+
+Line No 6 -> rel_expression : simple_expression
+MOV TV5, 9
+
+
+Line No 6 -> logic_expression : rel_expression
+MOV TV5, 9
+
+
+Line No 6 -> expression : variable ASSIGNOP logic_expression
+MOV TV5, 9
+ 
+MOV AX, TV5 
+MOV a2, AX 
+
+
+Line No 6 -> expression_statement : expression SEMICOLON
+MOV TV5, 9
+ 
+MOV AX, TV5 
+MOV a2, AX 
+
+
+Line No 6 -> statement : expression_statement
+MOV TV5, 9
+ 
+MOV AX, TV5 
+MOV a2, AX 
+
+
+Line No 6 -> statements : statements statement
+MOV TV0, 2
+ 
+MOV AX, a2 
+MOV TV1, AX 
+ 
+MOV AX, TV0 
+MUL TV1
+MOV TV2, AX 
+ 
+MOV DX, TV2 
+RET 
+ 
+MOV TV3, 1
+ 
+MOV AX, TV3 
+NEG AX 
+MOV TV4, AX 
+ 
+PUSH TV4 
+call ASMOUT 
+ 
+ 
+MOV TV5, 9
+ 
+MOV AX, TV5 
+MOV a2, AX 
+ 
+
+
+Line No 7 -> compound_statement : LCURL statements RCURL
+MOV TV0, 2
+ 
+MOV AX, a2 
+MOV TV1, AX 
+ 
+MOV AX, TV0 
+MUL TV1
+MOV TV2, AX 
+ 
+MOV DX, TV2 
+RET 
+ 
+MOV TV3, 1
+ 
+MOV AX, TV3 
+NEG AX 
+MOV TV4, AX 
+ 
+PUSH TV4 
+call ASMOUT 
+ 
+ 
+MOV TV5, 9
+ 
+MOV AX, TV5 
+MOV a2, AX 
+ 
+
+
+Line No 7 -> func_definition : type_specifier ID LPAREN parameter_list RPAREN
+f PROC 
+POP TV6 
+POP a2
+ 
+PUSH AX 
+PUSH BX 
+PUSH CX 
+PUSH DX 
+PUSH SP 
+PUSH BP 										
+PUSH SI 
+PUSH DI 
+PUSHF 
+PUSH TV6 
+MOV TV0, 2
+ 
+MOV AX, a2 
+MOV TV1, AX 
+ 
+MOV AX, TV0 
+MUL TV1
+MOV TV2, AX 
+ 
+MOV DX, TV2 
+RET 
+ 
+MOV TV3, 1
+ 
+MOV AX, TV3 
+NEG AX 
+MOV TV4, AX 
+ 
+PUSH TV4 
+call ASMOUT 
+ 
+ 
+MOV TV5, 9
+ 
+MOV AX, TV5 
+MOV a2, AX 
+ 
+ 
+RET 
+f ENDP
+
+Line No 7 -> unit : func_definition
+f PROC 
+POP TV6 
+POP a2
+ 
+PUSH AX 
+PUSH BX 
+PUSH CX 
+PUSH DX 
+PUSH SP 
+PUSH BP 										
+PUSH SI 
+PUSH DI 
+PUSHF 
+PUSH TV6 
+MOV TV0, 2
+ 
+MOV AX, a2 
+MOV TV1, AX 
+ 
+MOV AX, TV0 
+MUL TV1
+MOV TV2, AX 
+ 
+MOV DX, TV2 
+RET 
+ 
+MOV TV3, 1
+ 
+MOV AX, TV3 
+NEG AX 
+MOV TV4, AX 
+ 
+PUSH TV4 
+call ASMOUT 
+ 
+ 
+MOV TV5, 9
+ 
+MOV AX, TV5 
+MOV a2, AX 
+ 
+ 
+RET 
+f ENDP
+
+Line No 7 -> program : program unit
+ 
+f PROC 
+POP TV6 
+POP a2
+ 
+PUSH AX 
+PUSH BX 
+PUSH CX 
+PUSH DX 
+PUSH SP 
+PUSH BP 										
+PUSH SI 
+PUSH DI 
+PUSHF 
+PUSH TV6 
+MOV TV0, 2
+ 
+MOV AX, a2 
+MOV TV1, AX 
+ 
+MOV AX, TV0 
+MUL TV1
+MOV TV2, AX 
+ 
+MOV DX, TV2 
+RET 
+ 
+MOV TV3, 1
+ 
+MOV AX, TV3 
+NEG AX 
+MOV TV4, AX 
+ 
+PUSH TV4 
+call ASMOUT 
+ 
+ 
+MOV TV5, 9
+ 
+MOV AX, TV5 
+MOV a2, AX 
+ 
+ 
+RET 
+f ENDP 
+
+
+Line No 9 -> type_specifier : INT
+
+
+Line No 9 -> type_specifier : INT
+
+
+Line No 9 -> parameter_list : type_specifier ID
+
+
+Line No 9 -> type_specifier : INT
+
+
+Line No 9 -> parameter_list : parameter_list COMMA type_specifier ID
+
+
+Line No 10 -> type_specifier : INT
+
+
+Line No 10 -> declaration_list : ID
+
+
+Line No 10 -> var_declaration : type_specifier declaration_list SEMICOLON
+
+
+Line No 10 -> statement : var_declaration
+
+
+Line No 10 -> statements : statement
+
+
+Line No 11 -> variable : ID
+
+
+Line No 11 -> variable : ID
+
+
+Line No 11 -> factor : variable
+MOV AX, a3 
+MOV TV8, AX 
+
+
+Line No 11 -> unary_expression : factor
+MOV AX, a3 
+MOV TV8, AX 
+
+
+Line No 11 -> term : unary_expression
+MOV AX, a3 
+MOV TV8, AX 
+
+
+Line No 11 -> simple_expression : term
+MOV AX, a3 
+MOV TV8, AX 
+
+
+Line No 11 -> rel_expression : simple_expression
+MOV AX, a3 
+MOV TV8, AX 
+
+
+Line No 11 -> logic_expression : rel_expression
+MOV AX, a3 
+MOV TV8, AX 
+
+
+Line No 11 -> arguments : logic_expression
+MOV AX, a3 
+MOV TV8, AX 
+ 
+PUSH TV8 
+
+
+Line No 11 -> argument_list : arguments
+MOV AX, a3 
+MOV TV8, AX 
+ 
+PUSH TV8 
+
+
+Line No 11 -> factor : ID LPAREN argument_list RPAREN
+MOV AX, a3 
+MOV TV8, AX 
+ 
+PUSH TV8 
+ 
+call f 
+MOV TV9, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX
+
+Line No 11 -> unary_expression : factor
+MOV AX, a3 
+MOV TV8, AX 
+ 
+PUSH TV8 
+ 
+call f 
+MOV TV9, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX
+
+Line No 11 -> term : unary_expression
+MOV AX, a3 
+MOV TV8, AX 
+ 
+PUSH TV8 
+ 
+call f 
+MOV TV9, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX
+
+Line No 11 -> simple_expression : term
+MOV AX, a3 
+MOV TV8, AX 
+ 
+PUSH TV8 
+ 
+call f 
+MOV TV9, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX
+
+Line No 11 -> variable : ID
+
+
+Line No 11 -> factor : variable
+MOV AX, a3 
+MOV TV10, AX 
+
+
+Line No 11 -> unary_expression : factor
+MOV AX, a3 
+MOV TV10, AX 
+
+
+Line No 11 -> term : unary_expression
+MOV AX, a3 
+MOV TV10, AX 
+
+
+Line No 11 -> simple_expression : simple_expression ADDOP term
+MOV AX, a3 
+MOV TV8, AX 
+ 
+PUSH TV8 
+ 
+call f 
+MOV TV9, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+MOV AX, a3 
+MOV TV10, AX 
+ 
+MOV BX, TV9 
+ADD BX, TV10 
+MOV TV11, BX 
+
+
+Line No 11 -> variable : ID
+
+
+Line No 11 -> factor : variable
+MOV AX, b3 
+MOV TV12, AX 
+
+
+Line No 11 -> unary_expression : factor
+MOV AX, b3 
+MOV TV12, AX 
+
+
+Line No 11 -> term : unary_expression
+MOV AX, b3 
+MOV TV12, AX 
+
+
+Line No 11 -> simple_expression : simple_expression ADDOP term
+MOV AX, a3 
+MOV TV8, AX 
+ 
+PUSH TV8 
+ 
+call f 
+MOV TV9, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+MOV AX, a3 
+MOV TV10, AX 
+ 
+MOV BX, TV9 
+ADD BX, TV10 
+MOV TV11, BX 
+ 
+MOV AX, b3 
+MOV TV12, AX 
+ 
+MOV BX, TV11 
+ADD BX, TV12 
+MOV TV13, BX 
+
+
+Line No 11 -> rel_expression : simple_expression
+MOV AX, a3 
+MOV TV8, AX 
+ 
+PUSH TV8 
+ 
+call f 
+MOV TV9, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+MOV AX, a3 
+MOV TV10, AX 
+ 
+MOV BX, TV9 
+ADD BX, TV10 
+MOV TV11, BX 
+ 
+MOV AX, b3 
+MOV TV12, AX 
+ 
+MOV BX, TV11 
+ADD BX, TV12 
+MOV TV13, BX 
+
+
+Line No 11 -> logic_expression : rel_expression
+MOV AX, a3 
+MOV TV8, AX 
+ 
+PUSH TV8 
+ 
+call f 
+MOV TV9, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+MOV AX, a3 
+MOV TV10, AX 
+ 
+MOV BX, TV9 
+ADD BX, TV10 
+MOV TV11, BX 
+ 
+MOV AX, b3 
+MOV TV12, AX 
+ 
+MOV BX, TV11 
+ADD BX, TV12 
+MOV TV13, BX 
+
+
+Line No 11 -> expression : variable ASSIGNOP logic_expression
+MOV AX, a3 
+MOV TV8, AX 
+ 
+PUSH TV8 
+ 
+call f 
+MOV TV9, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+MOV AX, a3 
+MOV TV10, AX 
+ 
+MOV BX, TV9 
+ADD BX, TV10 
+MOV TV11, BX 
+ 
+MOV AX, b3 
+MOV TV12, AX 
+ 
+MOV BX, TV11 
+ADD BX, TV12 
+MOV TV13, BX 
+ 
+MOV AX, TV13 
+MOV x3, AX 
+
+
+Line No 11 -> expression_statement : expression SEMICOLON
+MOV AX, a3 
+MOV TV8, AX 
+ 
+PUSH TV8 
+ 
+call f 
+MOV TV9, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+MOV AX, a3 
+MOV TV10, AX 
+ 
+MOV BX, TV9 
+ADD BX, TV10 
+MOV TV11, BX 
+ 
+MOV AX, b3 
+MOV TV12, AX 
+ 
+MOV BX, TV11 
+ADD BX, TV12 
+MOV TV13, BX 
+ 
+MOV AX, TV13 
+MOV x3, AX 
+
+
+Line No 11 -> statement : expression_statement
+MOV AX, a3 
+MOV TV8, AX 
+ 
+PUSH TV8 
+ 
+call f 
+MOV TV9, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+MOV AX, a3 
+MOV TV10, AX 
+ 
+MOV BX, TV9 
+ADD BX, TV10 
+MOV TV11, BX 
+ 
+MOV AX, b3 
+MOV TV12, AX 
+ 
+MOV BX, TV11 
+ADD BX, TV12 
+MOV TV13, BX 
+ 
+MOV AX, TV13 
+MOV x3, AX 
+
+
+Line No 11 -> statements : statements statement
+ 
+MOV AX, a3 
+MOV TV8, AX 
+ 
+PUSH TV8 
+ 
+call f 
+MOV TV9, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+MOV AX, a3 
+MOV TV10, AX 
+ 
+MOV BX, TV9 
+ADD BX, TV10 
+MOV TV11, BX 
+ 
+MOV AX, b3 
+MOV TV12, AX 
+ 
+MOV BX, TV11 
+ADD BX, TV12 
+MOV TV13, BX 
+ 
+MOV AX, TV13 
+MOV x3, AX 
+ 
+
+
+Line No 12 -> variable : ID
+
+
+Line No 12 -> factor : variable
+MOV AX, x3 
+MOV TV14, AX 
+
+
+Line No 12 -> unary_expression : factor
+MOV AX, x3 
+MOV TV14, AX 
+
+
+Line No 12 -> term : unary_expression
+MOV AX, x3 
+MOV TV14, AX 
+
+
+Line No 12 -> simple_expression : term
+MOV AX, x3 
+MOV TV14, AX 
+
+
+Line No 12 -> rel_expression : simple_expression
+MOV AX, x3 
+MOV TV14, AX 
+
+
+Line No 12 -> logic_expression : rel_expression
+MOV AX, x3 
+MOV TV14, AX 
+
+
+Line No 12 -> expression : logic_expression
+MOV AX, x3 
+MOV TV14, AX 
+
+
+Line No 12 -> statement : RETURN expression SEMICOLON
+MOV AX, x3 
+MOV TV14, AX 
+ 
+MOV DX, TV14 
+RET 
+
+
+Line No 12 -> statements : statements statement
+ 
+MOV AX, a3 
+MOV TV8, AX 
+ 
+PUSH TV8 
+ 
+call f 
+MOV TV9, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+MOV AX, a3 
+MOV TV10, AX 
+ 
+MOV BX, TV9 
+ADD BX, TV10 
+MOV TV11, BX 
+ 
+MOV AX, b3 
+MOV TV12, AX 
+ 
+MOV BX, TV11 
+ADD BX, TV12 
+MOV TV13, BX 
+ 
+MOV AX, TV13 
+MOV x3, AX 
+ 
+ 
+MOV AX, x3 
+MOV TV14, AX 
+ 
+MOV DX, TV14 
+RET 
+ 
+
+
+Line No 13 -> compound_statement : LCURL statements RCURL
+ 
+MOV AX, a3 
+MOV TV8, AX 
+ 
+PUSH TV8 
+ 
+call f 
+MOV TV9, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+MOV AX, a3 
+MOV TV10, AX 
+ 
+MOV BX, TV9 
+ADD BX, TV10 
+MOV TV11, BX 
+ 
+MOV AX, b3 
+MOV TV12, AX 
+ 
+MOV BX, TV11 
+ADD BX, TV12 
+MOV TV13, BX 
+ 
+MOV AX, TV13 
+MOV x3, AX 
+ 
+ 
+MOV AX, x3 
+MOV TV14, AX 
+ 
+MOV DX, TV14 
+RET 
+ 
+
+
+Line No 13 -> func_definition : type_specifier ID LPAREN parameter_list RPAREN
+g PROC 
+POP TV15 
+POP b3
+POP a3
+ 
+PUSH AX 
+PUSH BX 
+PUSH CX 
+PUSH DX 
+PUSH SP 
+PUSH BP 										
+PUSH SI 
+PUSH DI 
+PUSHF 
+PUSH TV15 
+ 
+MOV AX, a3 
+MOV TV8, AX 
+ 
+PUSH TV8 
+ 
+call f 
+MOV TV9, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+MOV AX, a3 
+MOV TV10, AX 
+ 
+MOV BX, TV9 
+ADD BX, TV10 
+MOV TV11, BX 
+ 
+MOV AX, b3 
+MOV TV12, AX 
+ 
+MOV BX, TV11 
+ADD BX, TV12 
+MOV TV13, BX 
+ 
+MOV AX, TV13 
+MOV x3, AX 
+ 
+ 
+MOV AX, x3 
+MOV TV14, AX 
+ 
+MOV DX, TV14 
+RET 
+ 
+ 
+RET 
+g ENDP
+
+Line No 13 -> unit : func_definition
+g PROC 
+POP TV15 
+POP b3
+POP a3
+ 
+PUSH AX 
+PUSH BX 
+PUSH CX 
+PUSH DX 
+PUSH SP 
+PUSH BP 										
+PUSH SI 
+PUSH DI 
+PUSHF 
+PUSH TV15 
+ 
+MOV AX, a3 
+MOV TV8, AX 
+ 
+PUSH TV8 
+ 
+call f 
+MOV TV9, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+MOV AX, a3 
+MOV TV10, AX 
+ 
+MOV BX, TV9 
+ADD BX, TV10 
+MOV TV11, BX 
+ 
+MOV AX, b3 
+MOV TV12, AX 
+ 
+MOV BX, TV11 
+ADD BX, TV12 
+MOV TV13, BX 
+ 
+MOV AX, TV13 
+MOV x3, AX 
+ 
+ 
+MOV AX, x3 
+MOV TV14, AX 
+ 
+MOV DX, TV14 
+RET 
+ 
+ 
+RET 
+g ENDP
+
+Line No 13 -> program : program unit
+ 
+f PROC 
+POP TV6 
+POP a2
+ 
+PUSH AX 
+PUSH BX 
+PUSH CX 
+PUSH DX 
+PUSH SP 
+PUSH BP 										
+PUSH SI 
+PUSH DI 
+PUSHF 
+PUSH TV6 
+MOV TV0, 2
+ 
+MOV AX, a2 
+MOV TV1, AX 
+ 
+MOV AX, TV0 
+MUL TV1
+MOV TV2, AX 
+ 
+MOV DX, TV2 
+RET 
+ 
+MOV TV3, 1
+ 
+MOV AX, TV3 
+NEG AX 
+MOV TV4, AX 
+ 
+PUSH TV4 
+call ASMOUT 
+ 
+ 
+MOV TV5, 9
+ 
+MOV AX, TV5 
+MOV a2, AX 
+ 
+ 
+RET 
+f ENDP 
+ 
+g PROC 
+POP TV15 
+POP b3
+POP a3
+ 
+PUSH AX 
+PUSH BX 
+PUSH CX 
+PUSH DX 
+PUSH SP 
+PUSH BP 										
+PUSH SI 
+PUSH DI 
+PUSHF 
+PUSH TV15 
+ 
+MOV AX, a3 
+MOV TV8, AX 
+ 
+PUSH TV8 
+ 
+call f 
+MOV TV9, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+MOV AX, a3 
+MOV TV10, AX 
+ 
+MOV BX, TV9 
+ADD BX, TV10 
+MOV TV11, BX 
+ 
+MOV AX, b3 
+MOV TV12, AX 
+ 
+MOV BX, TV11 
+ADD BX, TV12 
+MOV TV13, BX 
+ 
+MOV AX, TV13 
+MOV x3, AX 
+ 
+ 
+MOV AX, x3 
+MOV TV14, AX 
+ 
+MOV DX, TV14 
+RET 
+ 
+ 
+RET 
+g ENDP 
+
+
+Line No 16 -> type_specifier : VOID
+
+
+Line No 16 -> func_declaration : type_specifier ID LPAREN RPAREN SEMICOLON
+
+
+Line No 16 -> unit : func_declaration
+
+
+Line No 16 -> program : program unit
+ 
+f PROC 
+POP TV6 
+POP a2
+ 
+PUSH AX 
+PUSH BX 
+PUSH CX 
+PUSH DX 
+PUSH SP 
+PUSH BP 										
+PUSH SI 
+PUSH DI 
+PUSHF 
+PUSH TV6 
+MOV TV0, 2
+ 
+MOV AX, a2 
+MOV TV1, AX 
+ 
+MOV AX, TV0 
+MUL TV1
+MOV TV2, AX 
+ 
+MOV DX, TV2 
+RET 
+ 
+MOV TV3, 1
+ 
+MOV AX, TV3 
+NEG AX 
+MOV TV4, AX 
+ 
+PUSH TV4 
+call ASMOUT 
+ 
+ 
+MOV TV5, 9
+ 
+MOV AX, TV5 
+MOV a2, AX 
+ 
+ 
+RET 
+f ENDP 
+ 
+g PROC 
+POP TV15 
+POP b3
+POP a3
+ 
+PUSH AX 
+PUSH BX 
+PUSH CX 
+PUSH DX 
+PUSH SP 
+PUSH BP 										
+PUSH SI 
+PUSH DI 
+PUSHF 
+PUSH TV15 
+ 
+MOV AX, a3 
+MOV TV8, AX 
+ 
+PUSH TV8 
+ 
+call f 
+MOV TV9, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+MOV AX, a3 
+MOV TV10, AX 
+ 
+MOV BX, TV9 
+ADD BX, TV10 
+MOV TV11, BX 
+ 
+MOV AX, b3 
+MOV TV12, AX 
+ 
+MOV BX, TV11 
+ADD BX, TV12 
+MOV TV13, BX 
+ 
+MOV AX, TV13 
+MOV x3, AX 
+ 
+ 
+MOV AX, x3 
+MOV TV14, AX 
+ 
+MOV DX, TV14 
+RET 
+ 
+ 
+RET 
+g ENDP 
+ 
+ 
+
+
+Line No 19 -> type_specifier : INT
+
+
+Line No 21 -> type_specifier : INT
+
+
+Line No 21 -> declaration_list : ID
+
+
+Line No 21 -> declaration_list : declaration_list COMMA ID
+
+
+Line No 21 -> declaration_list : declaration_list COMMA ID
+
+
+Line No 21 -> var_declaration : type_specifier declaration_list SEMICOLON
+
+
+Line No 21 -> statement : var_declaration
+
+
+Line No 21 -> statements : statement
+
+
+Line No 23 -> variable : ID
+
+
+Line No 23 -> factor : CONST_INT
+MOV TV17, 5
+
+
+Line No 23 -> unary_expression : factor
+MOV TV17, 5
+
+
+Line No 23 -> term : unary_expression
+MOV TV17, 5
+
+
+Line No 23 -> simple_expression : term
+MOV TV17, 5
+
+
+Line No 23 -> rel_expression : simple_expression
+MOV TV17, 5
+
+
+Line No 23 -> logic_expression : rel_expression
+MOV TV17, 5
+
+
+Line No 23 -> expression : variable ASSIGNOP logic_expression
+MOV TV17, 5
+ 
+MOV AX, TV17 
+MOV a4, AX 
+
+
+Line No 23 -> expression_statement : expression SEMICOLON
+MOV TV17, 5
+ 
+MOV AX, TV17 
+MOV a4, AX 
+
+
+Line No 23 -> statement : expression_statement
+MOV TV17, 5
+ 
+MOV AX, TV17 
+MOV a4, AX 
+
+
+Line No 23 -> statements : statements statement
+ 
+MOV TV17, 5
+ 
+MOV AX, TV17 
+MOV a4, AX 
+ 
+
+
+Line No 24 -> variable : ID
+
+
+Line No 24 -> factor : CONST_INT
+MOV TV18, 7
+
+
+Line No 24 -> unary_expression : factor
+MOV TV18, 7
+
+
+Line No 24 -> term : unary_expression
+MOV TV18, 7
+
+
+Line No 24 -> simple_expression : term
+MOV TV18, 7
+
+
+Line No 24 -> rel_expression : simple_expression
+MOV TV18, 7
+
+
+Line No 24 -> logic_expression : rel_expression
+MOV TV18, 7
+
+
+Line No 24 -> expression : variable ASSIGNOP logic_expression
+MOV TV18, 7
+ 
+MOV AX, TV18 
+MOV b4, AX 
+
+
+Line No 24 -> expression_statement : expression SEMICOLON
+MOV TV18, 7
+ 
+MOV AX, TV18 
+MOV b4, AX 
+
+
+Line No 24 -> statement : expression_statement
+MOV TV18, 7
+ 
+MOV AX, TV18 
+MOV b4, AX 
+
+
+Line No 24 -> statements : statements statement
+ 
+MOV TV17, 5
+ 
+MOV AX, TV17 
+MOV a4, AX 
+ 
+ 
+MOV TV18, 7
+ 
+MOV AX, TV18 
+MOV b4, AX 
+ 
+
+
+Line No 26 -> variable : ID
+
+
+Line No 26 -> variable : ID
+
+
+Line No 26 -> factor : variable
+MOV AX, a4 
+MOV TV19, AX 
+
+
+Line No 26 -> unary_expression : factor
+MOV AX, a4 
+MOV TV19, AX 
+
+
+Line No 26 -> term : unary_expression
+MOV AX, a4 
+MOV TV19, AX 
+
+
+Line No 26 -> simple_expression : term
+MOV AX, a4 
+MOV TV19, AX 
+
+
+Line No 26 -> rel_expression : simple_expression
+MOV AX, a4 
+MOV TV19, AX 
+
+
+Line No 26 -> logic_expression : rel_expression
+MOV AX, a4 
+MOV TV19, AX 
+
+
+Line No 26 -> arguments : logic_expression
+MOV AX, a4 
+MOV TV19, AX 
+ 
+PUSH TV19 
+
+
+Line No 26 -> variable : ID
+
+
+Line No 26 -> factor : variable
+MOV AX, b4 
+MOV TV20, AX 
+
+
+Line No 26 -> unary_expression : factor
+MOV AX, b4 
+MOV TV20, AX 
+
+
+Line No 26 -> term : unary_expression
+MOV AX, b4 
+MOV TV20, AX 
+
+
+Line No 26 -> simple_expression : term
+MOV AX, b4 
+MOV TV20, AX 
+
+
+Line No 26 -> rel_expression : simple_expression
+MOV AX, b4 
+MOV TV20, AX 
+
+
+Line No 26 -> logic_expression : rel_expression
+MOV AX, b4 
+MOV TV20, AX 
+
+
+Line No 26 -> arguments : arguments COMMA logic_expression
+MOV AX, a4 
+MOV TV19, AX 
+ 
+PUSH TV19 
+ 
+MOV AX, b4 
+MOV TV20, AX 
+ 
+PUSH TV20 
+
+
+Line No 26 -> argument_list : arguments
+MOV AX, a4 
+MOV TV19, AX 
+ 
+PUSH TV19 
+ 
+MOV AX, b4 
+MOV TV20, AX 
+ 
+PUSH TV20 
+
+
+Line No 26 -> factor : ID LPAREN argument_list RPAREN
+MOV AX, a4 
+MOV TV19, AX 
+ 
+PUSH TV19 
+ 
+MOV AX, b4 
+MOV TV20, AX 
+ 
+PUSH TV20 
+ 
+call g 
+MOV TV21, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX
+
+Line No 26 -> unary_expression : factor
+MOV AX, a4 
+MOV TV19, AX 
+ 
+PUSH TV19 
+ 
+MOV AX, b4 
+MOV TV20, AX 
+ 
+PUSH TV20 
+ 
+call g 
+MOV TV21, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX
+
+Line No 26 -> term : unary_expression
+MOV AX, a4 
+MOV TV19, AX 
+ 
+PUSH TV19 
+ 
+MOV AX, b4 
+MOV TV20, AX 
+ 
+PUSH TV20 
+ 
+call g 
+MOV TV21, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX
+
+Line No 26 -> simple_expression : term
+MOV AX, a4 
+MOV TV19, AX 
+ 
+PUSH TV19 
+ 
+MOV AX, b4 
+MOV TV20, AX 
+ 
+PUSH TV20 
+ 
+call g 
+MOV TV21, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX
+
+Line No 26 -> rel_expression : simple_expression
+MOV AX, a4 
+MOV TV19, AX 
+ 
+PUSH TV19 
+ 
+MOV AX, b4 
+MOV TV20, AX 
+ 
+PUSH TV20 
+ 
+call g 
+MOV TV21, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX
+
+Line No 26 -> logic_expression : rel_expression
+MOV AX, a4 
+MOV TV19, AX 
+ 
+PUSH TV19 
+ 
+MOV AX, b4 
+MOV TV20, AX 
+ 
+PUSH TV20 
+ 
+call g 
+MOV TV21, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX
+
+Line No 26 -> expression : variable ASSIGNOP logic_expression
+MOV AX, a4 
+MOV TV19, AX 
+ 
+PUSH TV19 
+ 
+MOV AX, b4 
+MOV TV20, AX 
+ 
+PUSH TV20 
+ 
+call g 
+MOV TV21, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+MOV AX, TV21 
+MOV x4, AX 
+
+
+Line No 26 -> expression_statement : expression SEMICOLON
+MOV AX, a4 
+MOV TV19, AX 
+ 
+PUSH TV19 
+ 
+MOV AX, b4 
+MOV TV20, AX 
+ 
+PUSH TV20 
+ 
+call g 
+MOV TV21, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+MOV AX, TV21 
+MOV x4, AX 
+
+
+Line No 26 -> statement : expression_statement
+MOV AX, a4 
+MOV TV19, AX 
+ 
+PUSH TV19 
+ 
+MOV AX, b4 
+MOV TV20, AX 
+ 
+PUSH TV20 
+ 
+call g 
+MOV TV21, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+MOV AX, TV21 
+MOV x4, AX 
+
+
+Line No 26 -> statements : statements statement
+ 
+MOV TV17, 5
+ 
+MOV AX, TV17 
+MOV a4, AX 
+ 
+ 
+MOV TV18, 7
+ 
+MOV AX, TV18 
+MOV b4, AX 
+ 
+ 
+MOV AX, a4 
+MOV TV19, AX 
+ 
+PUSH TV19 
+ 
+MOV AX, b4 
+MOV TV20, AX 
+ 
+PUSH TV20 
+ 
+call g 
+MOV TV21, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+MOV AX, TV21 
+MOV x4, AX 
+ 
+
+
+Line No 27 -> variable : ID
+
+
+Line No 27 -> factor : variable
+MOV AX, x4 
+MOV TV22, AX 
+
+
+Line No 27 -> unary_expression : factor
+MOV AX, x4 
+MOV TV22, AX 
+
+
+Line No 27 -> term : unary_expression
+MOV AX, x4 
+MOV TV22, AX 
+
+
+Line No 27 -> simple_expression : term
+MOV AX, x4 
+MOV TV22, AX 
+
+
+Line No 27 -> rel_expression : simple_expression
+MOV AX, x4 
+MOV TV22, AX 
+
+
+Line No 27 -> logic_expression : rel_expression
+MOV AX, x4 
+MOV TV22, AX 
+
+
+Line No 27 -> expression : logic_expression
+MOV AX, x4 
+MOV TV22, AX 
+
+
+Line No 27 -> statement : PRINTLN LPAREN expression RPAREN SEMICOLON
+MOV AX, x4 
+MOV TV22, AX 
+ 
+PUSH TV22 
+call ASMOUT 
+
+
+Line No 27 -> statements : statements statement
+ 
+MOV TV17, 5
+ 
+MOV AX, TV17 
+MOV a4, AX 
+ 
+ 
+MOV TV18, 7
+ 
+MOV AX, TV18 
+MOV b4, AX 
+ 
+ 
+MOV AX, a4 
+MOV TV19, AX 
+ 
+PUSH TV19 
+ 
+MOV AX, b4 
+MOV TV20, AX 
+ 
+PUSH TV20 
+ 
+call g 
+MOV TV21, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+MOV AX, TV21 
+MOV x4, AX 
+ 
+ 
+MOV AX, x4 
+MOV TV22, AX 
+ 
+PUSH TV22 
+call ASMOUT 
+ 
+
+
+Line No 30 -> variable : ID
+
+
+Line No 30 -> factor : variable
+MOV AX, a4 
+MOV TV23, AX 
+
+
+Line No 30 -> unary_expression : factor
+MOV AX, a4 
+MOV TV23, AX 
+
+
+Line No 30 -> term : unary_expression
+MOV AX, a4 
+MOV TV23, AX 
+
+
+Line No 30 -> simple_expression : term
+MOV AX, a4 
+MOV TV23, AX 
+
+
+Line No 30 -> variable : ID
+
+
+Line No 30 -> factor : variable
+MOV AX, b4 
+MOV TV24, AX 
+
+
+Line No 30 -> unary_expression : factor
+MOV AX, b4 
+MOV TV24, AX 
+
+
+Line No 30 -> term : unary_expression
+MOV AX, b4 
+MOV TV24, AX 
+
+
+Line No 30 -> simple_expression : simple_expression ADDOP term
+MOV AX, a4 
+MOV TV23, AX 
+ 
+MOV AX, b4 
+MOV TV24, AX 
+ 
+MOV BX, TV23 
+ADD BX, TV24 
+MOV TV25, BX 
+
+
+Line No 30 -> rel_expression : simple_expression
+MOV AX, a4 
+MOV TV23, AX 
+ 
+MOV AX, b4 
+MOV TV24, AX 
+ 
+MOV BX, TV23 
+ADD BX, TV24 
+MOV TV25, BX 
+
+
+Line No 30 -> logic_expression : rel_expression
+MOV AX, a4 
+MOV TV23, AX 
+ 
+MOV AX, b4 
+MOV TV24, AX 
+ 
+MOV BX, TV23 
+ADD BX, TV24 
+MOV TV25, BX 
+
+
+Line No 30 -> expression : logic_expression
+MOV AX, a4 
+MOV TV23, AX 
+ 
+MOV AX, b4 
+MOV TV24, AX 
+ 
+MOV BX, TV23 
+ADD BX, TV24 
+MOV TV25, BX 
+
+
+Line No 30 -> statement : PRINTLN LPAREN expression RPAREN SEMICOLON
+MOV AX, a4 
+MOV TV23, AX 
+ 
+MOV AX, b4 
+MOV TV24, AX 
+ 
+MOV BX, TV23 
+ADD BX, TV24 
+MOV TV25, BX 
+ 
+PUSH TV25 
+call ASMOUT 
+
+
+Line No 30 -> statements : statements statement
+ 
+MOV TV17, 5
+ 
+MOV AX, TV17 
+MOV a4, AX 
+ 
+ 
+MOV TV18, 7
+ 
+MOV AX, TV18 
+MOV b4, AX 
+ 
+ 
+MOV AX, a4 
+MOV TV19, AX 
+ 
+PUSH TV19 
+ 
+MOV AX, b4 
+MOV TV20, AX 
+ 
+PUSH TV20 
+ 
+call g 
+MOV TV21, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+MOV AX, TV21 
+MOV x4, AX 
+ 
+ 
+MOV AX, x4 
+MOV TV22, AX 
+ 
+PUSH TV22 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV23, AX 
+ 
+MOV AX, b4 
+MOV TV24, AX 
+ 
+MOV BX, TV23 
+ADD BX, TV24 
+MOV TV25, BX 
+ 
+PUSH TV25 
+call ASMOUT 
+ 
+
+
+Line No 31 -> variable : ID
+
+
+Line No 31 -> factor : variable
+MOV AX, a4 
+MOV TV26, AX 
+
+
+Line No 31 -> unary_expression : factor
+MOV AX, a4 
+MOV TV26, AX 
+
+
+Line No 31 -> term : unary_expression
+MOV AX, a4 
+MOV TV26, AX 
+
+
+Line No 31 -> simple_expression : term
+MOV AX, a4 
+MOV TV26, AX 
+
+
+Line No 31 -> variable : ID
+
+
+Line No 31 -> factor : variable
+MOV AX, b4 
+MOV TV27, AX 
+
+
+Line No 31 -> unary_expression : factor
+MOV AX, b4 
+MOV TV27, AX 
+
+
+Line No 31 -> term : unary_expression
+MOV AX, b4 
+MOV TV27, AX 
+
+
+Line No 31 -> simple_expression : simple_expression ADDOP term
+MOV AX, a4 
+MOV TV26, AX 
+ 
+MOV AX, b4 
+MOV TV27, AX 
+ 
+MOV BX, TV26 
+SUB BX, TV27 
+MOV TV28, BX 
+
+
+Line No 31 -> rel_expression : simple_expression
+MOV AX, a4 
+MOV TV26, AX 
+ 
+MOV AX, b4 
+MOV TV27, AX 
+ 
+MOV BX, TV26 
+SUB BX, TV27 
+MOV TV28, BX 
+
+
+Line No 31 -> logic_expression : rel_expression
+MOV AX, a4 
+MOV TV26, AX 
+ 
+MOV AX, b4 
+MOV TV27, AX 
+ 
+MOV BX, TV26 
+SUB BX, TV27 
+MOV TV28, BX 
+
+
+Line No 31 -> expression : logic_expression
+MOV AX, a4 
+MOV TV26, AX 
+ 
+MOV AX, b4 
+MOV TV27, AX 
+ 
+MOV BX, TV26 
+SUB BX, TV27 
+MOV TV28, BX 
+
+
+Line No 31 -> statement : PRINTLN LPAREN expression RPAREN SEMICOLON
+MOV AX, a4 
+MOV TV26, AX 
+ 
+MOV AX, b4 
+MOV TV27, AX 
+ 
+MOV BX, TV26 
+SUB BX, TV27 
+MOV TV28, BX 
+ 
+PUSH TV28 
+call ASMOUT 
+
+
+Line No 31 -> statements : statements statement
+ 
+MOV TV17, 5
+ 
+MOV AX, TV17 
+MOV a4, AX 
+ 
+ 
+MOV TV18, 7
+ 
+MOV AX, TV18 
+MOV b4, AX 
+ 
+ 
+MOV AX, a4 
+MOV TV19, AX 
+ 
+PUSH TV19 
+ 
+MOV AX, b4 
+MOV TV20, AX 
+ 
+PUSH TV20 
+ 
+call g 
+MOV TV21, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+MOV AX, TV21 
+MOV x4, AX 
+ 
+ 
+MOV AX, x4 
+MOV TV22, AX 
+ 
+PUSH TV22 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV23, AX 
+ 
+MOV AX, b4 
+MOV TV24, AX 
+ 
+MOV BX, TV23 
+ADD BX, TV24 
+MOV TV25, BX 
+ 
+PUSH TV25 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV26, AX 
+ 
+MOV AX, b4 
+MOV TV27, AX 
+ 
+MOV BX, TV26 
+SUB BX, TV27 
+MOV TV28, BX 
+ 
+PUSH TV28 
+call ASMOUT 
+ 
+
+
+Line No 32 -> variable : ID
+
+
+Line No 32 -> factor : variable
+MOV AX, a4 
+MOV TV29, AX 
+
+
+Line No 32 -> unary_expression : factor
+MOV AX, a4 
+MOV TV29, AX 
+
+
+Line No 32 -> term : unary_expression
+MOV AX, a4 
+MOV TV29, AX 
+
+
+Line No 32 -> variable : ID
+
+
+Line No 32 -> factor : variable
+MOV AX, b4 
+MOV TV30, AX 
+
+
+Line No 32 -> unary_expression : factor
+MOV AX, b4 
+MOV TV30, AX 
+
+
+Line No 32 -> term : term MULOP unary_expression
+MOV AX, a4 
+MOV TV29, AX 
+ 
+MOV AX, b4 
+MOV TV30, AX 
+ 
+MOV AX, TV29 
+MUL TV30
+MOV TV31, AX 
+
+
+Line No 32 -> simple_expression : term
+MOV AX, a4 
+MOV TV29, AX 
+ 
+MOV AX, b4 
+MOV TV30, AX 
+ 
+MOV AX, TV29 
+MUL TV30
+MOV TV31, AX 
+
+
+Line No 32 -> rel_expression : simple_expression
+MOV AX, a4 
+MOV TV29, AX 
+ 
+MOV AX, b4 
+MOV TV30, AX 
+ 
+MOV AX, TV29 
+MUL TV30
+MOV TV31, AX 
+
+
+Line No 32 -> logic_expression : rel_expression
+MOV AX, a4 
+MOV TV29, AX 
+ 
+MOV AX, b4 
+MOV TV30, AX 
+ 
+MOV AX, TV29 
+MUL TV30
+MOV TV31, AX 
+
+
+Line No 32 -> expression : logic_expression
+MOV AX, a4 
+MOV TV29, AX 
+ 
+MOV AX, b4 
+MOV TV30, AX 
+ 
+MOV AX, TV29 
+MUL TV30
+MOV TV31, AX 
+
+
+Line No 32 -> statement : PRINTLN LPAREN expression RPAREN SEMICOLON
+MOV AX, a4 
+MOV TV29, AX 
+ 
+MOV AX, b4 
+MOV TV30, AX 
+ 
+MOV AX, TV29 
+MUL TV30
+MOV TV31, AX 
+ 
+PUSH TV31 
+call ASMOUT 
+
+
+Line No 32 -> statements : statements statement
+ 
+MOV TV17, 5
+ 
+MOV AX, TV17 
+MOV a4, AX 
+ 
+ 
+MOV TV18, 7
+ 
+MOV AX, TV18 
+MOV b4, AX 
+ 
+ 
+MOV AX, a4 
+MOV TV19, AX 
+ 
+PUSH TV19 
+ 
+MOV AX, b4 
+MOV TV20, AX 
+ 
+PUSH TV20 
+ 
+call g 
+MOV TV21, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+MOV AX, TV21 
+MOV x4, AX 
+ 
+ 
+MOV AX, x4 
+MOV TV22, AX 
+ 
+PUSH TV22 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV23, AX 
+ 
+MOV AX, b4 
+MOV TV24, AX 
+ 
+MOV BX, TV23 
+ADD BX, TV24 
+MOV TV25, BX 
+ 
+PUSH TV25 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV26, AX 
+ 
+MOV AX, b4 
+MOV TV27, AX 
+ 
+MOV BX, TV26 
+SUB BX, TV27 
+MOV TV28, BX 
+ 
+PUSH TV28 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV29, AX 
+ 
+MOV AX, b4 
+MOV TV30, AX 
+ 
+MOV AX, TV29 
+MUL TV30
+MOV TV31, AX 
+ 
+PUSH TV31 
+call ASMOUT 
+ 
+
+
+Line No 33 -> variable : ID
+
+
+Line No 33 -> factor : variable
+MOV AX, a4 
+MOV TV32, AX 
+
+
+Line No 33 -> unary_expression : factor
+MOV AX, a4 
+MOV TV32, AX 
+
+
+Line No 33 -> term : unary_expression
+MOV AX, a4 
+MOV TV32, AX 
+
+
+Line No 33 -> variable : ID
+
+
+Line No 33 -> factor : variable
+MOV AX, b4 
+MOV TV33, AX 
+
+
+Line No 33 -> unary_expression : factor
+MOV AX, b4 
+MOV TV33, AX 
+
+
+Line No 33 -> term : term MULOP unary_expression
+MOV AX, a4 
+MOV TV32, AX 
+ 
+MOV AX, b4 
+MOV TV33, AX 
+ 
+MOV AX, TV32 
+MOV BX, TV33 
+DIV BL
+XOR AH, AH 
+MOV TV34, AX 
+
+
+Line No 33 -> simple_expression : term
+MOV AX, a4 
+MOV TV32, AX 
+ 
+MOV AX, b4 
+MOV TV33, AX 
+ 
+MOV AX, TV32 
+MOV BX, TV33 
+DIV BL
+XOR AH, AH 
+MOV TV34, AX 
+
+
+Line No 33 -> rel_expression : simple_expression
+MOV AX, a4 
+MOV TV32, AX 
+ 
+MOV AX, b4 
+MOV TV33, AX 
+ 
+MOV AX, TV32 
+MOV BX, TV33 
+DIV BL
+XOR AH, AH 
+MOV TV34, AX 
+
+
+Line No 33 -> logic_expression : rel_expression
+MOV AX, a4 
+MOV TV32, AX 
+ 
+MOV AX, b4 
+MOV TV33, AX 
+ 
+MOV AX, TV32 
+MOV BX, TV33 
+DIV BL
+XOR AH, AH 
+MOV TV34, AX 
+
+
+Line No 33 -> expression : logic_expression
+MOV AX, a4 
+MOV TV32, AX 
+ 
+MOV AX, b4 
+MOV TV33, AX 
+ 
+MOV AX, TV32 
+MOV BX, TV33 
+DIV BL
+XOR AH, AH 
+MOV TV34, AX 
+
+
+Line No 33 -> statement : PRINTLN LPAREN expression RPAREN SEMICOLON
+MOV AX, a4 
+MOV TV32, AX 
+ 
+MOV AX, b4 
+MOV TV33, AX 
+ 
+MOV AX, TV32 
+MOV BX, TV33 
+DIV BL
+XOR AH, AH 
+MOV TV34, AX 
+ 
+PUSH TV34 
+call ASMOUT 
+
+
+Line No 33 -> statements : statements statement
+ 
+MOV TV17, 5
+ 
+MOV AX, TV17 
+MOV a4, AX 
+ 
+ 
+MOV TV18, 7
+ 
+MOV AX, TV18 
+MOV b4, AX 
+ 
+ 
+MOV AX, a4 
+MOV TV19, AX 
+ 
+PUSH TV19 
+ 
+MOV AX, b4 
+MOV TV20, AX 
+ 
+PUSH TV20 
+ 
+call g 
+MOV TV21, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+MOV AX, TV21 
+MOV x4, AX 
+ 
+ 
+MOV AX, x4 
+MOV TV22, AX 
+ 
+PUSH TV22 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV23, AX 
+ 
+MOV AX, b4 
+MOV TV24, AX 
+ 
+MOV BX, TV23 
+ADD BX, TV24 
+MOV TV25, BX 
+ 
+PUSH TV25 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV26, AX 
+ 
+MOV AX, b4 
+MOV TV27, AX 
+ 
+MOV BX, TV26 
+SUB BX, TV27 
+MOV TV28, BX 
+ 
+PUSH TV28 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV29, AX 
+ 
+MOV AX, b4 
+MOV TV30, AX 
+ 
+MOV AX, TV29 
+MUL TV30
+MOV TV31, AX 
+ 
+PUSH TV31 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV32, AX 
+ 
+MOV AX, b4 
+MOV TV33, AX 
+ 
+MOV AX, TV32 
+MOV BX, TV33 
+DIV BL
+XOR AH, AH 
+MOV TV34, AX 
+ 
+PUSH TV34 
+call ASMOUT 
+ 
+
+
+Line No 34 -> variable : ID
+
+
+Line No 34 -> factor : variable
+MOV AX, a4 
+MOV TV35, AX 
+
+
+Line No 34 -> unary_expression : factor
+MOV AX, a4 
+MOV TV35, AX 
+
+
+Line No 34 -> term : unary_expression
+MOV AX, a4 
+MOV TV35, AX 
+
+
+Line No 34 -> variable : ID
+
+
+Line No 34 -> factor : variable
+MOV AX, b4 
+MOV TV36, AX 
+
+
+Line No 34 -> unary_expression : factor
+MOV AX, b4 
+MOV TV36, AX 
+
+
+Line No 34 -> term : term MULOP unary_expression
+MOV AX, a4 
+MOV TV35, AX 
+ 
+MOV AX, b4 
+MOV TV36, AX 
+ 
+MOV AX, TV35 
+MOV BX, TV36 
+DIV BL
+MOV AL, AH 
+XOR AH, AH 
+MOV TV37, AX 
+
+
+Line No 34 -> simple_expression : term
+MOV AX, a4 
+MOV TV35, AX 
+ 
+MOV AX, b4 
+MOV TV36, AX 
+ 
+MOV AX, TV35 
+MOV BX, TV36 
+DIV BL
+MOV AL, AH 
+XOR AH, AH 
+MOV TV37, AX 
+
+
+Line No 34 -> rel_expression : simple_expression
+MOV AX, a4 
+MOV TV35, AX 
+ 
+MOV AX, b4 
+MOV TV36, AX 
+ 
+MOV AX, TV35 
+MOV BX, TV36 
+DIV BL
+MOV AL, AH 
+XOR AH, AH 
+MOV TV37, AX 
+
+
+Line No 34 -> logic_expression : rel_expression
+MOV AX, a4 
+MOV TV35, AX 
+ 
+MOV AX, b4 
+MOV TV36, AX 
+ 
+MOV AX, TV35 
+MOV BX, TV36 
+DIV BL
+MOV AL, AH 
+XOR AH, AH 
+MOV TV37, AX 
+
+
+Line No 34 -> expression : logic_expression
+MOV AX, a4 
+MOV TV35, AX 
+ 
+MOV AX, b4 
+MOV TV36, AX 
+ 
+MOV AX, TV35 
+MOV BX, TV36 
+DIV BL
+MOV AL, AH 
+XOR AH, AH 
+MOV TV37, AX 
+
+
+Line No 34 -> statement : PRINTLN LPAREN expression RPAREN SEMICOLON
+MOV AX, a4 
+MOV TV35, AX 
+ 
+MOV AX, b4 
+MOV TV36, AX 
+ 
+MOV AX, TV35 
+MOV BX, TV36 
+DIV BL
+MOV AL, AH 
+XOR AH, AH 
+MOV TV37, AX 
+ 
+PUSH TV37 
+call ASMOUT 
+
+
+Line No 34 -> statements : statements statement
+ 
+MOV TV17, 5
+ 
+MOV AX, TV17 
+MOV a4, AX 
+ 
+ 
+MOV TV18, 7
+ 
+MOV AX, TV18 
+MOV b4, AX 
+ 
+ 
+MOV AX, a4 
+MOV TV19, AX 
+ 
+PUSH TV19 
+ 
+MOV AX, b4 
+MOV TV20, AX 
+ 
+PUSH TV20 
+ 
+call g 
+MOV TV21, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+MOV AX, TV21 
+MOV x4, AX 
+ 
+ 
+MOV AX, x4 
+MOV TV22, AX 
+ 
+PUSH TV22 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV23, AX 
+ 
+MOV AX, b4 
+MOV TV24, AX 
+ 
+MOV BX, TV23 
+ADD BX, TV24 
+MOV TV25, BX 
+ 
+PUSH TV25 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV26, AX 
+ 
+MOV AX, b4 
+MOV TV27, AX 
+ 
+MOV BX, TV26 
+SUB BX, TV27 
+MOV TV28, BX 
+ 
+PUSH TV28 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV29, AX 
+ 
+MOV AX, b4 
+MOV TV30, AX 
+ 
+MOV AX, TV29 
+MUL TV30
+MOV TV31, AX 
+ 
+PUSH TV31 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV32, AX 
+ 
+MOV AX, b4 
+MOV TV33, AX 
+ 
+MOV AX, TV32 
+MOV BX, TV33 
+DIV BL
+XOR AH, AH 
+MOV TV34, AX 
+ 
+PUSH TV34 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV35, AX 
+ 
+MOV AX, b4 
+MOV TV36, AX 
+ 
+MOV AX, TV35 
+MOV BX, TV36 
+DIV BL
+MOV AL, AH 
+XOR AH, AH 
+MOV TV37, AX 
+ 
+PUSH TV37 
+call ASMOUT 
+ 
+
+
+Line No 36 -> variable : ID
+
+
+Line No 36 -> factor : CONST_INT
+MOV TV38, 0
+
+
+Line No 36 -> unary_expression : factor
+MOV TV38, 0
+
+
+Line No 36 -> term : unary_expression
+MOV TV38, 0
+
+
+Line No 36 -> simple_expression : term
+MOV TV38, 0
+
+
+Line No 36 -> rel_expression : simple_expression
+MOV TV38, 0
+
+
+Line No 36 -> logic_expression : rel_expression
+MOV TV38, 0
+
+
+Line No 36 -> expression : variable ASSIGNOP logic_expression
+MOV TV38, 0
+ 
+MOV AX, TV38 
+MOV b4, AX 
+
+
+Line No 36 -> expression_statement : expression SEMICOLON
+MOV TV38, 0
+ 
+MOV AX, TV38 
+MOV b4, AX 
+
+
+Line No 36 -> statement : expression_statement
+MOV TV38, 0
+ 
+MOV AX, TV38 
+MOV b4, AX 
+
+
+Line No 36 -> statements : statements statement
+ 
+MOV TV17, 5
+ 
+MOV AX, TV17 
+MOV a4, AX 
+ 
+ 
+MOV TV18, 7
+ 
+MOV AX, TV18 
+MOV b4, AX 
+ 
+ 
+MOV AX, a4 
+MOV TV19, AX 
+ 
+PUSH TV19 
+ 
+MOV AX, b4 
+MOV TV20, AX 
+ 
+PUSH TV20 
+ 
+call g 
+MOV TV21, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+MOV AX, TV21 
+MOV x4, AX 
+ 
+ 
+MOV AX, x4 
+MOV TV22, AX 
+ 
+PUSH TV22 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV23, AX 
+ 
+MOV AX, b4 
+MOV TV24, AX 
+ 
+MOV BX, TV23 
+ADD BX, TV24 
+MOV TV25, BX 
+ 
+PUSH TV25 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV26, AX 
+ 
+MOV AX, b4 
+MOV TV27, AX 
+ 
+MOV BX, TV26 
+SUB BX, TV27 
+MOV TV28, BX 
+ 
+PUSH TV28 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV29, AX 
+ 
+MOV AX, b4 
+MOV TV30, AX 
+ 
+MOV AX, TV29 
+MUL TV30
+MOV TV31, AX 
+ 
+PUSH TV31 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV32, AX 
+ 
+MOV AX, b4 
+MOV TV33, AX 
+ 
+MOV AX, TV32 
+MOV BX, TV33 
+DIV BL
+XOR AH, AH 
+MOV TV34, AX 
+ 
+PUSH TV34 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV35, AX 
+ 
+MOV AX, b4 
+MOV TV36, AX 
+ 
+MOV AX, TV35 
+MOV BX, TV36 
+DIV BL
+MOV AL, AH 
+XOR AH, AH 
+MOV TV37, AX 
+ 
+PUSH TV37 
+call ASMOUT 
+ 
+ 
+MOV TV38, 0
+ 
+MOV AX, TV38 
+MOV b4, AX 
+ 
+
+
+Line No 38 -> variable : ID
+
+
+Line No 38 -> factor : variable
+MOV AX, a4 
+MOV TV39, AX 
+
+
+Line No 38 -> unary_expression : factor
+MOV AX, a4 
+MOV TV39, AX 
+
+
+Line No 38 -> term : unary_expression
+MOV AX, a4 
+MOV TV39, AX 
+
+
+Line No 38 -> simple_expression : term
+MOV AX, a4 
+MOV TV39, AX 
+
+
+Line No 38 -> rel_expression : simple_expression
+MOV AX, a4 
+MOV TV39, AX 
+
+
+Line No 38 -> variable : ID
+
+
+Line No 38 -> factor : variable
+MOV AX, b4 
+MOV TV40, AX 
+
+
+Line No 38 -> unary_expression : factor
+MOV AX, b4 
+MOV TV40, AX 
+
+
+Line No 38 -> term : unary_expression
+MOV AX, b4 
+MOV TV40, AX 
+
+
+Line No 38 -> simple_expression : term
+MOV AX, b4 
+MOV TV40, AX 
+
+
+Line No 38 -> rel_expression : simple_expression
+MOV AX, b4 
+MOV TV40, AX 
+
+
+Line No 38 -> logic_expression : rel_expression LOGICOP rel_expression
+MOV AX, a4 
+MOV TV39, AX 
+ 
+MOV AX, b4 
+MOV TV40, AX 
+ 
+MOV AX, TV39 
+CMP AX, 0 
+ JE LB0 
+MOV AX, TV40 
+CMP AX, 0 
+ JE LB0 
+MOV AX, 1 
+JMP LB2 
+LB0: 
+MOV AX, 0 
+LB2: 
+MOV TV41, AX 
+
+
+Line No 38 -> expression : logic_expression
+MOV AX, a4 
+MOV TV39, AX 
+ 
+MOV AX, b4 
+MOV TV40, AX 
+ 
+MOV AX, TV39 
+CMP AX, 0 
+ JE LB0 
+MOV AX, TV40 
+CMP AX, 0 
+ JE LB0 
+MOV AX, 1 
+JMP LB2 
+LB0: 
+MOV AX, 0 
+LB2: 
+MOV TV41, AX 
+
+
+Line No 38 -> statement : PRINTLN LPAREN expression RPAREN SEMICOLON
+MOV AX, a4 
+MOV TV39, AX 
+ 
+MOV AX, b4 
+MOV TV40, AX 
+ 
+MOV AX, TV39 
+CMP AX, 0 
+ JE LB0 
+MOV AX, TV40 
+CMP AX, 0 
+ JE LB0 
+MOV AX, 1 
+JMP LB2 
+LB0: 
+MOV AX, 0 
+LB2: 
+MOV TV41, AX 
+ 
+PUSH TV41 
+call ASMOUT 
+
+
+Line No 38 -> statements : statements statement
+ 
+MOV TV17, 5
+ 
+MOV AX, TV17 
+MOV a4, AX 
+ 
+ 
+MOV TV18, 7
+ 
+MOV AX, TV18 
+MOV b4, AX 
+ 
+ 
+MOV AX, a4 
+MOV TV19, AX 
+ 
+PUSH TV19 
+ 
+MOV AX, b4 
+MOV TV20, AX 
+ 
+PUSH TV20 
+ 
+call g 
+MOV TV21, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+MOV AX, TV21 
+MOV x4, AX 
+ 
+ 
+MOV AX, x4 
+MOV TV22, AX 
+ 
+PUSH TV22 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV23, AX 
+ 
+MOV AX, b4 
+MOV TV24, AX 
+ 
+MOV BX, TV23 
+ADD BX, TV24 
+MOV TV25, BX 
+ 
+PUSH TV25 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV26, AX 
+ 
+MOV AX, b4 
+MOV TV27, AX 
+ 
+MOV BX, TV26 
+SUB BX, TV27 
+MOV TV28, BX 
+ 
+PUSH TV28 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV29, AX 
+ 
+MOV AX, b4 
+MOV TV30, AX 
+ 
+MOV AX, TV29 
+MUL TV30
+MOV TV31, AX 
+ 
+PUSH TV31 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV32, AX 
+ 
+MOV AX, b4 
+MOV TV33, AX 
+ 
+MOV AX, TV32 
+MOV BX, TV33 
+DIV BL
+XOR AH, AH 
+MOV TV34, AX 
+ 
+PUSH TV34 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV35, AX 
+ 
+MOV AX, b4 
+MOV TV36, AX 
+ 
+MOV AX, TV35 
+MOV BX, TV36 
+DIV BL
+MOV AL, AH 
+XOR AH, AH 
+MOV TV37, AX 
+ 
+PUSH TV37 
+call ASMOUT 
+ 
+ 
+MOV TV38, 0
+ 
+MOV AX, TV38 
+MOV b4, AX 
+ 
+ 
+MOV AX, a4 
+MOV TV39, AX 
+ 
+MOV AX, b4 
+MOV TV40, AX 
+ 
+MOV AX, TV39 
+CMP AX, 0 
+ JE LB0 
+MOV AX, TV40 
+CMP AX, 0 
+ JE LB0 
+MOV AX, 1 
+JMP LB2 
+LB0: 
+MOV AX, 0 
+LB2: 
+MOV TV41, AX 
+ 
+PUSH TV41 
+call ASMOUT 
+ 
+
+
+Line No 39 -> variable : ID
+
+
+Line No 39 -> factor : variable
+MOV AX, a4 
+MOV TV42, AX 
+
+
+Line No 39 -> unary_expression : factor
+MOV AX, a4 
+MOV TV42, AX 
+
+
+Line No 39 -> term : unary_expression
+MOV AX, a4 
+MOV TV42, AX 
+
+
+Line No 39 -> simple_expression : term
+MOV AX, a4 
+MOV TV42, AX 
+
+
+Line No 39 -> rel_expression : simple_expression
+MOV AX, a4 
+MOV TV42, AX 
+
+
+Line No 39 -> variable : ID
+
+
+Line No 39 -> factor : variable
+MOV AX, b4 
+MOV TV43, AX 
+
+
+Line No 39 -> unary_expression : factor
+MOV AX, b4 
+MOV TV43, AX 
+
+
+Line No 39 -> term : unary_expression
+MOV AX, b4 
+MOV TV43, AX 
+
+
+Line No 39 -> simple_expression : term
+MOV AX, b4 
+MOV TV43, AX 
+
+
+Line No 39 -> rel_expression : simple_expression
+MOV AX, b4 
+MOV TV43, AX 
+
+
+Line No 39 -> logic_expression : rel_expression LOGICOP rel_expression
+MOV AX, a4 
+MOV TV42, AX 
+ 
+MOV AX, b4 
+MOV TV43, AX 
+ 
+MOV AX, TV42 
+CMP AX, 0 
+ JNE LB4 
+MOV AX, TV43 
+CMP AX, 0 
+ JNE LB4 
+MOV AX, 0 
+JMP LB5 
+LB4: 
+MOV AX, 1 
+LB5: 
+MOV TV44, AX 
+
+
+Line No 39 -> expression : logic_expression
+MOV AX, a4 
+MOV TV42, AX 
+ 
+MOV AX, b4 
+MOV TV43, AX 
+ 
+MOV AX, TV42 
+CMP AX, 0 
+ JNE LB4 
+MOV AX, TV43 
+CMP AX, 0 
+ JNE LB4 
+MOV AX, 0 
+JMP LB5 
+LB4: 
+MOV AX, 1 
+LB5: 
+MOV TV44, AX 
+
+
+Line No 39 -> statement : PRINTLN LPAREN expression RPAREN SEMICOLON
+MOV AX, a4 
+MOV TV42, AX 
+ 
+MOV AX, b4 
+MOV TV43, AX 
+ 
+MOV AX, TV42 
+CMP AX, 0 
+ JNE LB4 
+MOV AX, TV43 
+CMP AX, 0 
+ JNE LB4 
+MOV AX, 0 
+JMP LB5 
+LB4: 
+MOV AX, 1 
+LB5: 
+MOV TV44, AX 
+ 
+PUSH TV44 
+call ASMOUT 
+
+
+Line No 39 -> statements : statements statement
+ 
+MOV TV17, 5
+ 
+MOV AX, TV17 
+MOV a4, AX 
+ 
+ 
+MOV TV18, 7
+ 
+MOV AX, TV18 
+MOV b4, AX 
+ 
+ 
+MOV AX, a4 
+MOV TV19, AX 
+ 
+PUSH TV19 
+ 
+MOV AX, b4 
+MOV TV20, AX 
+ 
+PUSH TV20 
+ 
+call g 
+MOV TV21, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+MOV AX, TV21 
+MOV x4, AX 
+ 
+ 
+MOV AX, x4 
+MOV TV22, AX 
+ 
+PUSH TV22 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV23, AX 
+ 
+MOV AX, b4 
+MOV TV24, AX 
+ 
+MOV BX, TV23 
+ADD BX, TV24 
+MOV TV25, BX 
+ 
+PUSH TV25 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV26, AX 
+ 
+MOV AX, b4 
+MOV TV27, AX 
+ 
+MOV BX, TV26 
+SUB BX, TV27 
+MOV TV28, BX 
+ 
+PUSH TV28 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV29, AX 
+ 
+MOV AX, b4 
+MOV TV30, AX 
+ 
+MOV AX, TV29 
+MUL TV30
+MOV TV31, AX 
+ 
+PUSH TV31 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV32, AX 
+ 
+MOV AX, b4 
+MOV TV33, AX 
+ 
+MOV AX, TV32 
+MOV BX, TV33 
+DIV BL
+XOR AH, AH 
+MOV TV34, AX 
+ 
+PUSH TV34 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV35, AX 
+ 
+MOV AX, b4 
+MOV TV36, AX 
+ 
+MOV AX, TV35 
+MOV BX, TV36 
+DIV BL
+MOV AL, AH 
+XOR AH, AH 
+MOV TV37, AX 
+ 
+PUSH TV37 
+call ASMOUT 
+ 
+ 
+MOV TV38, 0
+ 
+MOV AX, TV38 
+MOV b4, AX 
+ 
+ 
+MOV AX, a4 
+MOV TV39, AX 
+ 
+MOV AX, b4 
+MOV TV40, AX 
+ 
+MOV AX, TV39 
+CMP AX, 0 
+ JE LB0 
+MOV AX, TV40 
+CMP AX, 0 
+ JE LB0 
+MOV AX, 1 
+JMP LB2 
+LB0: 
+MOV AX, 0 
+LB2: 
+MOV TV41, AX 
+ 
+PUSH TV41 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV42, AX 
+ 
+MOV AX, b4 
+MOV TV43, AX 
+ 
+MOV AX, TV42 
+CMP AX, 0 
+ JNE LB4 
+MOV AX, TV43 
+CMP AX, 0 
+ JNE LB4 
+MOV AX, 0 
+JMP LB5 
+LB4: 
+MOV AX, 1 
+LB5: 
+MOV TV44, AX 
+ 
+PUSH TV44 
+call ASMOUT 
+ 
+
+
+Line No 41 -> type_specifier : INT
+
+
+Line No 41 -> declaration_list : ID LTHIRD CONST_INT RTHIRD
+
+
+Line No 41 -> var_declaration : type_specifier declaration_list SEMICOLON
+
+
+Line No 41 -> statement : var_declaration
+
+
+Line No 41 -> statements : statements statement
+ 
+MOV TV17, 5
+ 
+MOV AX, TV17 
+MOV a4, AX 
+ 
+ 
+MOV TV18, 7
+ 
+MOV AX, TV18 
+MOV b4, AX 
+ 
+ 
+MOV AX, a4 
+MOV TV19, AX 
+ 
+PUSH TV19 
+ 
+MOV AX, b4 
+MOV TV20, AX 
+ 
+PUSH TV20 
+ 
+call g 
+MOV TV21, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+MOV AX, TV21 
+MOV x4, AX 
+ 
+ 
+MOV AX, x4 
+MOV TV22, AX 
+ 
+PUSH TV22 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV23, AX 
+ 
+MOV AX, b4 
+MOV TV24, AX 
+ 
+MOV BX, TV23 
+ADD BX, TV24 
+MOV TV25, BX 
+ 
+PUSH TV25 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV26, AX 
+ 
+MOV AX, b4 
+MOV TV27, AX 
+ 
+MOV BX, TV26 
+SUB BX, TV27 
+MOV TV28, BX 
+ 
+PUSH TV28 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV29, AX 
+ 
+MOV AX, b4 
+MOV TV30, AX 
+ 
+MOV AX, TV29 
+MUL TV30
+MOV TV31, AX 
+ 
+PUSH TV31 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV32, AX 
+ 
+MOV AX, b4 
+MOV TV33, AX 
+ 
+MOV AX, TV32 
+MOV BX, TV33 
+DIV BL
+XOR AH, AH 
+MOV TV34, AX 
+ 
+PUSH TV34 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV35, AX 
+ 
+MOV AX, b4 
+MOV TV36, AX 
+ 
+MOV AX, TV35 
+MOV BX, TV36 
+DIV BL
+MOV AL, AH 
+XOR AH, AH 
+MOV TV37, AX 
+ 
+PUSH TV37 
+call ASMOUT 
+ 
+ 
+MOV TV38, 0
+ 
+MOV AX, TV38 
+MOV b4, AX 
+ 
+ 
+MOV AX, a4 
+MOV TV39, AX 
+ 
+MOV AX, b4 
+MOV TV40, AX 
+ 
+MOV AX, TV39 
+CMP AX, 0 
+ JE LB0 
+MOV AX, TV40 
+CMP AX, 0 
+ JE LB0 
+MOV AX, 1 
+JMP LB2 
+LB0: 
+MOV AX, 0 
+LB2: 
+MOV TV41, AX 
+ 
+PUSH TV41 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV42, AX 
+ 
+MOV AX, b4 
+MOV TV43, AX 
+ 
+MOV AX, TV42 
+CMP AX, 0 
+ JNE LB4 
+MOV AX, TV43 
+CMP AX, 0 
+ JNE LB4 
+MOV AX, 0 
+JMP LB5 
+LB4: 
+MOV AX, 1 
+LB5: 
+MOV TV44, AX 
+ 
+PUSH TV44 
+call ASMOUT 
+ 
+ 
+ 
+
+
+Line No 42 -> factor : CONST_INT
+MOV TV45, 2
+
+
+Line No 42 -> unary_expression : factor
+MOV TV45, 2
+
+
+Line No 42 -> term : unary_expression
+MOV TV45, 2
+
+
+Line No 42 -> simple_expression : term
+MOV TV45, 2
+
+
+Line No 42 -> rel_expression : simple_expression
+MOV TV45, 2
+
+
+Line No 42 -> logic_expression : rel_expression
+MOV TV45, 2
+
+
+Line No 42 -> expression : logic_expression
+MOV TV45, 2
+
+
+Line No 42 -> variable : ID LTHIRD expression RTHIRD
+
+
+Line No 42 -> factor : CONST_INT
+MOV TV46, 4
+
+
+Line No 42 -> unary_expression : factor
+MOV TV46, 4
+
+
+Line No 42 -> term : unary_expression
+MOV TV46, 4
+
+
+Line No 42 -> simple_expression : term
+MOV TV46, 4
+
+
+Line No 42 -> rel_expression : simple_expression
+MOV TV46, 4
+
+
+Line No 42 -> logic_expression : rel_expression
+MOV TV46, 4
+
+
+Line No 42 -> expression : variable ASSIGNOP logic_expression
+MOV TV46, 4
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, TV46 
+MOV SI[BX], CX
+
+
+Line No 42 -> expression_statement : expression SEMICOLON
+MOV TV46, 4
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, TV46 
+MOV SI[BX], CX
+
+
+Line No 42 -> statement : expression_statement
+MOV TV46, 4
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, TV46 
+MOV SI[BX], CX
+
+
+Line No 42 -> statements : statements statement
+ 
+MOV TV17, 5
+ 
+MOV AX, TV17 
+MOV a4, AX 
+ 
+ 
+MOV TV18, 7
+ 
+MOV AX, TV18 
+MOV b4, AX 
+ 
+ 
+MOV AX, a4 
+MOV TV19, AX 
+ 
+PUSH TV19 
+ 
+MOV AX, b4 
+MOV TV20, AX 
+ 
+PUSH TV20 
+ 
+call g 
+MOV TV21, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+MOV AX, TV21 
+MOV x4, AX 
+ 
+ 
+MOV AX, x4 
+MOV TV22, AX 
+ 
+PUSH TV22 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV23, AX 
+ 
+MOV AX, b4 
+MOV TV24, AX 
+ 
+MOV BX, TV23 
+ADD BX, TV24 
+MOV TV25, BX 
+ 
+PUSH TV25 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV26, AX 
+ 
+MOV AX, b4 
+MOV TV27, AX 
+ 
+MOV BX, TV26 
+SUB BX, TV27 
+MOV TV28, BX 
+ 
+PUSH TV28 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV29, AX 
+ 
+MOV AX, b4 
+MOV TV30, AX 
+ 
+MOV AX, TV29 
+MUL TV30
+MOV TV31, AX 
+ 
+PUSH TV31 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV32, AX 
+ 
+MOV AX, b4 
+MOV TV33, AX 
+ 
+MOV AX, TV32 
+MOV BX, TV33 
+DIV BL
+XOR AH, AH 
+MOV TV34, AX 
+ 
+PUSH TV34 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV35, AX 
+ 
+MOV AX, b4 
+MOV TV36, AX 
+ 
+MOV AX, TV35 
+MOV BX, TV36 
+DIV BL
+MOV AL, AH 
+XOR AH, AH 
+MOV TV37, AX 
+ 
+PUSH TV37 
+call ASMOUT 
+ 
+ 
+MOV TV38, 0
+ 
+MOV AX, TV38 
+MOV b4, AX 
+ 
+ 
+MOV AX, a4 
+MOV TV39, AX 
+ 
+MOV AX, b4 
+MOV TV40, AX 
+ 
+MOV AX, TV39 
+CMP AX, 0 
+ JE LB0 
+MOV AX, TV40 
+CMP AX, 0 
+ JE LB0 
+MOV AX, 1 
+JMP LB2 
+LB0: 
+MOV AX, 0 
+LB2: 
+MOV TV41, AX 
+ 
+PUSH TV41 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV42, AX 
+ 
+MOV AX, b4 
+MOV TV43, AX 
+ 
+MOV AX, TV42 
+CMP AX, 0 
+ JNE LB4 
+MOV AX, TV43 
+CMP AX, 0 
+ JNE LB4 
+MOV AX, 0 
+JMP LB5 
+LB4: 
+MOV AX, 1 
+LB5: 
+MOV TV44, AX 
+ 
+PUSH TV44 
+call ASMOUT 
+ 
+ 
+ 
+ 
+MOV TV46, 4
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, TV46 
+MOV SI[BX], CX
+ 
+
+
+Line No 46 -> factor : CONST_INT
+MOV TV47, 2
+
+
+Line No 46 -> unary_expression : factor
+MOV TV47, 2
+
+
+Line No 46 -> term : unary_expression
+MOV TV47, 2
+
+
+Line No 46 -> simple_expression : term
+MOV TV47, 2
+
+
+Line No 46 -> rel_expression : simple_expression
+MOV TV47, 2
+
+
+Line No 46 -> logic_expression : rel_expression
+MOV TV47, 2
+
+
+Line No 46 -> expression : logic_expression
+MOV TV47, 2
+
+
+Line No 46 -> variable : ID LTHIRD expression RTHIRD
+
+
+Line No 46 -> factor : variable
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV48, CX
+
+
+Line No 46 -> unary_expression : factor
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV48, CX
+
+
+Line No 46 -> term : unary_expression
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV48, CX
+
+
+Line No 46 -> simple_expression : term
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV48, CX
+
+
+Line No 46 -> rel_expression : simple_expression
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV48, CX
+
+
+Line No 46 -> logic_expression : rel_expression
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV48, CX
+
+
+Line No 46 -> arguments : logic_expression
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV48, CX
+ 
+PUSH TV48 
+
+
+Line No 46 -> argument_list : arguments
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV48, CX
+ 
+PUSH TV48 
+
+
+Line No 46 -> factor : ID LPAREN argument_list RPAREN
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV48, CX
+ 
+PUSH TV48 
+ 
+call f 
+MOV TV49, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX
+
+Line No 46 -> unary_expression : factor
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV48, CX
+ 
+PUSH TV48 
+ 
+call f 
+MOV TV49, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX
+
+Line No 46 -> term : unary_expression
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV48, CX
+ 
+PUSH TV48 
+ 
+call f 
+MOV TV49, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX
+
+Line No 46 -> simple_expression : term
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV48, CX
+ 
+PUSH TV48 
+ 
+call f 
+MOV TV49, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX
+
+Line No 46 -> rel_expression : simple_expression
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV48, CX
+ 
+PUSH TV48 
+ 
+call f 
+MOV TV49, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX
+
+Line No 46 -> logic_expression : rel_expression
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV48, CX
+ 
+PUSH TV48 
+ 
+call f 
+MOV TV49, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX
+
+Line No 46 -> expression : logic_expression
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV48, CX
+ 
+PUSH TV48 
+ 
+call f 
+MOV TV49, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX
+
+Line No 46 -> statement : PRINTLN LPAREN expression RPAREN SEMICOLON
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV48, CX
+ 
+PUSH TV48 
+ 
+call f 
+MOV TV49, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+PUSH TV49 
+call ASMOUT 
+
+
+Line No 46 -> statements : statements statement
+ 
+MOV TV17, 5
+ 
+MOV AX, TV17 
+MOV a4, AX 
+ 
+ 
+MOV TV18, 7
+ 
+MOV AX, TV18 
+MOV b4, AX 
+ 
+ 
+MOV AX, a4 
+MOV TV19, AX 
+ 
+PUSH TV19 
+ 
+MOV AX, b4 
+MOV TV20, AX 
+ 
+PUSH TV20 
+ 
+call g 
+MOV TV21, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+MOV AX, TV21 
+MOV x4, AX 
+ 
+ 
+MOV AX, x4 
+MOV TV22, AX 
+ 
+PUSH TV22 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV23, AX 
+ 
+MOV AX, b4 
+MOV TV24, AX 
+ 
+MOV BX, TV23 
+ADD BX, TV24 
+MOV TV25, BX 
+ 
+PUSH TV25 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV26, AX 
+ 
+MOV AX, b4 
+MOV TV27, AX 
+ 
+MOV BX, TV26 
+SUB BX, TV27 
+MOV TV28, BX 
+ 
+PUSH TV28 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV29, AX 
+ 
+MOV AX, b4 
+MOV TV30, AX 
+ 
+MOV AX, TV29 
+MUL TV30
+MOV TV31, AX 
+ 
+PUSH TV31 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV32, AX 
+ 
+MOV AX, b4 
+MOV TV33, AX 
+ 
+MOV AX, TV32 
+MOV BX, TV33 
+DIV BL
+XOR AH, AH 
+MOV TV34, AX 
+ 
+PUSH TV34 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV35, AX 
+ 
+MOV AX, b4 
+MOV TV36, AX 
+ 
+MOV AX, TV35 
+MOV BX, TV36 
+DIV BL
+MOV AL, AH 
+XOR AH, AH 
+MOV TV37, AX 
+ 
+PUSH TV37 
+call ASMOUT 
+ 
+ 
+MOV TV38, 0
+ 
+MOV AX, TV38 
+MOV b4, AX 
+ 
+ 
+MOV AX, a4 
+MOV TV39, AX 
+ 
+MOV AX, b4 
+MOV TV40, AX 
+ 
+MOV AX, TV39 
+CMP AX, 0 
+ JE LB0 
+MOV AX, TV40 
+CMP AX, 0 
+ JE LB0 
+MOV AX, 1 
+JMP LB2 
+LB0: 
+MOV AX, 0 
+LB2: 
+MOV TV41, AX 
+ 
+PUSH TV41 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV42, AX 
+ 
+MOV AX, b4 
+MOV TV43, AX 
+ 
+MOV AX, TV42 
+CMP AX, 0 
+ JNE LB4 
+MOV AX, TV43 
+CMP AX, 0 
+ JNE LB4 
+MOV AX, 0 
+JMP LB5 
+LB4: 
+MOV AX, 1 
+LB5: 
+MOV TV44, AX 
+ 
+PUSH TV44 
+call ASMOUT 
+ 
+ 
+ 
+ 
+MOV TV46, 4
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, TV46 
+MOV SI[BX], CX
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV48, CX
+ 
+PUSH TV48 
+ 
+call f 
+MOV TV49, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+PUSH TV49 
+call ASMOUT 
+ 
+
+
+Line No 49 -> factor : CONST_INT
+MOV TV50, 2
+
+
+Line No 49 -> unary_expression : factor
+MOV TV50, 2
+
+
+Line No 49 -> term : unary_expression
+MOV TV50, 2
+
+
+Line No 49 -> simple_expression : term
+MOV TV50, 2
+
+
+Line No 49 -> rel_expression : simple_expression
+MOV TV50, 2
+
+
+Line No 49 -> logic_expression : rel_expression
+MOV TV50, 2
+
+
+Line No 49 -> expression : logic_expression
+MOV TV50, 2
+
+
+Line No 49 -> variable : ID LTHIRD expression RTHIRD
+
+
+Line No 49 -> factor : variable INCOP
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV51, CX 
+INC CX 
+MOV SI[BX], CX 
+
+
+Line No 49 -> unary_expression : factor
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV51, CX 
+INC CX 
+MOV SI[BX], CX 
+
+
+Line No 49 -> term : unary_expression
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV51, CX 
+INC CX 
+MOV SI[BX], CX 
+
+
+Line No 49 -> simple_expression : term
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV51, CX 
+INC CX 
+MOV SI[BX], CX 
+
+
+Line No 49 -> rel_expression : simple_expression
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV51, CX 
+INC CX 
+MOV SI[BX], CX 
+
+
+Line No 49 -> logic_expression : rel_expression
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV51, CX 
+INC CX 
+MOV SI[BX], CX 
+
+
+Line No 49 -> expression : logic_expression
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV51, CX 
+INC CX 
+MOV SI[BX], CX 
+
+
+Line No 49 -> expression_statement : expression SEMICOLON
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV51, CX 
+INC CX 
+MOV SI[BX], CX 
+
+
+Line No 49 -> statement : expression_statement
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV51, CX 
+INC CX 
+MOV SI[BX], CX 
+
+
+Line No 49 -> statements : statements statement
+ 
+MOV TV17, 5
+ 
+MOV AX, TV17 
+MOV a4, AX 
+ 
+ 
+MOV TV18, 7
+ 
+MOV AX, TV18 
+MOV b4, AX 
+ 
+ 
+MOV AX, a4 
+MOV TV19, AX 
+ 
+PUSH TV19 
+ 
+MOV AX, b4 
+MOV TV20, AX 
+ 
+PUSH TV20 
+ 
+call g 
+MOV TV21, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+MOV AX, TV21 
+MOV x4, AX 
+ 
+ 
+MOV AX, x4 
+MOV TV22, AX 
+ 
+PUSH TV22 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV23, AX 
+ 
+MOV AX, b4 
+MOV TV24, AX 
+ 
+MOV BX, TV23 
+ADD BX, TV24 
+MOV TV25, BX 
+ 
+PUSH TV25 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV26, AX 
+ 
+MOV AX, b4 
+MOV TV27, AX 
+ 
+MOV BX, TV26 
+SUB BX, TV27 
+MOV TV28, BX 
+ 
+PUSH TV28 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV29, AX 
+ 
+MOV AX, b4 
+MOV TV30, AX 
+ 
+MOV AX, TV29 
+MUL TV30
+MOV TV31, AX 
+ 
+PUSH TV31 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV32, AX 
+ 
+MOV AX, b4 
+MOV TV33, AX 
+ 
+MOV AX, TV32 
+MOV BX, TV33 
+DIV BL
+XOR AH, AH 
+MOV TV34, AX 
+ 
+PUSH TV34 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV35, AX 
+ 
+MOV AX, b4 
+MOV TV36, AX 
+ 
+MOV AX, TV35 
+MOV BX, TV36 
+DIV BL
+MOV AL, AH 
+XOR AH, AH 
+MOV TV37, AX 
+ 
+PUSH TV37 
+call ASMOUT 
+ 
+ 
+MOV TV38, 0
+ 
+MOV AX, TV38 
+MOV b4, AX 
+ 
+ 
+MOV AX, a4 
+MOV TV39, AX 
+ 
+MOV AX, b4 
+MOV TV40, AX 
+ 
+MOV AX, TV39 
+CMP AX, 0 
+ JE LB0 
+MOV AX, TV40 
+CMP AX, 0 
+ JE LB0 
+MOV AX, 1 
+JMP LB2 
+LB0: 
+MOV AX, 0 
+LB2: 
+MOV TV41, AX 
+ 
+PUSH TV41 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV42, AX 
+ 
+MOV AX, b4 
+MOV TV43, AX 
+ 
+MOV AX, TV42 
+CMP AX, 0 
+ JNE LB4 
+MOV AX, TV43 
+CMP AX, 0 
+ JNE LB4 
+MOV AX, 0 
+JMP LB5 
+LB4: 
+MOV AX, 1 
+LB5: 
+MOV TV44, AX 
+ 
+PUSH TV44 
+call ASMOUT 
+ 
+ 
+ 
+ 
+MOV TV46, 4
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, TV46 
+MOV SI[BX], CX
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV48, CX
+ 
+PUSH TV48 
+ 
+call f 
+MOV TV49, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+PUSH TV49 
+call ASMOUT 
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV51, CX 
+INC CX 
+MOV SI[BX], CX 
+ 
+
+
+Line No 51 -> factor : CONST_INT
+MOV TV52, 1
+
+
+Line No 51 -> unary_expression : factor
+MOV TV52, 1
+
+
+Line No 51 -> term : unary_expression
+MOV TV52, 1
+
+
+Line No 51 -> simple_expression : term
+MOV TV52, 1
+
+
+Line No 51 -> rel_expression : simple_expression
+MOV TV52, 1
+
+
+Line No 51 -> logic_expression : rel_expression
+MOV TV52, 1
+
+
+Line No 51 -> expression : logic_expression
+MOV TV52, 1
+
+
+Line No 51 -> variable : ID LTHIRD expression RTHIRD
+
+
+Line No 51 -> factor : CONST_INT
+MOV TV53, 6
+
+
+Line No 51 -> unary_expression : factor
+MOV TV53, 6
+
+
+Line No 51 -> term : unary_expression
+MOV TV53, 6
+
+
+Line No 51 -> simple_expression : term
+MOV TV53, 6
+
+
+Line No 51 -> rel_expression : simple_expression
+MOV TV53, 6
+
+
+Line No 51 -> logic_expression : rel_expression
+MOV TV53, 6
+
+
+Line No 51 -> expression : variable ASSIGNOP logic_expression
+MOV TV53, 6
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, TV53 
+MOV SI[BX], CX
+
+
+Line No 51 -> expression_statement : expression SEMICOLON
+MOV TV53, 6
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, TV53 
+MOV SI[BX], CX
+
+
+Line No 51 -> statement : expression_statement
+MOV TV53, 6
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, TV53 
+MOV SI[BX], CX
+
+
+Line No 51 -> statements : statements statement
+ 
+MOV TV17, 5
+ 
+MOV AX, TV17 
+MOV a4, AX 
+ 
+ 
+MOV TV18, 7
+ 
+MOV AX, TV18 
+MOV b4, AX 
+ 
+ 
+MOV AX, a4 
+MOV TV19, AX 
+ 
+PUSH TV19 
+ 
+MOV AX, b4 
+MOV TV20, AX 
+ 
+PUSH TV20 
+ 
+call g 
+MOV TV21, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+MOV AX, TV21 
+MOV x4, AX 
+ 
+ 
+MOV AX, x4 
+MOV TV22, AX 
+ 
+PUSH TV22 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV23, AX 
+ 
+MOV AX, b4 
+MOV TV24, AX 
+ 
+MOV BX, TV23 
+ADD BX, TV24 
+MOV TV25, BX 
+ 
+PUSH TV25 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV26, AX 
+ 
+MOV AX, b4 
+MOV TV27, AX 
+ 
+MOV BX, TV26 
+SUB BX, TV27 
+MOV TV28, BX 
+ 
+PUSH TV28 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV29, AX 
+ 
+MOV AX, b4 
+MOV TV30, AX 
+ 
+MOV AX, TV29 
+MUL TV30
+MOV TV31, AX 
+ 
+PUSH TV31 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV32, AX 
+ 
+MOV AX, b4 
+MOV TV33, AX 
+ 
+MOV AX, TV32 
+MOV BX, TV33 
+DIV BL
+XOR AH, AH 
+MOV TV34, AX 
+ 
+PUSH TV34 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV35, AX 
+ 
+MOV AX, b4 
+MOV TV36, AX 
+ 
+MOV AX, TV35 
+MOV BX, TV36 
+DIV BL
+MOV AL, AH 
+XOR AH, AH 
+MOV TV37, AX 
+ 
+PUSH TV37 
+call ASMOUT 
+ 
+ 
+MOV TV38, 0
+ 
+MOV AX, TV38 
+MOV b4, AX 
+ 
+ 
+MOV AX, a4 
+MOV TV39, AX 
+ 
+MOV AX, b4 
+MOV TV40, AX 
+ 
+MOV AX, TV39 
+CMP AX, 0 
+ JE LB0 
+MOV AX, TV40 
+CMP AX, 0 
+ JE LB0 
+MOV AX, 1 
+JMP LB2 
+LB0: 
+MOV AX, 0 
+LB2: 
+MOV TV41, AX 
+ 
+PUSH TV41 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV42, AX 
+ 
+MOV AX, b4 
+MOV TV43, AX 
+ 
+MOV AX, TV42 
+CMP AX, 0 
+ JNE LB4 
+MOV AX, TV43 
+CMP AX, 0 
+ JNE LB4 
+MOV AX, 0 
+JMP LB5 
+LB4: 
+MOV AX, 1 
+LB5: 
+MOV TV44, AX 
+ 
+PUSH TV44 
+call ASMOUT 
+ 
+ 
+ 
+ 
+MOV TV46, 4
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, TV46 
+MOV SI[BX], CX
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV48, CX
+ 
+PUSH TV48 
+ 
+call f 
+MOV TV49, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+PUSH TV49 
+call ASMOUT 
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV51, CX 
+INC CX 
+MOV SI[BX], CX 
+ 
+ 
+MOV TV53, 6
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, TV53 
+MOV SI[BX], CX
+ 
+
+
+Line No 53 -> factor : CONST_INT
+MOV TV54, 2
+
+
+Line No 53 -> unary_expression : factor
+MOV TV54, 2
+
+
+Line No 53 -> term : unary_expression
+MOV TV54, 2
+
+
+Line No 53 -> simple_expression : term
+MOV TV54, 2
+
+
+Line No 53 -> rel_expression : simple_expression
+MOV TV54, 2
+
+
+Line No 53 -> logic_expression : rel_expression
+MOV TV54, 2
+
+
+Line No 53 -> expression : logic_expression
+MOV TV54, 2
+
+
+Line No 53 -> variable : ID LTHIRD expression RTHIRD
+
+
+Line No 53 -> factor : variable
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV55, CX
+
+
+Line No 53 -> unary_expression : factor
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV55, CX
+
+
+Line No 53 -> term : unary_expression
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV55, CX
+
+
+Line No 53 -> factor : CONST_INT
+MOV TV56, 1
+
+
+Line No 53 -> unary_expression : factor
+MOV TV56, 1
+
+
+Line No 53 -> term : unary_expression
+MOV TV56, 1
+
+
+Line No 53 -> simple_expression : term
+MOV TV56, 1
+
+
+Line No 53 -> rel_expression : simple_expression
+MOV TV56, 1
+
+
+Line No 53 -> logic_expression : rel_expression
+MOV TV56, 1
+
+
+Line No 53 -> expression : logic_expression
+MOV TV56, 1
+
+
+Line No 53 -> variable : ID LTHIRD expression RTHIRD
+
+
+Line No 53 -> factor : variable
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, SI[BX] 
+MOV TV57, CX
+
+
+Line No 53 -> unary_expression : factor
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, SI[BX] 
+MOV TV57, CX
+
+
+Line No 53 -> term : term MULOP unary_expression
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV55, CX
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, SI[BX] 
+MOV TV57, CX
+ 
+MOV AX, TV55 
+MUL TV57
+MOV TV58, AX 
+
+
+Line No 53 -> simple_expression : term
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV55, CX
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, SI[BX] 
+MOV TV57, CX
+ 
+MOV AX, TV55 
+MUL TV57
+MOV TV58, AX 
+
+
+Line No 53 -> rel_expression : simple_expression
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV55, CX
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, SI[BX] 
+MOV TV57, CX
+ 
+MOV AX, TV55 
+MUL TV57
+MOV TV58, AX 
+
+
+Line No 53 -> logic_expression : rel_expression
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV55, CX
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, SI[BX] 
+MOV TV57, CX
+ 
+MOV AX, TV55 
+MUL TV57
+MOV TV58, AX 
+
+
+Line No 53 -> expression : logic_expression
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV55, CX
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, SI[BX] 
+MOV TV57, CX
+ 
+MOV AX, TV55 
+MUL TV57
+MOV TV58, AX 
+
+
+Line No 53 -> statement : PRINTLN LPAREN expression RPAREN SEMICOLON
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV55, CX
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, SI[BX] 
+MOV TV57, CX
+ 
+MOV AX, TV55 
+MUL TV57
+MOV TV58, AX 
+ 
+PUSH TV58 
+call ASMOUT 
+
+
+Line No 53 -> statements : statements statement
+ 
+MOV TV17, 5
+ 
+MOV AX, TV17 
+MOV a4, AX 
+ 
+ 
+MOV TV18, 7
+ 
+MOV AX, TV18 
+MOV b4, AX 
+ 
+ 
+MOV AX, a4 
+MOV TV19, AX 
+ 
+PUSH TV19 
+ 
+MOV AX, b4 
+MOV TV20, AX 
+ 
+PUSH TV20 
+ 
+call g 
+MOV TV21, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+MOV AX, TV21 
+MOV x4, AX 
+ 
+ 
+MOV AX, x4 
+MOV TV22, AX 
+ 
+PUSH TV22 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV23, AX 
+ 
+MOV AX, b4 
+MOV TV24, AX 
+ 
+MOV BX, TV23 
+ADD BX, TV24 
+MOV TV25, BX 
+ 
+PUSH TV25 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV26, AX 
+ 
+MOV AX, b4 
+MOV TV27, AX 
+ 
+MOV BX, TV26 
+SUB BX, TV27 
+MOV TV28, BX 
+ 
+PUSH TV28 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV29, AX 
+ 
+MOV AX, b4 
+MOV TV30, AX 
+ 
+MOV AX, TV29 
+MUL TV30
+MOV TV31, AX 
+ 
+PUSH TV31 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV32, AX 
+ 
+MOV AX, b4 
+MOV TV33, AX 
+ 
+MOV AX, TV32 
+MOV BX, TV33 
+DIV BL
+XOR AH, AH 
+MOV TV34, AX 
+ 
+PUSH TV34 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV35, AX 
+ 
+MOV AX, b4 
+MOV TV36, AX 
+ 
+MOV AX, TV35 
+MOV BX, TV36 
+DIV BL
+MOV AL, AH 
+XOR AH, AH 
+MOV TV37, AX 
+ 
+PUSH TV37 
+call ASMOUT 
+ 
+ 
+MOV TV38, 0
+ 
+MOV AX, TV38 
+MOV b4, AX 
+ 
+ 
+MOV AX, a4 
+MOV TV39, AX 
+ 
+MOV AX, b4 
+MOV TV40, AX 
+ 
+MOV AX, TV39 
+CMP AX, 0 
+ JE LB0 
+MOV AX, TV40 
+CMP AX, 0 
+ JE LB0 
+MOV AX, 1 
+JMP LB2 
+LB0: 
+MOV AX, 0 
+LB2: 
+MOV TV41, AX 
+ 
+PUSH TV41 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV42, AX 
+ 
+MOV AX, b4 
+MOV TV43, AX 
+ 
+MOV AX, TV42 
+CMP AX, 0 
+ JNE LB4 
+MOV AX, TV43 
+CMP AX, 0 
+ JNE LB4 
+MOV AX, 0 
+JMP LB5 
+LB4: 
+MOV AX, 1 
+LB5: 
+MOV TV44, AX 
+ 
+PUSH TV44 
+call ASMOUT 
+ 
+ 
+ 
+ 
+MOV TV46, 4
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, TV46 
+MOV SI[BX], CX
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV48, CX
+ 
+PUSH TV48 
+ 
+call f 
+MOV TV49, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+PUSH TV49 
+call ASMOUT 
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV51, CX 
+INC CX 
+MOV SI[BX], CX 
+ 
+ 
+MOV TV53, 6
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, TV53 
+MOV SI[BX], CX
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV55, CX
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, SI[BX] 
+MOV TV57, CX
+ 
+MOV AX, TV55 
+MUL TV57
+MOV TV58, AX 
+ 
+PUSH TV58 
+call ASMOUT 
+ 
+
+
+Line No 54 -> factor : CONST_INT
+MOV TV59, 2
+
+
+Line No 54 -> unary_expression : factor
+MOV TV59, 2
+
+
+Line No 54 -> term : unary_expression
+MOV TV59, 2
+
+
+Line No 54 -> simple_expression : term
+MOV TV59, 2
+
+
+Line No 54 -> rel_expression : simple_expression
+MOV TV59, 2
+
+
+Line No 54 -> logic_expression : rel_expression
+MOV TV59, 2
+
+
+Line No 54 -> expression : logic_expression
+MOV TV59, 2
+
+
+Line No 54 -> variable : ID LTHIRD expression RTHIRD
+
+
+Line No 54 -> factor : variable
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV60, CX
+
+
+Line No 54 -> unary_expression : factor
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV60, CX
+
+
+Line No 54 -> term : unary_expression
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV60, CX
+
+
+Line No 54 -> simple_expression : term
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV60, CX
+
+
+Line No 54 -> factor : CONST_INT
+MOV TV61, 1
+
+
+Line No 54 -> unary_expression : factor
+MOV TV61, 1
+
+
+Line No 54 -> term : unary_expression
+MOV TV61, 1
+
+
+Line No 54 -> simple_expression : term
+MOV TV61, 1
+
+
+Line No 54 -> rel_expression : simple_expression
+MOV TV61, 1
+
+
+Line No 54 -> logic_expression : rel_expression
+MOV TV61, 1
+
+
+Line No 54 -> expression : logic_expression
+MOV TV61, 1
+
+
+Line No 54 -> variable : ID LTHIRD expression RTHIRD
+
+
+Line No 54 -> factor : variable
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, SI[BX] 
+MOV TV62, CX
+
+
+Line No 54 -> unary_expression : factor
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, SI[BX] 
+MOV TV62, CX
+
+
+Line No 54 -> term : unary_expression
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, SI[BX] 
+MOV TV62, CX
+
+
+Line No 54 -> simple_expression : term
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, SI[BX] 
+MOV TV62, CX
+
+
+Line No 54 -> rel_expression : simple_expression RELOP simple_expression
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV60, CX
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, SI[BX] 
+MOV TV62, CX
+ 
+MOV AX, TV60 
+CMP AX, TV62 
+JG LB6 
+MOV AX, 0 
+JMP LB7
+LB6: 
+MOV AX, 1 
+LB7: 
+MOV TV63, AX 
+
+
+Line No 54 -> logic_expression : rel_expression
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV60, CX
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, SI[BX] 
+MOV TV62, CX
+ 
+MOV AX, TV60 
+CMP AX, TV62 
+JG LB6 
+MOV AX, 0 
+JMP LB7
+LB6: 
+MOV AX, 1 
+LB7: 
+MOV TV63, AX 
+
+
+Line No 54 -> expression : logic_expression
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV60, CX
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, SI[BX] 
+MOV TV62, CX
+ 
+MOV AX, TV60 
+CMP AX, TV62 
+JG LB6 
+MOV AX, 0 
+JMP LB7
+LB6: 
+MOV AX, 1 
+LB7: 
+MOV TV63, AX 
+
+
+Line No 54 -> factor : LPAREN expression RPAREN
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV60, CX
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, SI[BX] 
+MOV TV62, CX
+ 
+MOV AX, TV60 
+CMP AX, TV62 
+JG LB6 
+MOV AX, 0 
+JMP LB7
+LB6: 
+MOV AX, 1 
+LB7: 
+MOV TV63, AX 
+
+
+Line No 54 -> unary_expression : factor
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV60, CX
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, SI[BX] 
+MOV TV62, CX
+ 
+MOV AX, TV60 
+CMP AX, TV62 
+JG LB6 
+MOV AX, 0 
+JMP LB7
+LB6: 
+MOV AX, 1 
+LB7: 
+MOV TV63, AX 
+
+
+Line No 54 -> unary_expression : NOT unary_expression
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV60, CX
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, SI[BX] 
+MOV TV62, CX
+ 
+MOV AX, TV60 
+CMP AX, TV62 
+JG LB6 
+MOV AX, 0 
+JMP LB7
+LB6: 
+MOV AX, 1 
+LB7: 
+MOV TV63, AX 
+
+CMP TV63, 0 
+JNZ LB8 
+MOV TV64, 1 
+JMP LB9 
+LB8: 
+MOV TV64, 0 
+LB9: 
+
+
+Line No 54 -> term : unary_expression
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV60, CX
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, SI[BX] 
+MOV TV62, CX
+ 
+MOV AX, TV60 
+CMP AX, TV62 
+JG LB6 
+MOV AX, 0 
+JMP LB7
+LB6: 
+MOV AX, 1 
+LB7: 
+MOV TV63, AX 
+
+CMP TV63, 0 
+JNZ LB8 
+MOV TV64, 1 
+JMP LB9 
+LB8: 
+MOV TV64, 0 
+LB9: 
+
+
+Line No 54 -> simple_expression : term
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV60, CX
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, SI[BX] 
+MOV TV62, CX
+ 
+MOV AX, TV60 
+CMP AX, TV62 
+JG LB6 
+MOV AX, 0 
+JMP LB7
+LB6: 
+MOV AX, 1 
+LB7: 
+MOV TV63, AX 
+
+CMP TV63, 0 
+JNZ LB8 
+MOV TV64, 1 
+JMP LB9 
+LB8: 
+MOV TV64, 0 
+LB9: 
+
+
+Line No 54 -> rel_expression : simple_expression
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV60, CX
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, SI[BX] 
+MOV TV62, CX
+ 
+MOV AX, TV60 
+CMP AX, TV62 
+JG LB6 
+MOV AX, 0 
+JMP LB7
+LB6: 
+MOV AX, 1 
+LB7: 
+MOV TV63, AX 
+
+CMP TV63, 0 
+JNZ LB8 
+MOV TV64, 1 
+JMP LB9 
+LB8: 
+MOV TV64, 0 
+LB9: 
+
+
+Line No 54 -> logic_expression : rel_expression
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV60, CX
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, SI[BX] 
+MOV TV62, CX
+ 
+MOV AX, TV60 
+CMP AX, TV62 
+JG LB6 
+MOV AX, 0 
+JMP LB7
+LB6: 
+MOV AX, 1 
+LB7: 
+MOV TV63, AX 
+
+CMP TV63, 0 
+JNZ LB8 
+MOV TV64, 1 
+JMP LB9 
+LB8: 
+MOV TV64, 0 
+LB9: 
+
+
+Line No 54 -> expression : logic_expression
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV60, CX
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, SI[BX] 
+MOV TV62, CX
+ 
+MOV AX, TV60 
+CMP AX, TV62 
+JG LB6 
+MOV AX, 0 
+JMP LB7
+LB6: 
+MOV AX, 1 
+LB7: 
+MOV TV63, AX 
+
+CMP TV63, 0 
+JNZ LB8 
+MOV TV64, 1 
+JMP LB9 
+LB8: 
+MOV TV64, 0 
+LB9: 
+
+
+Line No 54 -> statement : PRINTLN LPAREN expression RPAREN SEMICOLON
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV60, CX
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, SI[BX] 
+MOV TV62, CX
+ 
+MOV AX, TV60 
+CMP AX, TV62 
+JG LB6 
+MOV AX, 0 
+JMP LB7
+LB6: 
+MOV AX, 1 
+LB7: 
+MOV TV63, AX 
+
+CMP TV63, 0 
+JNZ LB8 
+MOV TV64, 1 
+JMP LB9 
+LB8: 
+MOV TV64, 0 
+LB9: 
+ 
+PUSH TV64 
+call ASMOUT 
+
+
+Line No 54 -> statements : statements statement
+ 
+MOV TV17, 5
+ 
+MOV AX, TV17 
+MOV a4, AX 
+ 
+ 
+MOV TV18, 7
+ 
+MOV AX, TV18 
+MOV b4, AX 
+ 
+ 
+MOV AX, a4 
+MOV TV19, AX 
+ 
+PUSH TV19 
+ 
+MOV AX, b4 
+MOV TV20, AX 
+ 
+PUSH TV20 
+ 
+call g 
+MOV TV21, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+MOV AX, TV21 
+MOV x4, AX 
+ 
+ 
+MOV AX, x4 
+MOV TV22, AX 
+ 
+PUSH TV22 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV23, AX 
+ 
+MOV AX, b4 
+MOV TV24, AX 
+ 
+MOV BX, TV23 
+ADD BX, TV24 
+MOV TV25, BX 
+ 
+PUSH TV25 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV26, AX 
+ 
+MOV AX, b4 
+MOV TV27, AX 
+ 
+MOV BX, TV26 
+SUB BX, TV27 
+MOV TV28, BX 
+ 
+PUSH TV28 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV29, AX 
+ 
+MOV AX, b4 
+MOV TV30, AX 
+ 
+MOV AX, TV29 
+MUL TV30
+MOV TV31, AX 
+ 
+PUSH TV31 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV32, AX 
+ 
+MOV AX, b4 
+MOV TV33, AX 
+ 
+MOV AX, TV32 
+MOV BX, TV33 
+DIV BL
+XOR AH, AH 
+MOV TV34, AX 
+ 
+PUSH TV34 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV35, AX 
+ 
+MOV AX, b4 
+MOV TV36, AX 
+ 
+MOV AX, TV35 
+MOV BX, TV36 
+DIV BL
+MOV AL, AH 
+XOR AH, AH 
+MOV TV37, AX 
+ 
+PUSH TV37 
+call ASMOUT 
+ 
+ 
+MOV TV38, 0
+ 
+MOV AX, TV38 
+MOV b4, AX 
+ 
+ 
+MOV AX, a4 
+MOV TV39, AX 
+ 
+MOV AX, b4 
+MOV TV40, AX 
+ 
+MOV AX, TV39 
+CMP AX, 0 
+ JE LB0 
+MOV AX, TV40 
+CMP AX, 0 
+ JE LB0 
+MOV AX, 1 
+JMP LB2 
+LB0: 
+MOV AX, 0 
+LB2: 
+MOV TV41, AX 
+ 
+PUSH TV41 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV42, AX 
+ 
+MOV AX, b4 
+MOV TV43, AX 
+ 
+MOV AX, TV42 
+CMP AX, 0 
+ JNE LB4 
+MOV AX, TV43 
+CMP AX, 0 
+ JNE LB4 
+MOV AX, 0 
+JMP LB5 
+LB4: 
+MOV AX, 1 
+LB5: 
+MOV TV44, AX 
+ 
+PUSH TV44 
+call ASMOUT 
+ 
+ 
+ 
+ 
+MOV TV46, 4
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, TV46 
+MOV SI[BX], CX
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV48, CX
+ 
+PUSH TV48 
+ 
+call f 
+MOV TV49, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+PUSH TV49 
+call ASMOUT 
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV51, CX 
+INC CX 
+MOV SI[BX], CX 
+ 
+ 
+MOV TV53, 6
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, TV53 
+MOV SI[BX], CX
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV55, CX
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, SI[BX] 
+MOV TV57, CX
+ 
+MOV AX, TV55 
+MUL TV57
+MOV TV58, AX 
+ 
+PUSH TV58 
+call ASMOUT 
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV60, CX
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, SI[BX] 
+MOV TV62, CX
+ 
+MOV AX, TV60 
+CMP AX, TV62 
+JG LB6 
+MOV AX, 0 
+JMP LB7
+LB6: 
+MOV AX, 1 
+LB7: 
+MOV TV63, AX 
+
+CMP TV63, 0 
+JNZ LB8 
+MOV TV64, 1 
+JMP LB9 
+LB8: 
+MOV TV64, 0 
+LB9: 
+ 
+PUSH TV64 
+call ASMOUT 
+ 
+
+
+Line No 56 -> factor : CONST_INT
+MOV TV65, 2
+
+
+Line No 56 -> unary_expression : factor
+MOV TV65, 2
+
+
+Line No 56 -> term : unary_expression
+MOV TV65, 2
+
+
+Line No 56 -> simple_expression : term
+MOV TV65, 2
+
+
+Line No 56 -> rel_expression : simple_expression
+MOV TV65, 2
+
+
+Line No 56 -> logic_expression : rel_expression
+MOV TV65, 2
+
+
+Line No 56 -> expression : logic_expression
+MOV TV65, 2
+
+
+Line No 56 -> variable : ID LTHIRD expression RTHIRD
+
+
+Line No 56 -> factor : variable
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV66, CX
+
+
+Line No 56 -> unary_expression : factor
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV66, CX
+
+
+Line No 56 -> unary_expression : NOT unary_expression
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV66, CX
+
+CMP TV66, 0 
+JNZ LB10 
+MOV TV67, 1 
+JMP LB11 
+LB10: 
+MOV TV67, 0 
+LB11: 
+
+
+Line No 56 -> term : unary_expression
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV66, CX
+
+CMP TV66, 0 
+JNZ LB10 
+MOV TV67, 1 
+JMP LB11 
+LB10: 
+MOV TV67, 0 
+LB11: 
+
+
+Line No 56 -> simple_expression : term
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV66, CX
+
+CMP TV66, 0 
+JNZ LB10 
+MOV TV67, 1 
+JMP LB11 
+LB10: 
+MOV TV67, 0 
+LB11: 
+
+
+Line No 56 -> rel_expression : simple_expression
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV66, CX
+
+CMP TV66, 0 
+JNZ LB10 
+MOV TV67, 1 
+JMP LB11 
+LB10: 
+MOV TV67, 0 
+LB11: 
+
+
+Line No 56 -> logic_expression : rel_expression
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV66, CX
+
+CMP TV66, 0 
+JNZ LB10 
+MOV TV67, 1 
+JMP LB11 
+LB10: 
+MOV TV67, 0 
+LB11: 
+
+
+Line No 56 -> expression : logic_expression
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV66, CX
+
+CMP TV66, 0 
+JNZ LB10 
+MOV TV67, 1 
+JMP LB11 
+LB10: 
+MOV TV67, 0 
+LB11: 
+
+
+Line No 56 -> statement : PRINTLN LPAREN expression RPAREN SEMICOLON
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV66, CX
+
+CMP TV66, 0 
+JNZ LB10 
+MOV TV67, 1 
+JMP LB11 
+LB10: 
+MOV TV67, 0 
+LB11: 
+ 
+PUSH TV67 
+call ASMOUT 
+
+
+Line No 56 -> statements : statements statement
+ 
+MOV TV17, 5
+ 
+MOV AX, TV17 
+MOV a4, AX 
+ 
+ 
+MOV TV18, 7
+ 
+MOV AX, TV18 
+MOV b4, AX 
+ 
+ 
+MOV AX, a4 
+MOV TV19, AX 
+ 
+PUSH TV19 
+ 
+MOV AX, b4 
+MOV TV20, AX 
+ 
+PUSH TV20 
+ 
+call g 
+MOV TV21, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+MOV AX, TV21 
+MOV x4, AX 
+ 
+ 
+MOV AX, x4 
+MOV TV22, AX 
+ 
+PUSH TV22 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV23, AX 
+ 
+MOV AX, b4 
+MOV TV24, AX 
+ 
+MOV BX, TV23 
+ADD BX, TV24 
+MOV TV25, BX 
+ 
+PUSH TV25 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV26, AX 
+ 
+MOV AX, b4 
+MOV TV27, AX 
+ 
+MOV BX, TV26 
+SUB BX, TV27 
+MOV TV28, BX 
+ 
+PUSH TV28 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV29, AX 
+ 
+MOV AX, b4 
+MOV TV30, AX 
+ 
+MOV AX, TV29 
+MUL TV30
+MOV TV31, AX 
+ 
+PUSH TV31 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV32, AX 
+ 
+MOV AX, b4 
+MOV TV33, AX 
+ 
+MOV AX, TV32 
+MOV BX, TV33 
+DIV BL
+XOR AH, AH 
+MOV TV34, AX 
+ 
+PUSH TV34 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV35, AX 
+ 
+MOV AX, b4 
+MOV TV36, AX 
+ 
+MOV AX, TV35 
+MOV BX, TV36 
+DIV BL
+MOV AL, AH 
+XOR AH, AH 
+MOV TV37, AX 
+ 
+PUSH TV37 
+call ASMOUT 
+ 
+ 
+MOV TV38, 0
+ 
+MOV AX, TV38 
+MOV b4, AX 
+ 
+ 
+MOV AX, a4 
+MOV TV39, AX 
+ 
+MOV AX, b4 
+MOV TV40, AX 
+ 
+MOV AX, TV39 
+CMP AX, 0 
+ JE LB0 
+MOV AX, TV40 
+CMP AX, 0 
+ JE LB0 
+MOV AX, 1 
+JMP LB2 
+LB0: 
+MOV AX, 0 
+LB2: 
+MOV TV41, AX 
+ 
+PUSH TV41 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV42, AX 
+ 
+MOV AX, b4 
+MOV TV43, AX 
+ 
+MOV AX, TV42 
+CMP AX, 0 
+ JNE LB4 
+MOV AX, TV43 
+CMP AX, 0 
+ JNE LB4 
+MOV AX, 0 
+JMP LB5 
+LB4: 
+MOV AX, 1 
+LB5: 
+MOV TV44, AX 
+ 
+PUSH TV44 
+call ASMOUT 
+ 
+ 
+ 
+ 
+MOV TV46, 4
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, TV46 
+MOV SI[BX], CX
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV48, CX
+ 
+PUSH TV48 
+ 
+call f 
+MOV TV49, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+PUSH TV49 
+call ASMOUT 
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV51, CX 
+INC CX 
+MOV SI[BX], CX 
+ 
+ 
+MOV TV53, 6
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, TV53 
+MOV SI[BX], CX
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV55, CX
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, SI[BX] 
+MOV TV57, CX
+ 
+MOV AX, TV55 
+MUL TV57
+MOV TV58, AX 
+ 
+PUSH TV58 
+call ASMOUT 
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV60, CX
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, SI[BX] 
+MOV TV62, CX
+ 
+MOV AX, TV60 
+CMP AX, TV62 
+JG LB6 
+MOV AX, 0 
+JMP LB7
+LB6: 
+MOV AX, 1 
+LB7: 
+MOV TV63, AX 
+
+CMP TV63, 0 
+JNZ LB8 
+MOV TV64, 1 
+JMP LB9 
+LB8: 
+MOV TV64, 0 
+LB9: 
+ 
+PUSH TV64 
+call ASMOUT 
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV66, CX
+
+CMP TV66, 0 
+JNZ LB10 
+MOV TV67, 1 
+JMP LB11 
+LB10: 
+MOV TV67, 0 
+LB11: 
+ 
+PUSH TV67 
+call ASMOUT 
+ 
+
+
+Line No 58 -> variable : ID
+
+
+Line No 58 -> factor : CONST_INT
+MOV TV68, 0
+
+
+Line No 58 -> unary_expression : factor
+MOV TV68, 0
+
+
+Line No 58 -> term : unary_expression
+MOV TV68, 0
+
+
+Line No 58 -> simple_expression : term
+MOV TV68, 0
+
+
+Line No 58 -> rel_expression : simple_expression
+MOV TV68, 0
+
+
+Line No 58 -> logic_expression : rel_expression
+MOV TV68, 0
+
+
+Line No 58 -> expression : variable ASSIGNOP logic_expression
+MOV TV68, 0
+ 
+MOV AX, TV68 
+MOV b4, AX 
+
+
+Line No 58 -> expression_statement : expression SEMICOLON
+MOV TV68, 0
+ 
+MOV AX, TV68 
+MOV b4, AX 
+
+
+Line No 58 -> variable : ID
+
+
+Line No 58 -> factor : variable
+MOV AX, b4 
+MOV TV69, AX 
+
+
+Line No 58 -> unary_expression : factor
+MOV AX, b4 
+MOV TV69, AX 
+
+
+Line No 58 -> term : unary_expression
+MOV AX, b4 
+MOV TV69, AX 
+
+
+Line No 58 -> simple_expression : term
+MOV AX, b4 
+MOV TV69, AX 
+
+
+Line No 58 -> factor : CONST_INT
+MOV TV70, 2
+
+
+Line No 58 -> unary_expression : factor
+MOV TV70, 2
+
+
+Line No 58 -> term : unary_expression
+MOV TV70, 2
+
+
+Line No 58 -> simple_expression : term
+MOV TV70, 2
+
+
+Line No 58 -> rel_expression : simple_expression
+MOV TV70, 2
+
+
+Line No 58 -> logic_expression : rel_expression
+MOV TV70, 2
+
+
+Line No 58 -> expression : logic_expression
+MOV TV70, 2
+
+
+Line No 58 -> variable : ID LTHIRD expression RTHIRD
+
+
+Line No 58 -> factor : variable
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV71, CX
+
+
+Line No 58 -> unary_expression : factor
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV71, CX
+
+
+Line No 58 -> term : unary_expression
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV71, CX
+
+
+Line No 58 -> simple_expression : term
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV71, CX
+
+
+Line No 58 -> rel_expression : simple_expression RELOP simple_expression
+MOV AX, b4 
+MOV TV69, AX 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV71, CX
+ 
+MOV AX, TV69 
+CMP AX, TV71 
+JLE LB12 
+MOV AX, 0 
+JMP LB13
+LB12: 
+MOV AX, 1 
+LB13: 
+MOV TV72, AX 
+
+
+Line No 58 -> logic_expression : rel_expression
+MOV AX, b4 
+MOV TV69, AX 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV71, CX
+ 
+MOV AX, TV69 
+CMP AX, TV71 
+JLE LB12 
+MOV AX, 0 
+JMP LB13
+LB12: 
+MOV AX, 1 
+LB13: 
+MOV TV72, AX 
+
+
+Line No 58 -> expression : logic_expression
+MOV AX, b4 
+MOV TV69, AX 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV71, CX
+ 
+MOV AX, TV69 
+CMP AX, TV71 
+JLE LB12 
+MOV AX, 0 
+JMP LB13
+LB12: 
+MOV AX, 1 
+LB13: 
+MOV TV72, AX 
+
+
+Line No 58 -> expression_statement : expression SEMICOLON
+MOV AX, b4 
+MOV TV69, AX 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV71, CX
+ 
+MOV AX, TV69 
+CMP AX, TV71 
+JLE LB12 
+MOV AX, 0 
+JMP LB13
+LB12: 
+MOV AX, 1 
+LB13: 
+MOV TV72, AX 
+
+
+Line No 58 -> variable : ID
+
+
+Line No 58 -> factor : variable INCOP
+MOV AX, b4 
+MOV TV73, AX 
+INC b4 
+
+
+Line No 58 -> unary_expression : factor
+MOV AX, b4 
+MOV TV73, AX 
+INC b4 
+
+
+Line No 58 -> term : unary_expression
+MOV AX, b4 
+MOV TV73, AX 
+INC b4 
+
+
+Line No 58 -> simple_expression : term
+MOV AX, b4 
+MOV TV73, AX 
+INC b4 
+
+
+Line No 58 -> rel_expression : simple_expression
+MOV AX, b4 
+MOV TV73, AX 
+INC b4 
+
+
+Line No 58 -> logic_expression : rel_expression
+MOV AX, b4 
+MOV TV73, AX 
+INC b4 
+
+
+Line No 58 -> expression : logic_expression
+MOV AX, b4 
+MOV TV73, AX 
+INC b4 
+
+
+Line No 59 -> variable : ID
+
+
+Line No 59 -> factor : variable
+MOV AX, b4 
+MOV TV74, AX 
+
+
+Line No 59 -> unary_expression : factor
+MOV AX, b4 
+MOV TV74, AX 
+
+
+Line No 59 -> term : unary_expression
+MOV AX, b4 
+MOV TV74, AX 
+
+
+Line No 59 -> simple_expression : term
+MOV AX, b4 
+MOV TV74, AX 
+
+
+Line No 59 -> rel_expression : simple_expression
+MOV AX, b4 
+MOV TV74, AX 
+
+
+Line No 59 -> logic_expression : rel_expression
+MOV AX, b4 
+MOV TV74, AX 
+
+
+Line No 59 -> expression : logic_expression
+MOV AX, b4 
+MOV TV74, AX 
+
+
+Line No 59 -> statement : PRINTLN LPAREN expression RPAREN SEMICOLON
+MOV AX, b4 
+MOV TV74, AX 
+ 
+PUSH TV74 
+call ASMOUT 
+
+
+Line No 59 -> statement : FOR LPAREN expression_statement expression_statement expression RPAREN statement
+MOV TV68, 0
+ 
+MOV AX, TV68 
+MOV b4, AX 
+ 
+LB14: 
+MOV AX, b4 
+MOV TV69, AX 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV71, CX
+ 
+MOV AX, TV69 
+CMP AX, TV71 
+JLE LB12 
+MOV AX, 0 
+JMP LB13
+LB12: 
+MOV AX, 1 
+LB13: 
+MOV TV72, AX 
+ 
+CMP TV72, 0 
+JZ LB15 
+MOV AX, b4 
+MOV TV74, AX 
+ 
+PUSH TV74 
+call ASMOUT 
+ 
+MOV AX, b4 
+MOV TV73, AX 
+INC b4 
+ 
+JMP LB14 
+LB15: 
+
+
+Line No 59 -> statements : statements statement
+ 
+MOV TV17, 5
+ 
+MOV AX, TV17 
+MOV a4, AX 
+ 
+ 
+MOV TV18, 7
+ 
+MOV AX, TV18 
+MOV b4, AX 
+ 
+ 
+MOV AX, a4 
+MOV TV19, AX 
+ 
+PUSH TV19 
+ 
+MOV AX, b4 
+MOV TV20, AX 
+ 
+PUSH TV20 
+ 
+call g 
+MOV TV21, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+MOV AX, TV21 
+MOV x4, AX 
+ 
+ 
+MOV AX, x4 
+MOV TV22, AX 
+ 
+PUSH TV22 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV23, AX 
+ 
+MOV AX, b4 
+MOV TV24, AX 
+ 
+MOV BX, TV23 
+ADD BX, TV24 
+MOV TV25, BX 
+ 
+PUSH TV25 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV26, AX 
+ 
+MOV AX, b4 
+MOV TV27, AX 
+ 
+MOV BX, TV26 
+SUB BX, TV27 
+MOV TV28, BX 
+ 
+PUSH TV28 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV29, AX 
+ 
+MOV AX, b4 
+MOV TV30, AX 
+ 
+MOV AX, TV29 
+MUL TV30
+MOV TV31, AX 
+ 
+PUSH TV31 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV32, AX 
+ 
+MOV AX, b4 
+MOV TV33, AX 
+ 
+MOV AX, TV32 
+MOV BX, TV33 
+DIV BL
+XOR AH, AH 
+MOV TV34, AX 
+ 
+PUSH TV34 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV35, AX 
+ 
+MOV AX, b4 
+MOV TV36, AX 
+ 
+MOV AX, TV35 
+MOV BX, TV36 
+DIV BL
+MOV AL, AH 
+XOR AH, AH 
+MOV TV37, AX 
+ 
+PUSH TV37 
+call ASMOUT 
+ 
+ 
+MOV TV38, 0
+ 
+MOV AX, TV38 
+MOV b4, AX 
+ 
+ 
+MOV AX, a4 
+MOV TV39, AX 
+ 
+MOV AX, b4 
+MOV TV40, AX 
+ 
+MOV AX, TV39 
+CMP AX, 0 
+ JE LB0 
+MOV AX, TV40 
+CMP AX, 0 
+ JE LB0 
+MOV AX, 1 
+JMP LB2 
+LB0: 
+MOV AX, 0 
+LB2: 
+MOV TV41, AX 
+ 
+PUSH TV41 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV42, AX 
+ 
+MOV AX, b4 
+MOV TV43, AX 
+ 
+MOV AX, TV42 
+CMP AX, 0 
+ JNE LB4 
+MOV AX, TV43 
+CMP AX, 0 
+ JNE LB4 
+MOV AX, 0 
+JMP LB5 
+LB4: 
+MOV AX, 1 
+LB5: 
+MOV TV44, AX 
+ 
+PUSH TV44 
+call ASMOUT 
+ 
+ 
+ 
+ 
+MOV TV46, 4
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, TV46 
+MOV SI[BX], CX
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV48, CX
+ 
+PUSH TV48 
+ 
+call f 
+MOV TV49, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+PUSH TV49 
+call ASMOUT 
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV51, CX 
+INC CX 
+MOV SI[BX], CX 
+ 
+ 
+MOV TV53, 6
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, TV53 
+MOV SI[BX], CX
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV55, CX
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, SI[BX] 
+MOV TV57, CX
+ 
+MOV AX, TV55 
+MUL TV57
+MOV TV58, AX 
+ 
+PUSH TV58 
+call ASMOUT 
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV60, CX
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, SI[BX] 
+MOV TV62, CX
+ 
+MOV AX, TV60 
+CMP AX, TV62 
+JG LB6 
+MOV AX, 0 
+JMP LB7
+LB6: 
+MOV AX, 1 
+LB7: 
+MOV TV63, AX 
+
+CMP TV63, 0 
+JNZ LB8 
+MOV TV64, 1 
+JMP LB9 
+LB8: 
+MOV TV64, 0 
+LB9: 
+ 
+PUSH TV64 
+call ASMOUT 
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV66, CX
+
+CMP TV66, 0 
+JNZ LB10 
+MOV TV67, 1 
+JMP LB11 
+LB10: 
+MOV TV67, 0 
+LB11: 
+ 
+PUSH TV67 
+call ASMOUT 
+ 
+ 
+MOV TV68, 0
+ 
+MOV AX, TV68 
+MOV b4, AX 
+ 
+LB14: 
+MOV AX, b4 
+MOV TV69, AX 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV71, CX
+ 
+MOV AX, TV69 
+CMP AX, TV71 
+JLE LB12 
+MOV AX, 0 
+JMP LB13
+LB12: 
+MOV AX, 1 
+LB13: 
+MOV TV72, AX 
+ 
+CMP TV72, 0 
+JZ LB15 
+MOV AX, b4 
+MOV TV74, AX 
+ 
+PUSH TV74 
+call ASMOUT 
+ 
+MOV AX, b4 
+MOV TV73, AX 
+INC b4 
+ 
+JMP LB14 
+LB15: 
+ 
+
+
+Line No 62 -> argument_list : <empty>
+
+
+Line No 62 -> factor : ID LPAREN argument_list RPAREN
+ 
+call h 
+MOV TV75, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX
+
+Line No 62 -> unary_expression : factor
+ 
+call h 
+MOV TV75, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX
+
+Line No 62 -> term : unary_expression
+ 
+call h 
+MOV TV75, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX
+
+Line No 62 -> simple_expression : term
+ 
+call h 
+MOV TV75, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX
+
+Line No 62 -> rel_expression : simple_expression
+ 
+call h 
+MOV TV75, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX
+
+Line No 62 -> logic_expression : rel_expression
+ 
+call h 
+MOV TV75, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX
+
+Line No 62 -> expression : logic_expression
+ 
+call h 
+MOV TV75, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX
+
+Line No 62 -> expression_statement : expression SEMICOLON
+ 
+call h 
+MOV TV75, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX
+
+Line No 62 -> statement : expression_statement
+ 
+call h 
+MOV TV75, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX
+
+Line No 62 -> statements : statements statement
+ 
+MOV TV17, 5
+ 
+MOV AX, TV17 
+MOV a4, AX 
+ 
+ 
+MOV TV18, 7
+ 
+MOV AX, TV18 
+MOV b4, AX 
+ 
+ 
+MOV AX, a4 
+MOV TV19, AX 
+ 
+PUSH TV19 
+ 
+MOV AX, b4 
+MOV TV20, AX 
+ 
+PUSH TV20 
+ 
+call g 
+MOV TV21, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+MOV AX, TV21 
+MOV x4, AX 
+ 
+ 
+MOV AX, x4 
+MOV TV22, AX 
+ 
+PUSH TV22 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV23, AX 
+ 
+MOV AX, b4 
+MOV TV24, AX 
+ 
+MOV BX, TV23 
+ADD BX, TV24 
+MOV TV25, BX 
+ 
+PUSH TV25 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV26, AX 
+ 
+MOV AX, b4 
+MOV TV27, AX 
+ 
+MOV BX, TV26 
+SUB BX, TV27 
+MOV TV28, BX 
+ 
+PUSH TV28 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV29, AX 
+ 
+MOV AX, b4 
+MOV TV30, AX 
+ 
+MOV AX, TV29 
+MUL TV30
+MOV TV31, AX 
+ 
+PUSH TV31 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV32, AX 
+ 
+MOV AX, b4 
+MOV TV33, AX 
+ 
+MOV AX, TV32 
+MOV BX, TV33 
+DIV BL
+XOR AH, AH 
+MOV TV34, AX 
+ 
+PUSH TV34 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV35, AX 
+ 
+MOV AX, b4 
+MOV TV36, AX 
+ 
+MOV AX, TV35 
+MOV BX, TV36 
+DIV BL
+MOV AL, AH 
+XOR AH, AH 
+MOV TV37, AX 
+ 
+PUSH TV37 
+call ASMOUT 
+ 
+ 
+MOV TV38, 0
+ 
+MOV AX, TV38 
+MOV b4, AX 
+ 
+ 
+MOV AX, a4 
+MOV TV39, AX 
+ 
+MOV AX, b4 
+MOV TV40, AX 
+ 
+MOV AX, TV39 
+CMP AX, 0 
+ JE LB0 
+MOV AX, TV40 
+CMP AX, 0 
+ JE LB0 
+MOV AX, 1 
+JMP LB2 
+LB0: 
+MOV AX, 0 
+LB2: 
+MOV TV41, AX 
+ 
+PUSH TV41 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV42, AX 
+ 
+MOV AX, b4 
+MOV TV43, AX 
+ 
+MOV AX, TV42 
+CMP AX, 0 
+ JNE LB4 
+MOV AX, TV43 
+CMP AX, 0 
+ JNE LB4 
+MOV AX, 0 
+JMP LB5 
+LB4: 
+MOV AX, 1 
+LB5: 
+MOV TV44, AX 
+ 
+PUSH TV44 
+call ASMOUT 
+ 
+ 
+ 
+ 
+MOV TV46, 4
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, TV46 
+MOV SI[BX], CX
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV48, CX
+ 
+PUSH TV48 
+ 
+call f 
+MOV TV49, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+PUSH TV49 
+call ASMOUT 
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV51, CX 
+INC CX 
+MOV SI[BX], CX 
+ 
+ 
+MOV TV53, 6
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, TV53 
+MOV SI[BX], CX
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV55, CX
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, SI[BX] 
+MOV TV57, CX
+ 
+MOV AX, TV55 
+MUL TV57
+MOV TV58, AX 
+ 
+PUSH TV58 
+call ASMOUT 
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV60, CX
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, SI[BX] 
+MOV TV62, CX
+ 
+MOV AX, TV60 
+CMP AX, TV62 
+JG LB6 
+MOV AX, 0 
+JMP LB7
+LB6: 
+MOV AX, 1 
+LB7: 
+MOV TV63, AX 
+
+CMP TV63, 0 
+JNZ LB8 
+MOV TV64, 1 
+JMP LB9 
+LB8: 
+MOV TV64, 0 
+LB9: 
+ 
+PUSH TV64 
+call ASMOUT 
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV66, CX
+
+CMP TV66, 0 
+JNZ LB10 
+MOV TV67, 1 
+JMP LB11 
+LB10: 
+MOV TV67, 0 
+LB11: 
+ 
+PUSH TV67 
+call ASMOUT 
+ 
+ 
+MOV TV68, 0
+ 
+MOV AX, TV68 
+MOV b4, AX 
+ 
+LB14: 
+MOV AX, b4 
+MOV TV69, AX 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV71, CX
+ 
+MOV AX, TV69 
+CMP AX, TV71 
+JLE LB12 
+MOV AX, 0 
+JMP LB13
+LB12: 
+MOV AX, 1 
+LB13: 
+MOV TV72, AX 
+ 
+CMP TV72, 0 
+JZ LB15 
+MOV AX, b4 
+MOV TV74, AX 
+ 
+PUSH TV74 
+call ASMOUT 
+ 
+MOV AX, b4 
+MOV TV73, AX 
+INC b4 
+ 
+JMP LB14 
+LB15: 
+ 
+ 
+ 
+call h 
+MOV TV75, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+
+
+Line No 64 -> variable : ID
+
+
+Line No 64 -> factor : CONST_INT
+MOV TV76, 0
+
+
+Line No 64 -> unary_expression : factor
+MOV TV76, 0
+
+
+Line No 64 -> term : unary_expression
+MOV TV76, 0
+
+
+Line No 64 -> simple_expression : term
+MOV TV76, 0
+
+
+Line No 64 -> rel_expression : simple_expression
+MOV TV76, 0
+
+
+Line No 64 -> logic_expression : rel_expression
+MOV TV76, 0
+
+
+Line No 64 -> expression : variable ASSIGNOP logic_expression
+MOV TV76, 0
+ 
+MOV AX, TV76 
+MOV b4, AX 
+
+
+Line No 64 -> expression_statement : expression SEMICOLON
+MOV TV76, 0
+ 
+MOV AX, TV76 
+MOV b4, AX 
+
+
+Line No 64 -> statement : expression_statement
+MOV TV76, 0
+ 
+MOV AX, TV76 
+MOV b4, AX 
+
+
+Line No 64 -> statements : statements statement
+ 
+MOV TV17, 5
+ 
+MOV AX, TV17 
+MOV a4, AX 
+ 
+ 
+MOV TV18, 7
+ 
+MOV AX, TV18 
+MOV b4, AX 
+ 
+ 
+MOV AX, a4 
+MOV TV19, AX 
+ 
+PUSH TV19 
+ 
+MOV AX, b4 
+MOV TV20, AX 
+ 
+PUSH TV20 
+ 
+call g 
+MOV TV21, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+MOV AX, TV21 
+MOV x4, AX 
+ 
+ 
+MOV AX, x4 
+MOV TV22, AX 
+ 
+PUSH TV22 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV23, AX 
+ 
+MOV AX, b4 
+MOV TV24, AX 
+ 
+MOV BX, TV23 
+ADD BX, TV24 
+MOV TV25, BX 
+ 
+PUSH TV25 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV26, AX 
+ 
+MOV AX, b4 
+MOV TV27, AX 
+ 
+MOV BX, TV26 
+SUB BX, TV27 
+MOV TV28, BX 
+ 
+PUSH TV28 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV29, AX 
+ 
+MOV AX, b4 
+MOV TV30, AX 
+ 
+MOV AX, TV29 
+MUL TV30
+MOV TV31, AX 
+ 
+PUSH TV31 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV32, AX 
+ 
+MOV AX, b4 
+MOV TV33, AX 
+ 
+MOV AX, TV32 
+MOV BX, TV33 
+DIV BL
+XOR AH, AH 
+MOV TV34, AX 
+ 
+PUSH TV34 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV35, AX 
+ 
+MOV AX, b4 
+MOV TV36, AX 
+ 
+MOV AX, TV35 
+MOV BX, TV36 
+DIV BL
+MOV AL, AH 
+XOR AH, AH 
+MOV TV37, AX 
+ 
+PUSH TV37 
+call ASMOUT 
+ 
+ 
+MOV TV38, 0
+ 
+MOV AX, TV38 
+MOV b4, AX 
+ 
+ 
+MOV AX, a4 
+MOV TV39, AX 
+ 
+MOV AX, b4 
+MOV TV40, AX 
+ 
+MOV AX, TV39 
+CMP AX, 0 
+ JE LB0 
+MOV AX, TV40 
+CMP AX, 0 
+ JE LB0 
+MOV AX, 1 
+JMP LB2 
+LB0: 
+MOV AX, 0 
+LB2: 
+MOV TV41, AX 
+ 
+PUSH TV41 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV42, AX 
+ 
+MOV AX, b4 
+MOV TV43, AX 
+ 
+MOV AX, TV42 
+CMP AX, 0 
+ JNE LB4 
+MOV AX, TV43 
+CMP AX, 0 
+ JNE LB4 
+MOV AX, 0 
+JMP LB5 
+LB4: 
+MOV AX, 1 
+LB5: 
+MOV TV44, AX 
+ 
+PUSH TV44 
+call ASMOUT 
+ 
+ 
+ 
+ 
+MOV TV46, 4
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, TV46 
+MOV SI[BX], CX
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV48, CX
+ 
+PUSH TV48 
+ 
+call f 
+MOV TV49, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+PUSH TV49 
+call ASMOUT 
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV51, CX 
+INC CX 
+MOV SI[BX], CX 
+ 
+ 
+MOV TV53, 6
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, TV53 
+MOV SI[BX], CX
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV55, CX
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, SI[BX] 
+MOV TV57, CX
+ 
+MOV AX, TV55 
+MUL TV57
+MOV TV58, AX 
+ 
+PUSH TV58 
+call ASMOUT 
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV60, CX
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, SI[BX] 
+MOV TV62, CX
+ 
+MOV AX, TV60 
+CMP AX, TV62 
+JG LB6 
+MOV AX, 0 
+JMP LB7
+LB6: 
+MOV AX, 1 
+LB7: 
+MOV TV63, AX 
+
+CMP TV63, 0 
+JNZ LB8 
+MOV TV64, 1 
+JMP LB9 
+LB8: 
+MOV TV64, 0 
+LB9: 
+ 
+PUSH TV64 
+call ASMOUT 
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV66, CX
+
+CMP TV66, 0 
+JNZ LB10 
+MOV TV67, 1 
+JMP LB11 
+LB10: 
+MOV TV67, 0 
+LB11: 
+ 
+PUSH TV67 
+call ASMOUT 
+ 
+ 
+MOV TV68, 0
+ 
+MOV AX, TV68 
+MOV b4, AX 
+ 
+LB14: 
+MOV AX, b4 
+MOV TV69, AX 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV71, CX
+ 
+MOV AX, TV69 
+CMP AX, TV71 
+JLE LB12 
+MOV AX, 0 
+JMP LB13
+LB12: 
+MOV AX, 1 
+LB13: 
+MOV TV72, AX 
+ 
+CMP TV72, 0 
+JZ LB15 
+MOV AX, b4 
+MOV TV74, AX 
+ 
+PUSH TV74 
+call ASMOUT 
+ 
+MOV AX, b4 
+MOV TV73, AX 
+INC b4 
+ 
+JMP LB14 
+LB15: 
+ 
+ 
+ 
+call h 
+MOV TV75, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+ 
+MOV TV76, 0
+ 
+MOV AX, TV76 
+MOV b4, AX 
+ 
+
+
+Line No 65 -> variable : ID
+
+
+Line No 65 -> factor : variable
+MOV AX, b4 
+MOV TV77, AX 
+
+
+Line No 65 -> unary_expression : factor
+MOV AX, b4 
+MOV TV77, AX 
+
+
+Line No 65 -> term : unary_expression
+MOV AX, b4 
+MOV TV77, AX 
+
+
+Line No 65 -> simple_expression : term
+MOV AX, b4 
+MOV TV77, AX 
+
+
+Line No 65 -> factor : CONST_INT
+MOV TV78, 2
+
+
+Line No 65 -> unary_expression : factor
+MOV TV78, 2
+
+
+Line No 65 -> term : unary_expression
+MOV TV78, 2
+
+
+Line No 65 -> simple_expression : term
+MOV TV78, 2
+
+
+Line No 65 -> rel_expression : simple_expression
+MOV TV78, 2
+
+
+Line No 65 -> logic_expression : rel_expression
+MOV TV78, 2
+
+
+Line No 65 -> expression : logic_expression
+MOV TV78, 2
+
+
+Line No 65 -> variable : ID LTHIRD expression RTHIRD
+
+
+Line No 65 -> factor : variable
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV79, CX
+
+
+Line No 65 -> unary_expression : factor
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV79, CX
+
+
+Line No 65 -> term : unary_expression
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV79, CX
+
+
+Line No 65 -> simple_expression : term
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV79, CX
+
+
+Line No 65 -> rel_expression : simple_expression RELOP simple_expression
+MOV AX, b4 
+MOV TV77, AX 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV79, CX
+ 
+MOV AX, TV77 
+CMP AX, TV79 
+JL LB16 
+MOV AX, 0 
+JMP LB17
+LB16: 
+MOV AX, 1 
+LB17: 
+MOV TV80, AX 
+
+
+Line No 65 -> logic_expression : rel_expression
+MOV AX, b4 
+MOV TV77, AX 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV79, CX
+ 
+MOV AX, TV77 
+CMP AX, TV79 
+JL LB16 
+MOV AX, 0 
+JMP LB17
+LB16: 
+MOV AX, 1 
+LB17: 
+MOV TV80, AX 
+
+
+Line No 65 -> expression : logic_expression
+MOV AX, b4 
+MOV TV77, AX 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV79, CX
+ 
+MOV AX, TV77 
+CMP AX, TV79 
+JL LB16 
+MOV AX, 0 
+JMP LB17
+LB16: 
+MOV AX, 1 
+LB17: 
+MOV TV80, AX 
+
+
+Line No 66 -> variable : ID
+
+
+Line No 66 -> factor : variable
+MOV AX, b4 
+MOV TV81, AX 
+
+
+Line No 66 -> unary_expression : factor
+MOV AX, b4 
+MOV TV81, AX 
+
+
+Line No 66 -> term : unary_expression
+MOV AX, b4 
+MOV TV81, AX 
+
+
+Line No 66 -> simple_expression : term
+MOV AX, b4 
+MOV TV81, AX 
+
+
+Line No 66 -> rel_expression : simple_expression
+MOV AX, b4 
+MOV TV81, AX 
+
+
+Line No 66 -> logic_expression : rel_expression
+MOV AX, b4 
+MOV TV81, AX 
+
+
+Line No 66 -> expression : logic_expression
+MOV AX, b4 
+MOV TV81, AX 
+
+
+Line No 66 -> statement : PRINTLN LPAREN expression RPAREN SEMICOLON
+MOV AX, b4 
+MOV TV81, AX 
+ 
+PUSH TV81 
+call ASMOUT 
+
+
+Line No 66 -> statements : statement
+MOV AX, b4 
+MOV TV81, AX 
+ 
+PUSH TV81 
+call ASMOUT 
+
+
+Line No 67 -> variable : ID
+
+
+Line No 67 -> variable : ID
+
+
+Line No 67 -> factor : variable
+MOV AX, b4 
+MOV TV82, AX 
+
+
+Line No 67 -> unary_expression : factor
+MOV AX, b4 
+MOV TV82, AX 
+
+
+Line No 67 -> term : unary_expression
+MOV AX, b4 
+MOV TV82, AX 
+
+
+Line No 67 -> simple_expression : term
+MOV AX, b4 
+MOV TV82, AX 
+
+
+Line No 67 -> factor : CONST_INT
+MOV TV83, 2
+
+
+Line No 67 -> unary_expression : factor
+MOV TV83, 2
+
+
+Line No 67 -> term : unary_expression
+MOV TV83, 2
+
+
+Line No 67 -> simple_expression : simple_expression ADDOP term
+MOV AX, b4 
+MOV TV82, AX 
+ 
+MOV TV83, 2
+ 
+MOV BX, TV82 
+ADD BX, TV83 
+MOV TV84, BX 
+
+
+Line No 67 -> rel_expression : simple_expression
+MOV AX, b4 
+MOV TV82, AX 
+ 
+MOV TV83, 2
+ 
+MOV BX, TV82 
+ADD BX, TV83 
+MOV TV84, BX 
+
+
+Line No 67 -> logic_expression : rel_expression
+MOV AX, b4 
+MOV TV82, AX 
+ 
+MOV TV83, 2
+ 
+MOV BX, TV82 
+ADD BX, TV83 
+MOV TV84, BX 
+
+
+Line No 67 -> expression : variable ASSIGNOP logic_expression
+MOV AX, b4 
+MOV TV82, AX 
+ 
+MOV TV83, 2
+ 
+MOV BX, TV82 
+ADD BX, TV83 
+MOV TV84, BX 
+ 
+MOV AX, TV84 
+MOV b4, AX 
+
+
+Line No 67 -> expression_statement : expression SEMICOLON
+MOV AX, b4 
+MOV TV82, AX 
+ 
+MOV TV83, 2
+ 
+MOV BX, TV82 
+ADD BX, TV83 
+MOV TV84, BX 
+ 
+MOV AX, TV84 
+MOV b4, AX 
+
+
+Line No 67 -> statement : expression_statement
+MOV AX, b4 
+MOV TV82, AX 
+ 
+MOV TV83, 2
+ 
+MOV BX, TV82 
+ADD BX, TV83 
+MOV TV84, BX 
+ 
+MOV AX, TV84 
+MOV b4, AX 
+
+
+Line No 67 -> statements : statements statement
+MOV AX, b4 
+MOV TV81, AX 
+ 
+PUSH TV81 
+call ASMOUT 
+ 
+MOV AX, b4 
+MOV TV82, AX 
+ 
+MOV TV83, 2
+ 
+MOV BX, TV82 
+ADD BX, TV83 
+MOV TV84, BX 
+ 
+MOV AX, TV84 
+MOV b4, AX 
+ 
+
+
+Line No 68 -> compound_statement : LCURL statements RCURL
+MOV AX, b4 
+MOV TV81, AX 
+ 
+PUSH TV81 
+call ASMOUT 
+ 
+MOV AX, b4 
+MOV TV82, AX 
+ 
+MOV TV83, 2
+ 
+MOV BX, TV82 
+ADD BX, TV83 
+MOV TV84, BX 
+ 
+MOV AX, TV84 
+MOV b4, AX 
+ 
+
+
+Line No 68 -> statement : compound_statement
+MOV AX, b4 
+MOV TV81, AX 
+ 
+PUSH TV81 
+call ASMOUT 
+ 
+MOV AX, b4 
+MOV TV82, AX 
+ 
+MOV TV83, 2
+ 
+MOV BX, TV82 
+ADD BX, TV83 
+MOV TV84, BX 
+ 
+MOV AX, TV84 
+MOV b4, AX 
+ 
+
+
+Line No 68 -> statement : WHILE LPAREN expression RPAREN statement
+LB18: 
+MOV AX, b4 
+MOV TV77, AX 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV79, CX
+ 
+MOV AX, TV77 
+CMP AX, TV79 
+JL LB16 
+MOV AX, 0 
+JMP LB17
+LB16: 
+MOV AX, 1 
+LB17: 
+MOV TV80, AX 
+ 
+CMP TV80, 0 
+JZ LB19 
+MOV AX, b4 
+MOV TV81, AX 
+ 
+PUSH TV81 
+call ASMOUT 
+ 
+MOV AX, b4 
+MOV TV82, AX 
+ 
+MOV TV83, 2
+ 
+MOV BX, TV82 
+ADD BX, TV83 
+MOV TV84, BX 
+ 
+MOV AX, TV84 
+MOV b4, AX 
+ 
+ 
+JMP LB18 
+LB19: 
+
+
+Line No 68 -> statements : statements statement
+ 
+MOV TV17, 5
+ 
+MOV AX, TV17 
+MOV a4, AX 
+ 
+ 
+MOV TV18, 7
+ 
+MOV AX, TV18 
+MOV b4, AX 
+ 
+ 
+MOV AX, a4 
+MOV TV19, AX 
+ 
+PUSH TV19 
+ 
+MOV AX, b4 
+MOV TV20, AX 
+ 
+PUSH TV20 
+ 
+call g 
+MOV TV21, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+MOV AX, TV21 
+MOV x4, AX 
+ 
+ 
+MOV AX, x4 
+MOV TV22, AX 
+ 
+PUSH TV22 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV23, AX 
+ 
+MOV AX, b4 
+MOV TV24, AX 
+ 
+MOV BX, TV23 
+ADD BX, TV24 
+MOV TV25, BX 
+ 
+PUSH TV25 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV26, AX 
+ 
+MOV AX, b4 
+MOV TV27, AX 
+ 
+MOV BX, TV26 
+SUB BX, TV27 
+MOV TV28, BX 
+ 
+PUSH TV28 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV29, AX 
+ 
+MOV AX, b4 
+MOV TV30, AX 
+ 
+MOV AX, TV29 
+MUL TV30
+MOV TV31, AX 
+ 
+PUSH TV31 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV32, AX 
+ 
+MOV AX, b4 
+MOV TV33, AX 
+ 
+MOV AX, TV32 
+MOV BX, TV33 
+DIV BL
+XOR AH, AH 
+MOV TV34, AX 
+ 
+PUSH TV34 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV35, AX 
+ 
+MOV AX, b4 
+MOV TV36, AX 
+ 
+MOV AX, TV35 
+MOV BX, TV36 
+DIV BL
+MOV AL, AH 
+XOR AH, AH 
+MOV TV37, AX 
+ 
+PUSH TV37 
+call ASMOUT 
+ 
+ 
+MOV TV38, 0
+ 
+MOV AX, TV38 
+MOV b4, AX 
+ 
+ 
+MOV AX, a4 
+MOV TV39, AX 
+ 
+MOV AX, b4 
+MOV TV40, AX 
+ 
+MOV AX, TV39 
+CMP AX, 0 
+ JE LB0 
+MOV AX, TV40 
+CMP AX, 0 
+ JE LB0 
+MOV AX, 1 
+JMP LB2 
+LB0: 
+MOV AX, 0 
+LB2: 
+MOV TV41, AX 
+ 
+PUSH TV41 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV42, AX 
+ 
+MOV AX, b4 
+MOV TV43, AX 
+ 
+MOV AX, TV42 
+CMP AX, 0 
+ JNE LB4 
+MOV AX, TV43 
+CMP AX, 0 
+ JNE LB4 
+MOV AX, 0 
+JMP LB5 
+LB4: 
+MOV AX, 1 
+LB5: 
+MOV TV44, AX 
+ 
+PUSH TV44 
+call ASMOUT 
+ 
+ 
+ 
+ 
+MOV TV46, 4
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, TV46 
+MOV SI[BX], CX
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV48, CX
+ 
+PUSH TV48 
+ 
+call f 
+MOV TV49, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+PUSH TV49 
+call ASMOUT 
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV51, CX 
+INC CX 
+MOV SI[BX], CX 
+ 
+ 
+MOV TV53, 6
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, TV53 
+MOV SI[BX], CX
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV55, CX
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, SI[BX] 
+MOV TV57, CX
+ 
+MOV AX, TV55 
+MUL TV57
+MOV TV58, AX 
+ 
+PUSH TV58 
+call ASMOUT 
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV60, CX
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, SI[BX] 
+MOV TV62, CX
+ 
+MOV AX, TV60 
+CMP AX, TV62 
+JG LB6 
+MOV AX, 0 
+JMP LB7
+LB6: 
+MOV AX, 1 
+LB7: 
+MOV TV63, AX 
+
+CMP TV63, 0 
+JNZ LB8 
+MOV TV64, 1 
+JMP LB9 
+LB8: 
+MOV TV64, 0 
+LB9: 
+ 
+PUSH TV64 
+call ASMOUT 
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV66, CX
+
+CMP TV66, 0 
+JNZ LB10 
+MOV TV67, 1 
+JMP LB11 
+LB10: 
+MOV TV67, 0 
+LB11: 
+ 
+PUSH TV67 
+call ASMOUT 
+ 
+ 
+MOV TV68, 0
+ 
+MOV AX, TV68 
+MOV b4, AX 
+ 
+LB14: 
+MOV AX, b4 
+MOV TV69, AX 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV71, CX
+ 
+MOV AX, TV69 
+CMP AX, TV71 
+JLE LB12 
+MOV AX, 0 
+JMP LB13
+LB12: 
+MOV AX, 1 
+LB13: 
+MOV TV72, AX 
+ 
+CMP TV72, 0 
+JZ LB15 
+MOV AX, b4 
+MOV TV74, AX 
+ 
+PUSH TV74 
+call ASMOUT 
+ 
+MOV AX, b4 
+MOV TV73, AX 
+INC b4 
+ 
+JMP LB14 
+LB15: 
+ 
+ 
+ 
+call h 
+MOV TV75, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+ 
+MOV TV76, 0
+ 
+MOV AX, TV76 
+MOV b4, AX 
+ 
+ 
+LB18: 
+MOV AX, b4 
+MOV TV77, AX 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV79, CX
+ 
+MOV AX, TV77 
+CMP AX, TV79 
+JL LB16 
+MOV AX, 0 
+JMP LB17
+LB16: 
+MOV AX, 1 
+LB17: 
+MOV TV80, AX 
+ 
+CMP TV80, 0 
+JZ LB19 
+MOV AX, b4 
+MOV TV81, AX 
+ 
+PUSH TV81 
+call ASMOUT 
+ 
+MOV AX, b4 
+MOV TV82, AX 
+ 
+MOV TV83, 2
+ 
+MOV BX, TV82 
+ADD BX, TV83 
+MOV TV84, BX 
+ 
+MOV AX, TV84 
+MOV b4, AX 
+ 
+ 
+JMP LB18 
+LB19: 
+ 
+
+
+Line No 70 -> factor : CONST_INT
+MOV TV85, 2
+
+
+Line No 70 -> unary_expression : factor
+MOV TV85, 2
+
+
+Line No 70 -> term : unary_expression
+MOV TV85, 2
+
+
+Line No 70 -> simple_expression : term
+MOV TV85, 2
+
+
+Line No 70 -> rel_expression : simple_expression
+MOV TV85, 2
+
+
+Line No 70 -> logic_expression : rel_expression
+MOV TV85, 2
+
+
+Line No 70 -> expression : logic_expression
+MOV TV85, 2
+
+
+Line No 70 -> variable : ID LTHIRD expression RTHIRD
+
+
+Line No 70 -> factor : variable
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV86, CX
+
+
+Line No 70 -> unary_expression : factor
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV86, CX
+
+
+Line No 70 -> term : unary_expression
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV86, CX
+
+
+Line No 70 -> simple_expression : term
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV86, CX
+
+
+Line No 70 -> factor : CONST_INT
+MOV TV87, 6
+
+
+Line No 70 -> unary_expression : factor
+MOV TV87, 6
+
+
+Line No 70 -> term : unary_expression
+MOV TV87, 6
+
+
+Line No 70 -> simple_expression : term
+MOV TV87, 6
+
+
+Line No 70 -> rel_expression : simple_expression RELOP simple_expression
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV86, CX
+ 
+MOV TV87, 6
+ 
+MOV AX, TV86 
+CMP AX, TV87 
+JGE LB20 
+MOV AX, 0 
+JMP LB21
+LB20: 
+MOV AX, 1 
+LB21: 
+MOV TV88, AX 
+
+
+Line No 70 -> logic_expression : rel_expression
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV86, CX
+ 
+MOV TV87, 6
+ 
+MOV AX, TV86 
+CMP AX, TV87 
+JGE LB20 
+MOV AX, 0 
+JMP LB21
+LB20: 
+MOV AX, 1 
+LB21: 
+MOV TV88, AX 
+
+
+Line No 70 -> expression : logic_expression
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV86, CX
+ 
+MOV TV87, 6
+ 
+MOV AX, TV86 
+CMP AX, TV87 
+JGE LB20 
+MOV AX, 0 
+JMP LB21
+LB20: 
+MOV AX, 1 
+LB21: 
+MOV TV88, AX 
+
+
+Line No 71 -> factor : CONST_INT
+MOV TV89, 1
+
+
+Line No 71 -> unary_expression : factor
+MOV TV89, 1
+
+
+Line No 71 -> term : unary_expression
+MOV TV89, 1
+
+
+Line No 71 -> simple_expression : term
+MOV TV89, 1
+
+
+Line No 71 -> rel_expression : simple_expression
+MOV TV89, 1
+
+
+Line No 71 -> logic_expression : rel_expression
+MOV TV89, 1
+
+
+Line No 71 -> expression : logic_expression
+MOV TV89, 1
+
+
+Line No 71 -> statement : PRINTLN LPAREN expression RPAREN SEMICOLON
+MOV TV89, 1
+ 
+PUSH TV89 
+call ASMOUT 
+
+
+Line No 71 -> statements : statement
+MOV TV89, 1
+ 
+PUSH TV89 
+call ASMOUT 
+
+
+Line No 72 -> compound_statement : LCURL statements RCURL
+MOV TV89, 1
+ 
+PUSH TV89 
+call ASMOUT 
+
+
+Line No 72 -> statement : compound_statement
+MOV TV89, 1
+ 
+PUSH TV89 
+call ASMOUT 
+
+
+Line No 74 -> factor : CONST_INT
+MOV TV90, 2
+
+
+Line No 74 -> unary_expression : factor
+MOV TV90, 2
+
+
+Line No 74 -> term : unary_expression
+MOV TV90, 2
+
+
+Line No 74 -> simple_expression : term
+MOV TV90, 2
+
+
+Line No 74 -> rel_expression : simple_expression
+MOV TV90, 2
+
+
+Line No 74 -> logic_expression : rel_expression
+MOV TV90, 2
+
+
+Line No 74 -> expression : logic_expression
+MOV TV90, 2
+
+
+Line No 74 -> statement : PRINTLN LPAREN expression RPAREN SEMICOLON
+MOV TV90, 2
+ 
+PUSH TV90 
+call ASMOUT 
+
+
+Line No 74 -> statements : statement
+MOV TV90, 2
+ 
+PUSH TV90 
+call ASMOUT 
+
+
+Line No 75 -> compound_statement : LCURL statements RCURL
+MOV TV90, 2
+ 
+PUSH TV90 
+call ASMOUT 
+
+
+Line No 75 -> statement : compound_statement
+MOV TV90, 2
+ 
+PUSH TV90 
+call ASMOUT 
+
+
+Line No 75 -> statement : IF LPAREN expression RPAREN statement ELSE statement
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV86, CX
+ 
+MOV TV87, 6
+ 
+MOV AX, TV86 
+CMP AX, TV87 
+JGE LB20 
+MOV AX, 0 
+JMP LB21
+LB20: 
+MOV AX, 1 
+LB21: 
+MOV TV88, AX 
+ 
+CMP TV88, 0 
+JE LB22 
+MOV TV89, 1
+ 
+PUSH TV89 
+call ASMOUT 
+ 
+ JMP LB23 
+LB22: 
+MOV TV90, 2
+ 
+PUSH TV90 
+call ASMOUT 
+ 
+ LB23: 
+
+
+Line No 75 -> statements : statements statement
+ 
+MOV TV17, 5
+ 
+MOV AX, TV17 
+MOV a4, AX 
+ 
+ 
+MOV TV18, 7
+ 
+MOV AX, TV18 
+MOV b4, AX 
+ 
+ 
+MOV AX, a4 
+MOV TV19, AX 
+ 
+PUSH TV19 
+ 
+MOV AX, b4 
+MOV TV20, AX 
+ 
+PUSH TV20 
+ 
+call g 
+MOV TV21, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+MOV AX, TV21 
+MOV x4, AX 
+ 
+ 
+MOV AX, x4 
+MOV TV22, AX 
+ 
+PUSH TV22 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV23, AX 
+ 
+MOV AX, b4 
+MOV TV24, AX 
+ 
+MOV BX, TV23 
+ADD BX, TV24 
+MOV TV25, BX 
+ 
+PUSH TV25 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV26, AX 
+ 
+MOV AX, b4 
+MOV TV27, AX 
+ 
+MOV BX, TV26 
+SUB BX, TV27 
+MOV TV28, BX 
+ 
+PUSH TV28 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV29, AX 
+ 
+MOV AX, b4 
+MOV TV30, AX 
+ 
+MOV AX, TV29 
+MUL TV30
+MOV TV31, AX 
+ 
+PUSH TV31 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV32, AX 
+ 
+MOV AX, b4 
+MOV TV33, AX 
+ 
+MOV AX, TV32 
+MOV BX, TV33 
+DIV BL
+XOR AH, AH 
+MOV TV34, AX 
+ 
+PUSH TV34 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV35, AX 
+ 
+MOV AX, b4 
+MOV TV36, AX 
+ 
+MOV AX, TV35 
+MOV BX, TV36 
+DIV BL
+MOV AL, AH 
+XOR AH, AH 
+MOV TV37, AX 
+ 
+PUSH TV37 
+call ASMOUT 
+ 
+ 
+MOV TV38, 0
+ 
+MOV AX, TV38 
+MOV b4, AX 
+ 
+ 
+MOV AX, a4 
+MOV TV39, AX 
+ 
+MOV AX, b4 
+MOV TV40, AX 
+ 
+MOV AX, TV39 
+CMP AX, 0 
+ JE LB0 
+MOV AX, TV40 
+CMP AX, 0 
+ JE LB0 
+MOV AX, 1 
+JMP LB2 
+LB0: 
+MOV AX, 0 
+LB2: 
+MOV TV41, AX 
+ 
+PUSH TV41 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV42, AX 
+ 
+MOV AX, b4 
+MOV TV43, AX 
+ 
+MOV AX, TV42 
+CMP AX, 0 
+ JNE LB4 
+MOV AX, TV43 
+CMP AX, 0 
+ JNE LB4 
+MOV AX, 0 
+JMP LB5 
+LB4: 
+MOV AX, 1 
+LB5: 
+MOV TV44, AX 
+ 
+PUSH TV44 
+call ASMOUT 
+ 
+ 
+ 
+ 
+MOV TV46, 4
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, TV46 
+MOV SI[BX], CX
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV48, CX
+ 
+PUSH TV48 
+ 
+call f 
+MOV TV49, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+PUSH TV49 
+call ASMOUT 
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV51, CX 
+INC CX 
+MOV SI[BX], CX 
+ 
+ 
+MOV TV53, 6
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, TV53 
+MOV SI[BX], CX
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV55, CX
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, SI[BX] 
+MOV TV57, CX
+ 
+MOV AX, TV55 
+MUL TV57
+MOV TV58, AX 
+ 
+PUSH TV58 
+call ASMOUT 
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV60, CX
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, SI[BX] 
+MOV TV62, CX
+ 
+MOV AX, TV60 
+CMP AX, TV62 
+JG LB6 
+MOV AX, 0 
+JMP LB7
+LB6: 
+MOV AX, 1 
+LB7: 
+MOV TV63, AX 
+
+CMP TV63, 0 
+JNZ LB8 
+MOV TV64, 1 
+JMP LB9 
+LB8: 
+MOV TV64, 0 
+LB9: 
+ 
+PUSH TV64 
+call ASMOUT 
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV66, CX
+
+CMP TV66, 0 
+JNZ LB10 
+MOV TV67, 1 
+JMP LB11 
+LB10: 
+MOV TV67, 0 
+LB11: 
+ 
+PUSH TV67 
+call ASMOUT 
+ 
+ 
+MOV TV68, 0
+ 
+MOV AX, TV68 
+MOV b4, AX 
+ 
+LB14: 
+MOV AX, b4 
+MOV TV69, AX 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV71, CX
+ 
+MOV AX, TV69 
+CMP AX, TV71 
+JLE LB12 
+MOV AX, 0 
+JMP LB13
+LB12: 
+MOV AX, 1 
+LB13: 
+MOV TV72, AX 
+ 
+CMP TV72, 0 
+JZ LB15 
+MOV AX, b4 
+MOV TV74, AX 
+ 
+PUSH TV74 
+call ASMOUT 
+ 
+MOV AX, b4 
+MOV TV73, AX 
+INC b4 
+ 
+JMP LB14 
+LB15: 
+ 
+ 
+ 
+call h 
+MOV TV75, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+ 
+MOV TV76, 0
+ 
+MOV AX, TV76 
+MOV b4, AX 
+ 
+ 
+LB18: 
+MOV AX, b4 
+MOV TV77, AX 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV79, CX
+ 
+MOV AX, TV77 
+CMP AX, TV79 
+JL LB16 
+MOV AX, 0 
+JMP LB17
+LB16: 
+MOV AX, 1 
+LB17: 
+MOV TV80, AX 
+ 
+CMP TV80, 0 
+JZ LB19 
+MOV AX, b4 
+MOV TV81, AX 
+ 
+PUSH TV81 
+call ASMOUT 
+ 
+MOV AX, b4 
+MOV TV82, AX 
+ 
+MOV TV83, 2
+ 
+MOV BX, TV82 
+ADD BX, TV83 
+MOV TV84, BX 
+ 
+MOV AX, TV84 
+MOV b4, AX 
+ 
+ 
+JMP LB18 
+LB19: 
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV86, CX
+ 
+MOV TV87, 6
+ 
+MOV AX, TV86 
+CMP AX, TV87 
+JGE LB20 
+MOV AX, 0 
+JMP LB21
+LB20: 
+MOV AX, 1 
+LB21: 
+MOV TV88, AX 
+ 
+CMP TV88, 0 
+JE LB22 
+MOV TV89, 1
+ 
+PUSH TV89 
+call ASMOUT 
+ 
+ JMP LB23 
+LB22: 
+MOV TV90, 2
+ 
+PUSH TV90 
+call ASMOUT 
+ 
+ LB23: 
+ 
+
+
+Line No 77 -> variable : ID
+
+
+Line No 77 -> factor : CONST_INT
+MOV TV91, 0
+
+
+Line No 77 -> unary_expression : factor
+MOV TV91, 0
+
+
+Line No 77 -> term : unary_expression
+MOV TV91, 0
+
+
+Line No 77 -> simple_expression : term
+MOV TV91, 0
+
+
+Line No 77 -> rel_expression : simple_expression
+MOV TV91, 0
+
+
+Line No 77 -> logic_expression : rel_expression
+MOV TV91, 0
+
+
+Line No 77 -> expression : variable ASSIGNOP logic_expression
+MOV TV91, 0
+ 
+MOV AX, TV91 
+MOV b4, AX 
+
+
+Line No 77 -> expression_statement : expression SEMICOLON
+MOV TV91, 0
+ 
+MOV AX, TV91 
+MOV b4, AX 
+
+
+Line No 77 -> variable : ID
+
+
+Line No 77 -> factor : variable
+MOV AX, b4 
+MOV TV92, AX 
+
+
+Line No 77 -> unary_expression : factor
+MOV AX, b4 
+MOV TV92, AX 
+
+
+Line No 77 -> term : unary_expression
+MOV AX, b4 
+MOV TV92, AX 
+
+
+Line No 77 -> simple_expression : term
+MOV AX, b4 
+MOV TV92, AX 
+
+
+Line No 77 -> factor : CONST_INT
+MOV TV93, 2
+
+
+Line No 77 -> unary_expression : factor
+MOV TV93, 2
+
+
+Line No 77 -> term : unary_expression
+MOV TV93, 2
+
+
+Line No 77 -> simple_expression : term
+MOV TV93, 2
+
+
+Line No 77 -> rel_expression : simple_expression
+MOV TV93, 2
+
+
+Line No 77 -> logic_expression : rel_expression
+MOV TV93, 2
+
+
+Line No 77 -> expression : logic_expression
+MOV TV93, 2
+
+
+Line No 77 -> variable : ID LTHIRD expression RTHIRD
+
+
+Line No 77 -> factor : variable
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV94, CX
+
+
+Line No 77 -> unary_expression : factor
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV94, CX
+
+
+Line No 77 -> term : unary_expression
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV94, CX
+
+
+Line No 77 -> simple_expression : term
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV94, CX
+
+
+Line No 77 -> rel_expression : simple_expression RELOP simple_expression
+MOV AX, b4 
+MOV TV92, AX 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV94, CX
+ 
+MOV AX, TV92 
+CMP AX, TV94 
+JL LB24 
+MOV AX, 0 
+JMP LB25
+LB24: 
+MOV AX, 1 
+LB25: 
+MOV TV95, AX 
+
+
+Line No 77 -> logic_expression : rel_expression
+MOV AX, b4 
+MOV TV92, AX 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV94, CX
+ 
+MOV AX, TV92 
+CMP AX, TV94 
+JL LB24 
+MOV AX, 0 
+JMP LB25
+LB24: 
+MOV AX, 1 
+LB25: 
+MOV TV95, AX 
+
+
+Line No 77 -> expression : logic_expression
+MOV AX, b4 
+MOV TV92, AX 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV94, CX
+ 
+MOV AX, TV92 
+CMP AX, TV94 
+JL LB24 
+MOV AX, 0 
+JMP LB25
+LB24: 
+MOV AX, 1 
+LB25: 
+MOV TV95, AX 
+
+
+Line No 77 -> expression_statement : expression SEMICOLON
+MOV AX, b4 
+MOV TV92, AX 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV94, CX
+ 
+MOV AX, TV92 
+CMP AX, TV94 
+JL LB24 
+MOV AX, 0 
+JMP LB25
+LB24: 
+MOV AX, 1 
+LB25: 
+MOV TV95, AX 
+
+
+Line No 77 -> variable : ID
+
+
+Line No 77 -> factor : variable INCOP
+MOV AX, b4 
+MOV TV96, AX 
+INC b4 
+
+
+Line No 77 -> unary_expression : factor
+MOV AX, b4 
+MOV TV96, AX 
+INC b4 
+
+
+Line No 77 -> term : unary_expression
+MOV AX, b4 
+MOV TV96, AX 
+INC b4 
+
+
+Line No 77 -> simple_expression : term
+MOV AX, b4 
+MOV TV96, AX 
+INC b4 
+
+
+Line No 77 -> rel_expression : simple_expression
+MOV AX, b4 
+MOV TV96, AX 
+INC b4 
+
+
+Line No 77 -> logic_expression : rel_expression
+MOV AX, b4 
+MOV TV96, AX 
+INC b4 
+
+
+Line No 77 -> expression : logic_expression
+MOV AX, b4 
+MOV TV96, AX 
+INC b4 
+
+
+Line No 78 -> variable : ID
+
+
+Line No 78 -> factor : CONST_INT
+MOV TV97, 0
+
+
+Line No 78 -> unary_expression : factor
+MOV TV97, 0
+
+
+Line No 78 -> term : unary_expression
+MOV TV97, 0
+
+
+Line No 78 -> simple_expression : term
+MOV TV97, 0
+
+
+Line No 78 -> rel_expression : simple_expression
+MOV TV97, 0
+
+
+Line No 78 -> logic_expression : rel_expression
+MOV TV97, 0
+
+
+Line No 78 -> expression : variable ASSIGNOP logic_expression
+MOV TV97, 0
+ 
+MOV AX, TV97 
+MOV x4, AX 
+
+
+Line No 78 -> expression_statement : expression SEMICOLON
+MOV TV97, 0
+ 
+MOV AX, TV97 
+MOV x4, AX 
+
+
+Line No 78 -> statement : expression_statement
+MOV TV97, 0
+ 
+MOV AX, TV97 
+MOV x4, AX 
+
+
+Line No 78 -> statements : statement
+MOV TV97, 0
+ 
+MOV AX, TV97 
+MOV x4, AX 
+
+
+Line No 79 -> variable : ID
+
+
+Line No 79 -> factor : variable
+MOV AX, x4 
+MOV TV98, AX 
+
+
+Line No 79 -> unary_expression : factor
+MOV AX, x4 
+MOV TV98, AX 
+
+
+Line No 79 -> term : unary_expression
+MOV AX, x4 
+MOV TV98, AX 
+
+
+Line No 79 -> simple_expression : term
+MOV AX, x4 
+MOV TV98, AX 
+
+
+Line No 79 -> factor : CONST_INT
+MOV TV99, 2
+
+
+Line No 79 -> unary_expression : factor
+MOV TV99, 2
+
+
+Line No 79 -> term : unary_expression
+MOV TV99, 2
+
+
+Line No 79 -> simple_expression : term
+MOV TV99, 2
+
+
+Line No 79 -> rel_expression : simple_expression RELOP simple_expression
+MOV AX, x4 
+MOV TV98, AX 
+ 
+MOV TV99, 2
+ 
+MOV AX, TV98 
+CMP AX, TV99 
+JL LB26 
+MOV AX, 0 
+JMP LB27
+LB26: 
+MOV AX, 1 
+LB27: 
+MOV TV100, AX 
+
+
+Line No 79 -> logic_expression : rel_expression
+MOV AX, x4 
+MOV TV98, AX 
+ 
+MOV TV99, 2
+ 
+MOV AX, TV98 
+CMP AX, TV99 
+JL LB26 
+MOV AX, 0 
+JMP LB27
+LB26: 
+MOV AX, 1 
+LB27: 
+MOV TV100, AX 
+
+
+Line No 79 -> expression : logic_expression
+MOV AX, x4 
+MOV TV98, AX 
+ 
+MOV TV99, 2
+ 
+MOV AX, TV98 
+CMP AX, TV99 
+JL LB26 
+MOV AX, 0 
+JMP LB27
+LB26: 
+MOV AX, 1 
+LB27: 
+MOV TV100, AX 
+
+
+Line No 80 -> variable : ID
+
+
+Line No 80 -> factor : variable
+MOV AX, b4 
+MOV TV101, AX 
+
+
+Line No 80 -> unary_expression : factor
+MOV AX, b4 
+MOV TV101, AX 
+
+
+Line No 80 -> term : unary_expression
+MOV AX, b4 
+MOV TV101, AX 
+
+
+Line No 80 -> variable : ID
+
+
+Line No 80 -> factor : variable
+MOV AX, x4 
+MOV TV102, AX 
+
+
+Line No 80 -> unary_expression : factor
+MOV AX, x4 
+MOV TV102, AX 
+
+
+Line No 80 -> term : term MULOP unary_expression
+MOV AX, b4 
+MOV TV101, AX 
+ 
+MOV AX, x4 
+MOV TV102, AX 
+ 
+MOV AX, TV101 
+MUL TV102
+MOV TV103, AX 
+
+
+Line No 80 -> simple_expression : term
+MOV AX, b4 
+MOV TV101, AX 
+ 
+MOV AX, x4 
+MOV TV102, AX 
+ 
+MOV AX, TV101 
+MUL TV102
+MOV TV103, AX 
+
+
+Line No 80 -> rel_expression : simple_expression
+MOV AX, b4 
+MOV TV101, AX 
+ 
+MOV AX, x4 
+MOV TV102, AX 
+ 
+MOV AX, TV101 
+MUL TV102
+MOV TV103, AX 
+
+
+Line No 80 -> logic_expression : rel_expression
+MOV AX, b4 
+MOV TV101, AX 
+ 
+MOV AX, x4 
+MOV TV102, AX 
+ 
+MOV AX, TV101 
+MUL TV102
+MOV TV103, AX 
+
+
+Line No 80 -> expression : logic_expression
+MOV AX, b4 
+MOV TV101, AX 
+ 
+MOV AX, x4 
+MOV TV102, AX 
+ 
+MOV AX, TV101 
+MUL TV102
+MOV TV103, AX 
+
+
+Line No 80 -> statement : PRINTLN LPAREN expression RPAREN SEMICOLON
+MOV AX, b4 
+MOV TV101, AX 
+ 
+MOV AX, x4 
+MOV TV102, AX 
+ 
+MOV AX, TV101 
+MUL TV102
+MOV TV103, AX 
+ 
+PUSH TV103 
+call ASMOUT 
+
+
+Line No 80 -> statements : statement
+MOV AX, b4 
+MOV TV101, AX 
+ 
+MOV AX, x4 
+MOV TV102, AX 
+ 
+MOV AX, TV101 
+MUL TV102
+MOV TV103, AX 
+ 
+PUSH TV103 
+call ASMOUT 
+
+
+Line No 81 -> variable : ID
+
+
+Line No 81 -> factor : variable INCOP
+MOV AX, x4 
+MOV TV104, AX 
+INC x4 
+
+
+Line No 81 -> unary_expression : factor
+MOV AX, x4 
+MOV TV104, AX 
+INC x4 
+
+
+Line No 81 -> term : unary_expression
+MOV AX, x4 
+MOV TV104, AX 
+INC x4 
+
+
+Line No 81 -> simple_expression : term
+MOV AX, x4 
+MOV TV104, AX 
+INC x4 
+
+
+Line No 81 -> rel_expression : simple_expression
+MOV AX, x4 
+MOV TV104, AX 
+INC x4 
+
+
+Line No 81 -> logic_expression : rel_expression
+MOV AX, x4 
+MOV TV104, AX 
+INC x4 
+
+
+Line No 81 -> expression : logic_expression
+MOV AX, x4 
+MOV TV104, AX 
+INC x4 
+
+
+Line No 81 -> expression_statement : expression SEMICOLON
+MOV AX, x4 
+MOV TV104, AX 
+INC x4 
+
+
+Line No 81 -> statement : expression_statement
+MOV AX, x4 
+MOV TV104, AX 
+INC x4 
+
+
+Line No 81 -> statements : statements statement
+MOV AX, b4 
+MOV TV101, AX 
+ 
+MOV AX, x4 
+MOV TV102, AX 
+ 
+MOV AX, TV101 
+MUL TV102
+MOV TV103, AX 
+ 
+PUSH TV103 
+call ASMOUT 
+ 
+MOV AX, x4 
+MOV TV104, AX 
+INC x4 
+ 
+
+
+Line No 82 -> compound_statement : LCURL statements RCURL
+MOV AX, b4 
+MOV TV101, AX 
+ 
+MOV AX, x4 
+MOV TV102, AX 
+ 
+MOV AX, TV101 
+MUL TV102
+MOV TV103, AX 
+ 
+PUSH TV103 
+call ASMOUT 
+ 
+MOV AX, x4 
+MOV TV104, AX 
+INC x4 
+ 
+
+
+Line No 82 -> statement : compound_statement
+MOV AX, b4 
+MOV TV101, AX 
+ 
+MOV AX, x4 
+MOV TV102, AX 
+ 
+MOV AX, TV101 
+MUL TV102
+MOV TV103, AX 
+ 
+PUSH TV103 
+call ASMOUT 
+ 
+MOV AX, x4 
+MOV TV104, AX 
+INC x4 
+ 
+
+
+Line No 82 -> statement : WHILE LPAREN expression RPAREN statement
+LB28: 
+MOV AX, x4 
+MOV TV98, AX 
+ 
+MOV TV99, 2
+ 
+MOV AX, TV98 
+CMP AX, TV99 
+JL LB26 
+MOV AX, 0 
+JMP LB27
+LB26: 
+MOV AX, 1 
+LB27: 
+MOV TV100, AX 
+ 
+CMP TV100, 0 
+JZ LB29 
+MOV AX, b4 
+MOV TV101, AX 
+ 
+MOV AX, x4 
+MOV TV102, AX 
+ 
+MOV AX, TV101 
+MUL TV102
+MOV TV103, AX 
+ 
+PUSH TV103 
+call ASMOUT 
+ 
+MOV AX, x4 
+MOV TV104, AX 
+INC x4 
+ 
+ 
+JMP LB28 
+LB29: 
+
+
+Line No 82 -> statements : statements statement
+MOV TV97, 0
+ 
+MOV AX, TV97 
+MOV x4, AX 
+ 
+LB28: 
+MOV AX, x4 
+MOV TV98, AX 
+ 
+MOV TV99, 2
+ 
+MOV AX, TV98 
+CMP AX, TV99 
+JL LB26 
+MOV AX, 0 
+JMP LB27
+LB26: 
+MOV AX, 1 
+LB27: 
+MOV TV100, AX 
+ 
+CMP TV100, 0 
+JZ LB29 
+MOV AX, b4 
+MOV TV101, AX 
+ 
+MOV AX, x4 
+MOV TV102, AX 
+ 
+MOV AX, TV101 
+MUL TV102
+MOV TV103, AX 
+ 
+PUSH TV103 
+call ASMOUT 
+ 
+MOV AX, x4 
+MOV TV104, AX 
+INC x4 
+ 
+ 
+JMP LB28 
+LB29: 
+ 
+
+
+Line No 83 -> compound_statement : LCURL statements RCURL
+MOV TV97, 0
+ 
+MOV AX, TV97 
+MOV x4, AX 
+ 
+LB28: 
+MOV AX, x4 
+MOV TV98, AX 
+ 
+MOV TV99, 2
+ 
+MOV AX, TV98 
+CMP AX, TV99 
+JL LB26 
+MOV AX, 0 
+JMP LB27
+LB26: 
+MOV AX, 1 
+LB27: 
+MOV TV100, AX 
+ 
+CMP TV100, 0 
+JZ LB29 
+MOV AX, b4 
+MOV TV101, AX 
+ 
+MOV AX, x4 
+MOV TV102, AX 
+ 
+MOV AX, TV101 
+MUL TV102
+MOV TV103, AX 
+ 
+PUSH TV103 
+call ASMOUT 
+ 
+MOV AX, x4 
+MOV TV104, AX 
+INC x4 
+ 
+ 
+JMP LB28 
+LB29: 
+ 
+
+
+Line No 83 -> statement : compound_statement
+MOV TV97, 0
+ 
+MOV AX, TV97 
+MOV x4, AX 
+ 
+LB28: 
+MOV AX, x4 
+MOV TV98, AX 
+ 
+MOV TV99, 2
+ 
+MOV AX, TV98 
+CMP AX, TV99 
+JL LB26 
+MOV AX, 0 
+JMP LB27
+LB26: 
+MOV AX, 1 
+LB27: 
+MOV TV100, AX 
+ 
+CMP TV100, 0 
+JZ LB29 
+MOV AX, b4 
+MOV TV101, AX 
+ 
+MOV AX, x4 
+MOV TV102, AX 
+ 
+MOV AX, TV101 
+MUL TV102
+MOV TV103, AX 
+ 
+PUSH TV103 
+call ASMOUT 
+ 
+MOV AX, x4 
+MOV TV104, AX 
+INC x4 
+ 
+ 
+JMP LB28 
+LB29: 
+ 
+
+
+Line No 83 -> statement : FOR LPAREN expression_statement expression_statement expression RPAREN statement
+MOV TV91, 0
+ 
+MOV AX, TV91 
+MOV b4, AX 
+ 
+LB30: 
+MOV AX, b4 
+MOV TV92, AX 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV94, CX
+ 
+MOV AX, TV92 
+CMP AX, TV94 
+JL LB24 
+MOV AX, 0 
+JMP LB25
+LB24: 
+MOV AX, 1 
+LB25: 
+MOV TV95, AX 
+ 
+CMP TV95, 0 
+JZ LB31 
+MOV TV97, 0
+ 
+MOV AX, TV97 
+MOV x4, AX 
+ 
+LB28: 
+MOV AX, x4 
+MOV TV98, AX 
+ 
+MOV TV99, 2
+ 
+MOV AX, TV98 
+CMP AX, TV99 
+JL LB26 
+MOV AX, 0 
+JMP LB27
+LB26: 
+MOV AX, 1 
+LB27: 
+MOV TV100, AX 
+ 
+CMP TV100, 0 
+JZ LB29 
+MOV AX, b4 
+MOV TV101, AX 
+ 
+MOV AX, x4 
+MOV TV102, AX 
+ 
+MOV AX, TV101 
+MUL TV102
+MOV TV103, AX 
+ 
+PUSH TV103 
+call ASMOUT 
+ 
+MOV AX, x4 
+MOV TV104, AX 
+INC x4 
+ 
+ 
+JMP LB28 
+LB29: 
+ 
+ 
+MOV AX, b4 
+MOV TV96, AX 
+INC b4 
+ 
+JMP LB30 
+LB31: 
+
+
+Line No 83 -> statements : statements statement
+ 
+MOV TV17, 5
+ 
+MOV AX, TV17 
+MOV a4, AX 
+ 
+ 
+MOV TV18, 7
+ 
+MOV AX, TV18 
+MOV b4, AX 
+ 
+ 
+MOV AX, a4 
+MOV TV19, AX 
+ 
+PUSH TV19 
+ 
+MOV AX, b4 
+MOV TV20, AX 
+ 
+PUSH TV20 
+ 
+call g 
+MOV TV21, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+MOV AX, TV21 
+MOV x4, AX 
+ 
+ 
+MOV AX, x4 
+MOV TV22, AX 
+ 
+PUSH TV22 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV23, AX 
+ 
+MOV AX, b4 
+MOV TV24, AX 
+ 
+MOV BX, TV23 
+ADD BX, TV24 
+MOV TV25, BX 
+ 
+PUSH TV25 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV26, AX 
+ 
+MOV AX, b4 
+MOV TV27, AX 
+ 
+MOV BX, TV26 
+SUB BX, TV27 
+MOV TV28, BX 
+ 
+PUSH TV28 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV29, AX 
+ 
+MOV AX, b4 
+MOV TV30, AX 
+ 
+MOV AX, TV29 
+MUL TV30
+MOV TV31, AX 
+ 
+PUSH TV31 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV32, AX 
+ 
+MOV AX, b4 
+MOV TV33, AX 
+ 
+MOV AX, TV32 
+MOV BX, TV33 
+DIV BL
+XOR AH, AH 
+MOV TV34, AX 
+ 
+PUSH TV34 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV35, AX 
+ 
+MOV AX, b4 
+MOV TV36, AX 
+ 
+MOV AX, TV35 
+MOV BX, TV36 
+DIV BL
+MOV AL, AH 
+XOR AH, AH 
+MOV TV37, AX 
+ 
+PUSH TV37 
+call ASMOUT 
+ 
+ 
+MOV TV38, 0
+ 
+MOV AX, TV38 
+MOV b4, AX 
+ 
+ 
+MOV AX, a4 
+MOV TV39, AX 
+ 
+MOV AX, b4 
+MOV TV40, AX 
+ 
+MOV AX, TV39 
+CMP AX, 0 
+ JE LB0 
+MOV AX, TV40 
+CMP AX, 0 
+ JE LB0 
+MOV AX, 1 
+JMP LB2 
+LB0: 
+MOV AX, 0 
+LB2: 
+MOV TV41, AX 
+ 
+PUSH TV41 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV42, AX 
+ 
+MOV AX, b4 
+MOV TV43, AX 
+ 
+MOV AX, TV42 
+CMP AX, 0 
+ JNE LB4 
+MOV AX, TV43 
+CMP AX, 0 
+ JNE LB4 
+MOV AX, 0 
+JMP LB5 
+LB4: 
+MOV AX, 1 
+LB5: 
+MOV TV44, AX 
+ 
+PUSH TV44 
+call ASMOUT 
+ 
+ 
+ 
+ 
+MOV TV46, 4
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, TV46 
+MOV SI[BX], CX
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV48, CX
+ 
+PUSH TV48 
+ 
+call f 
+MOV TV49, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+PUSH TV49 
+call ASMOUT 
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV51, CX 
+INC CX 
+MOV SI[BX], CX 
+ 
+ 
+MOV TV53, 6
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, TV53 
+MOV SI[BX], CX
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV55, CX
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, SI[BX] 
+MOV TV57, CX
+ 
+MOV AX, TV55 
+MUL TV57
+MOV TV58, AX 
+ 
+PUSH TV58 
+call ASMOUT 
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV60, CX
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, SI[BX] 
+MOV TV62, CX
+ 
+MOV AX, TV60 
+CMP AX, TV62 
+JG LB6 
+MOV AX, 0 
+JMP LB7
+LB6: 
+MOV AX, 1 
+LB7: 
+MOV TV63, AX 
+
+CMP TV63, 0 
+JNZ LB8 
+MOV TV64, 1 
+JMP LB9 
+LB8: 
+MOV TV64, 0 
+LB9: 
+ 
+PUSH TV64 
+call ASMOUT 
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV66, CX
+
+CMP TV66, 0 
+JNZ LB10 
+MOV TV67, 1 
+JMP LB11 
+LB10: 
+MOV TV67, 0 
+LB11: 
+ 
+PUSH TV67 
+call ASMOUT 
+ 
+ 
+MOV TV68, 0
+ 
+MOV AX, TV68 
+MOV b4, AX 
+ 
+LB14: 
+MOV AX, b4 
+MOV TV69, AX 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV71, CX
+ 
+MOV AX, TV69 
+CMP AX, TV71 
+JLE LB12 
+MOV AX, 0 
+JMP LB13
+LB12: 
+MOV AX, 1 
+LB13: 
+MOV TV72, AX 
+ 
+CMP TV72, 0 
+JZ LB15 
+MOV AX, b4 
+MOV TV74, AX 
+ 
+PUSH TV74 
+call ASMOUT 
+ 
+MOV AX, b4 
+MOV TV73, AX 
+INC b4 
+ 
+JMP LB14 
+LB15: 
+ 
+ 
+ 
+call h 
+MOV TV75, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+ 
+MOV TV76, 0
+ 
+MOV AX, TV76 
+MOV b4, AX 
+ 
+ 
+LB18: 
+MOV AX, b4 
+MOV TV77, AX 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV79, CX
+ 
+MOV AX, TV77 
+CMP AX, TV79 
+JL LB16 
+MOV AX, 0 
+JMP LB17
+LB16: 
+MOV AX, 1 
+LB17: 
+MOV TV80, AX 
+ 
+CMP TV80, 0 
+JZ LB19 
+MOV AX, b4 
+MOV TV81, AX 
+ 
+PUSH TV81 
+call ASMOUT 
+ 
+MOV AX, b4 
+MOV TV82, AX 
+ 
+MOV TV83, 2
+ 
+MOV BX, TV82 
+ADD BX, TV83 
+MOV TV84, BX 
+ 
+MOV AX, TV84 
+MOV b4, AX 
+ 
+ 
+JMP LB18 
+LB19: 
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV86, CX
+ 
+MOV TV87, 6
+ 
+MOV AX, TV86 
+CMP AX, TV87 
+JGE LB20 
+MOV AX, 0 
+JMP LB21
+LB20: 
+MOV AX, 1 
+LB21: 
+MOV TV88, AX 
+ 
+CMP TV88, 0 
+JE LB22 
+MOV TV89, 1
+ 
+PUSH TV89 
+call ASMOUT 
+ 
+ JMP LB23 
+LB22: 
+MOV TV90, 2
+ 
+PUSH TV90 
+call ASMOUT 
+ 
+ LB23: 
+ 
+ 
+MOV TV91, 0
+ 
+MOV AX, TV91 
+MOV b4, AX 
+ 
+LB30: 
+MOV AX, b4 
+MOV TV92, AX 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV94, CX
+ 
+MOV AX, TV92 
+CMP AX, TV94 
+JL LB24 
+MOV AX, 0 
+JMP LB25
+LB24: 
+MOV AX, 1 
+LB25: 
+MOV TV95, AX 
+ 
+CMP TV95, 0 
+JZ LB31 
+MOV TV97, 0
+ 
+MOV AX, TV97 
+MOV x4, AX 
+ 
+LB28: 
+MOV AX, x4 
+MOV TV98, AX 
+ 
+MOV TV99, 2
+ 
+MOV AX, TV98 
+CMP AX, TV99 
+JL LB26 
+MOV AX, 0 
+JMP LB27
+LB26: 
+MOV AX, 1 
+LB27: 
+MOV TV100, AX 
+ 
+CMP TV100, 0 
+JZ LB29 
+MOV AX, b4 
+MOV TV101, AX 
+ 
+MOV AX, x4 
+MOV TV102, AX 
+ 
+MOV AX, TV101 
+MUL TV102
+MOV TV103, AX 
+ 
+PUSH TV103 
+call ASMOUT 
+ 
+MOV AX, x4 
+MOV TV104, AX 
+INC x4 
+ 
+ 
+JMP LB28 
+LB29: 
+ 
+ 
+MOV AX, b4 
+MOV TV96, AX 
+INC b4 
+ 
+JMP LB30 
+LB31: 
+ 
+
+
+Line No 89 -> compound_statement : LCURL statements RCURL
+ 
+MOV TV17, 5
+ 
+MOV AX, TV17 
+MOV a4, AX 
+ 
+ 
+MOV TV18, 7
+ 
+MOV AX, TV18 
+MOV b4, AX 
+ 
+ 
+MOV AX, a4 
+MOV TV19, AX 
+ 
+PUSH TV19 
+ 
+MOV AX, b4 
+MOV TV20, AX 
+ 
+PUSH TV20 
+ 
+call g 
+MOV TV21, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+MOV AX, TV21 
+MOV x4, AX 
+ 
+ 
+MOV AX, x4 
+MOV TV22, AX 
+ 
+PUSH TV22 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV23, AX 
+ 
+MOV AX, b4 
+MOV TV24, AX 
+ 
+MOV BX, TV23 
+ADD BX, TV24 
+MOV TV25, BX 
+ 
+PUSH TV25 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV26, AX 
+ 
+MOV AX, b4 
+MOV TV27, AX 
+ 
+MOV BX, TV26 
+SUB BX, TV27 
+MOV TV28, BX 
+ 
+PUSH TV28 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV29, AX 
+ 
+MOV AX, b4 
+MOV TV30, AX 
+ 
+MOV AX, TV29 
+MUL TV30
+MOV TV31, AX 
+ 
+PUSH TV31 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV32, AX 
+ 
+MOV AX, b4 
+MOV TV33, AX 
+ 
+MOV AX, TV32 
+MOV BX, TV33 
+DIV BL
+XOR AH, AH 
+MOV TV34, AX 
+ 
+PUSH TV34 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV35, AX 
+ 
+MOV AX, b4 
+MOV TV36, AX 
+ 
+MOV AX, TV35 
+MOV BX, TV36 
+DIV BL
+MOV AL, AH 
+XOR AH, AH 
+MOV TV37, AX 
+ 
+PUSH TV37 
+call ASMOUT 
+ 
+ 
+MOV TV38, 0
+ 
+MOV AX, TV38 
+MOV b4, AX 
+ 
+ 
+MOV AX, a4 
+MOV TV39, AX 
+ 
+MOV AX, b4 
+MOV TV40, AX 
+ 
+MOV AX, TV39 
+CMP AX, 0 
+ JE LB0 
+MOV AX, TV40 
+CMP AX, 0 
+ JE LB0 
+MOV AX, 1 
+JMP LB2 
+LB0: 
+MOV AX, 0 
+LB2: 
+MOV TV41, AX 
+ 
+PUSH TV41 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV42, AX 
+ 
+MOV AX, b4 
+MOV TV43, AX 
+ 
+MOV AX, TV42 
+CMP AX, 0 
+ JNE LB4 
+MOV AX, TV43 
+CMP AX, 0 
+ JNE LB4 
+MOV AX, 0 
+JMP LB5 
+LB4: 
+MOV AX, 1 
+LB5: 
+MOV TV44, AX 
+ 
+PUSH TV44 
+call ASMOUT 
+ 
+ 
+ 
+ 
+MOV TV46, 4
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, TV46 
+MOV SI[BX], CX
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV48, CX
+ 
+PUSH TV48 
+ 
+call f 
+MOV TV49, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+PUSH TV49 
+call ASMOUT 
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV51, CX 
+INC CX 
+MOV SI[BX], CX 
+ 
+ 
+MOV TV53, 6
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, TV53 
+MOV SI[BX], CX
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV55, CX
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, SI[BX] 
+MOV TV57, CX
+ 
+MOV AX, TV55 
+MUL TV57
+MOV TV58, AX 
+ 
+PUSH TV58 
+call ASMOUT 
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV60, CX
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, SI[BX] 
+MOV TV62, CX
+ 
+MOV AX, TV60 
+CMP AX, TV62 
+JG LB6 
+MOV AX, 0 
+JMP LB7
+LB6: 
+MOV AX, 1 
+LB7: 
+MOV TV63, AX 
+
+CMP TV63, 0 
+JNZ LB8 
+MOV TV64, 1 
+JMP LB9 
+LB8: 
+MOV TV64, 0 
+LB9: 
+ 
+PUSH TV64 
+call ASMOUT 
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV66, CX
+
+CMP TV66, 0 
+JNZ LB10 
+MOV TV67, 1 
+JMP LB11 
+LB10: 
+MOV TV67, 0 
+LB11: 
+ 
+PUSH TV67 
+call ASMOUT 
+ 
+ 
+MOV TV68, 0
+ 
+MOV AX, TV68 
+MOV b4, AX 
+ 
+LB14: 
+MOV AX, b4 
+MOV TV69, AX 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV71, CX
+ 
+MOV AX, TV69 
+CMP AX, TV71 
+JLE LB12 
+MOV AX, 0 
+JMP LB13
+LB12: 
+MOV AX, 1 
+LB13: 
+MOV TV72, AX 
+ 
+CMP TV72, 0 
+JZ LB15 
+MOV AX, b4 
+MOV TV74, AX 
+ 
+PUSH TV74 
+call ASMOUT 
+ 
+MOV AX, b4 
+MOV TV73, AX 
+INC b4 
+ 
+JMP LB14 
+LB15: 
+ 
+ 
+ 
+call h 
+MOV TV75, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+ 
+MOV TV76, 0
+ 
+MOV AX, TV76 
+MOV b4, AX 
+ 
+ 
+LB18: 
+MOV AX, b4 
+MOV TV77, AX 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV79, CX
+ 
+MOV AX, TV77 
+CMP AX, TV79 
+JL LB16 
+MOV AX, 0 
+JMP LB17
+LB16: 
+MOV AX, 1 
+LB17: 
+MOV TV80, AX 
+ 
+CMP TV80, 0 
+JZ LB19 
+MOV AX, b4 
+MOV TV81, AX 
+ 
+PUSH TV81 
+call ASMOUT 
+ 
+MOV AX, b4 
+MOV TV82, AX 
+ 
+MOV TV83, 2
+ 
+MOV BX, TV82 
+ADD BX, TV83 
+MOV TV84, BX 
+ 
+MOV AX, TV84 
+MOV b4, AX 
+ 
+ 
+JMP LB18 
+LB19: 
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV86, CX
+ 
+MOV TV87, 6
+ 
+MOV AX, TV86 
+CMP AX, TV87 
+JGE LB20 
+MOV AX, 0 
+JMP LB21
+LB20: 
+MOV AX, 1 
+LB21: 
+MOV TV88, AX 
+ 
+CMP TV88, 0 
+JE LB22 
+MOV TV89, 1
+ 
+PUSH TV89 
+call ASMOUT 
+ 
+ JMP LB23 
+LB22: 
+MOV TV90, 2
+ 
+PUSH TV90 
+call ASMOUT 
+ 
+ LB23: 
+ 
+ 
+MOV TV91, 0
+ 
+MOV AX, TV91 
+MOV b4, AX 
+ 
+LB30: 
+MOV AX, b4 
+MOV TV92, AX 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV94, CX
+ 
+MOV AX, TV92 
+CMP AX, TV94 
+JL LB24 
+MOV AX, 0 
+JMP LB25
+LB24: 
+MOV AX, 1 
+LB25: 
+MOV TV95, AX 
+ 
+CMP TV95, 0 
+JZ LB31 
+MOV TV97, 0
+ 
+MOV AX, TV97 
+MOV x4, AX 
+ 
+LB28: 
+MOV AX, x4 
+MOV TV98, AX 
+ 
+MOV TV99, 2
+ 
+MOV AX, TV98 
+CMP AX, TV99 
+JL LB26 
+MOV AX, 0 
+JMP LB27
+LB26: 
+MOV AX, 1 
+LB27: 
+MOV TV100, AX 
+ 
+CMP TV100, 0 
+JZ LB29 
+MOV AX, b4 
+MOV TV101, AX 
+ 
+MOV AX, x4 
+MOV TV102, AX 
+ 
+MOV AX, TV101 
+MUL TV102
+MOV TV103, AX 
+ 
+PUSH TV103 
+call ASMOUT 
+ 
+MOV AX, x4 
+MOV TV104, AX 
+INC x4 
+ 
+ 
+JMP LB28 
+LB29: 
+ 
+ 
+MOV AX, b4 
+MOV TV96, AX 
+INC b4 
+ 
+JMP LB30 
+LB31: 
+ 
+
+
+Line No 89 -> func_definition : type_specifier ID LPAREN RPAREN compound_statement
+MAIN PROC 
+MOV DX, @DATA 
+MOV DS, DX 
+ 
+MOV TV17, 5
+ 
+MOV AX, TV17 
+MOV a4, AX 
+ 
+ 
+MOV TV18, 7
+ 
+MOV AX, TV18 
+MOV b4, AX 
+ 
+ 
+MOV AX, a4 
+MOV TV19, AX 
+ 
+PUSH TV19 
+ 
+MOV AX, b4 
+MOV TV20, AX 
+ 
+PUSH TV20 
+ 
+call g 
+MOV TV21, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+MOV AX, TV21 
+MOV x4, AX 
+ 
+ 
+MOV AX, x4 
+MOV TV22, AX 
+ 
+PUSH TV22 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV23, AX 
+ 
+MOV AX, b4 
+MOV TV24, AX 
+ 
+MOV BX, TV23 
+ADD BX, TV24 
+MOV TV25, BX 
+ 
+PUSH TV25 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV26, AX 
+ 
+MOV AX, b4 
+MOV TV27, AX 
+ 
+MOV BX, TV26 
+SUB BX, TV27 
+MOV TV28, BX 
+ 
+PUSH TV28 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV29, AX 
+ 
+MOV AX, b4 
+MOV TV30, AX 
+ 
+MOV AX, TV29 
+MUL TV30
+MOV TV31, AX 
+ 
+PUSH TV31 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV32, AX 
+ 
+MOV AX, b4 
+MOV TV33, AX 
+ 
+MOV AX, TV32 
+MOV BX, TV33 
+DIV BL
+XOR AH, AH 
+MOV TV34, AX 
+ 
+PUSH TV34 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV35, AX 
+ 
+MOV AX, b4 
+MOV TV36, AX 
+ 
+MOV AX, TV35 
+MOV BX, TV36 
+DIV BL
+MOV AL, AH 
+XOR AH, AH 
+MOV TV37, AX 
+ 
+PUSH TV37 
+call ASMOUT 
+ 
+ 
+MOV TV38, 0
+ 
+MOV AX, TV38 
+MOV b4, AX 
+ 
+ 
+MOV AX, a4 
+MOV TV39, AX 
+ 
+MOV AX, b4 
+MOV TV40, AX 
+ 
+MOV AX, TV39 
+CMP AX, 0 
+ JE LB0 
+MOV AX, TV40 
+CMP AX, 0 
+ JE LB0 
+MOV AX, 1 
+JMP LB2 
+LB0: 
+MOV AX, 0 
+LB2: 
+MOV TV41, AX 
+ 
+PUSH TV41 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV42, AX 
+ 
+MOV AX, b4 
+MOV TV43, AX 
+ 
+MOV AX, TV42 
+CMP AX, 0 
+ JNE LB4 
+MOV AX, TV43 
+CMP AX, 0 
+ JNE LB4 
+MOV AX, 0 
+JMP LB5 
+LB4: 
+MOV AX, 1 
+LB5: 
+MOV TV44, AX 
+ 
+PUSH TV44 
+call ASMOUT 
+ 
+ 
+ 
+ 
+MOV TV46, 4
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, TV46 
+MOV SI[BX], CX
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV48, CX
+ 
+PUSH TV48 
+ 
+call f 
+MOV TV49, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+PUSH TV49 
+call ASMOUT 
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV51, CX 
+INC CX 
+MOV SI[BX], CX 
+ 
+ 
+MOV TV53, 6
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, TV53 
+MOV SI[BX], CX
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV55, CX
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, SI[BX] 
+MOV TV57, CX
+ 
+MOV AX, TV55 
+MUL TV57
+MOV TV58, AX 
+ 
+PUSH TV58 
+call ASMOUT 
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV60, CX
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, SI[BX] 
+MOV TV62, CX
+ 
+MOV AX, TV60 
+CMP AX, TV62 
+JG LB6 
+MOV AX, 0 
+JMP LB7
+LB6: 
+MOV AX, 1 
+LB7: 
+MOV TV63, AX 
+
+CMP TV63, 0 
+JNZ LB8 
+MOV TV64, 1 
+JMP LB9 
+LB8: 
+MOV TV64, 0 
+LB9: 
+ 
+PUSH TV64 
+call ASMOUT 
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV66, CX
+
+CMP TV66, 0 
+JNZ LB10 
+MOV TV67, 1 
+JMP LB11 
+LB10: 
+MOV TV67, 0 
+LB11: 
+ 
+PUSH TV67 
+call ASMOUT 
+ 
+ 
+MOV TV68, 0
+ 
+MOV AX, TV68 
+MOV b4, AX 
+ 
+LB14: 
+MOV AX, b4 
+MOV TV69, AX 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV71, CX
+ 
+MOV AX, TV69 
+CMP AX, TV71 
+JLE LB12 
+MOV AX, 0 
+JMP LB13
+LB12: 
+MOV AX, 1 
+LB13: 
+MOV TV72, AX 
+ 
+CMP TV72, 0 
+JZ LB15 
+MOV AX, b4 
+MOV TV74, AX 
+ 
+PUSH TV74 
+call ASMOUT 
+ 
+MOV AX, b4 
+MOV TV73, AX 
+INC b4 
+ 
+JMP LB14 
+LB15: 
+ 
+ 
+ 
+call h 
+MOV TV75, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+ 
+MOV TV76, 0
+ 
+MOV AX, TV76 
+MOV b4, AX 
+ 
+ 
+LB18: 
+MOV AX, b4 
+MOV TV77, AX 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV79, CX
+ 
+MOV AX, TV77 
+CMP AX, TV79 
+JL LB16 
+MOV AX, 0 
+JMP LB17
+LB16: 
+MOV AX, 1 
+LB17: 
+MOV TV80, AX 
+ 
+CMP TV80, 0 
+JZ LB19 
+MOV AX, b4 
+MOV TV81, AX 
+ 
+PUSH TV81 
+call ASMOUT 
+ 
+MOV AX, b4 
+MOV TV82, AX 
+ 
+MOV TV83, 2
+ 
+MOV BX, TV82 
+ADD BX, TV83 
+MOV TV84, BX 
+ 
+MOV AX, TV84 
+MOV b4, AX 
+ 
+ 
+JMP LB18 
+LB19: 
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV86, CX
+ 
+MOV TV87, 6
+ 
+MOV AX, TV86 
+CMP AX, TV87 
+JGE LB20 
+MOV AX, 0 
+JMP LB21
+LB20: 
+MOV AX, 1 
+LB21: 
+MOV TV88, AX 
+ 
+CMP TV88, 0 
+JE LB22 
+MOV TV89, 1
+ 
+PUSH TV89 
+call ASMOUT 
+ 
+ JMP LB23 
+LB22: 
+MOV TV90, 2
+ 
+PUSH TV90 
+call ASMOUT 
+ 
+ LB23: 
+ 
+ 
+MOV TV91, 0
+ 
+MOV AX, TV91 
+MOV b4, AX 
+ 
+LB30: 
+MOV AX, b4 
+MOV TV92, AX 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV94, CX
+ 
+MOV AX, TV92 
+CMP AX, TV94 
+JL LB24 
+MOV AX, 0 
+JMP LB25
+LB24: 
+MOV AX, 1 
+LB25: 
+MOV TV95, AX 
+ 
+CMP TV95, 0 
+JZ LB31 
+MOV TV97, 0
+ 
+MOV AX, TV97 
+MOV x4, AX 
+ 
+LB28: 
+MOV AX, x4 
+MOV TV98, AX 
+ 
+MOV TV99, 2
+ 
+MOV AX, TV98 
+CMP AX, TV99 
+JL LB26 
+MOV AX, 0 
+JMP LB27
+LB26: 
+MOV AX, 1 
+LB27: 
+MOV TV100, AX 
+ 
+CMP TV100, 0 
+JZ LB29 
+MOV AX, b4 
+MOV TV101, AX 
+ 
+MOV AX, x4 
+MOV TV102, AX 
+ 
+MOV AX, TV101 
+MUL TV102
+MOV TV103, AX 
+ 
+PUSH TV103 
+call ASMOUT 
+ 
+MOV AX, x4 
+MOV TV104, AX 
+INC x4 
+ 
+ 
+JMP LB28 
+LB29: 
+ 
+ 
+MOV AX, b4 
+MOV TV96, AX 
+INC b4 
+ 
+JMP LB30 
+LB31: 
+ 
+ 
+MOV AH, 4Ch 
+INT 21h 
+MAIN ENDP 
+
+Line No 89 -> unit : func_definition
+MAIN PROC 
+MOV DX, @DATA 
+MOV DS, DX 
+ 
+MOV TV17, 5
+ 
+MOV AX, TV17 
+MOV a4, AX 
+ 
+ 
+MOV TV18, 7
+ 
+MOV AX, TV18 
+MOV b4, AX 
+ 
+ 
+MOV AX, a4 
+MOV TV19, AX 
+ 
+PUSH TV19 
+ 
+MOV AX, b4 
+MOV TV20, AX 
+ 
+PUSH TV20 
+ 
+call g 
+MOV TV21, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+MOV AX, TV21 
+MOV x4, AX 
+ 
+ 
+MOV AX, x4 
+MOV TV22, AX 
+ 
+PUSH TV22 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV23, AX 
+ 
+MOV AX, b4 
+MOV TV24, AX 
+ 
+MOV BX, TV23 
+ADD BX, TV24 
+MOV TV25, BX 
+ 
+PUSH TV25 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV26, AX 
+ 
+MOV AX, b4 
+MOV TV27, AX 
+ 
+MOV BX, TV26 
+SUB BX, TV27 
+MOV TV28, BX 
+ 
+PUSH TV28 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV29, AX 
+ 
+MOV AX, b4 
+MOV TV30, AX 
+ 
+MOV AX, TV29 
+MUL TV30
+MOV TV31, AX 
+ 
+PUSH TV31 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV32, AX 
+ 
+MOV AX, b4 
+MOV TV33, AX 
+ 
+MOV AX, TV32 
+MOV BX, TV33 
+DIV BL
+XOR AH, AH 
+MOV TV34, AX 
+ 
+PUSH TV34 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV35, AX 
+ 
+MOV AX, b4 
+MOV TV36, AX 
+ 
+MOV AX, TV35 
+MOV BX, TV36 
+DIV BL
+MOV AL, AH 
+XOR AH, AH 
+MOV TV37, AX 
+ 
+PUSH TV37 
+call ASMOUT 
+ 
+ 
+MOV TV38, 0
+ 
+MOV AX, TV38 
+MOV b4, AX 
+ 
+ 
+MOV AX, a4 
+MOV TV39, AX 
+ 
+MOV AX, b4 
+MOV TV40, AX 
+ 
+MOV AX, TV39 
+CMP AX, 0 
+ JE LB0 
+MOV AX, TV40 
+CMP AX, 0 
+ JE LB0 
+MOV AX, 1 
+JMP LB2 
+LB0: 
+MOV AX, 0 
+LB2: 
+MOV TV41, AX 
+ 
+PUSH TV41 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV42, AX 
+ 
+MOV AX, b4 
+MOV TV43, AX 
+ 
+MOV AX, TV42 
+CMP AX, 0 
+ JNE LB4 
+MOV AX, TV43 
+CMP AX, 0 
+ JNE LB4 
+MOV AX, 0 
+JMP LB5 
+LB4: 
+MOV AX, 1 
+LB5: 
+MOV TV44, AX 
+ 
+PUSH TV44 
+call ASMOUT 
+ 
+ 
+ 
+ 
+MOV TV46, 4
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, TV46 
+MOV SI[BX], CX
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV48, CX
+ 
+PUSH TV48 
+ 
+call f 
+MOV TV49, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+PUSH TV49 
+call ASMOUT 
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV51, CX 
+INC CX 
+MOV SI[BX], CX 
+ 
+ 
+MOV TV53, 6
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, TV53 
+MOV SI[BX], CX
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV55, CX
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, SI[BX] 
+MOV TV57, CX
+ 
+MOV AX, TV55 
+MUL TV57
+MOV TV58, AX 
+ 
+PUSH TV58 
+call ASMOUT 
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV60, CX
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, SI[BX] 
+MOV TV62, CX
+ 
+MOV AX, TV60 
+CMP AX, TV62 
+JG LB6 
+MOV AX, 0 
+JMP LB7
+LB6: 
+MOV AX, 1 
+LB7: 
+MOV TV63, AX 
+
+CMP TV63, 0 
+JNZ LB8 
+MOV TV64, 1 
+JMP LB9 
+LB8: 
+MOV TV64, 0 
+LB9: 
+ 
+PUSH TV64 
+call ASMOUT 
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV66, CX
+
+CMP TV66, 0 
+JNZ LB10 
+MOV TV67, 1 
+JMP LB11 
+LB10: 
+MOV TV67, 0 
+LB11: 
+ 
+PUSH TV67 
+call ASMOUT 
+ 
+ 
+MOV TV68, 0
+ 
+MOV AX, TV68 
+MOV b4, AX 
+ 
+LB14: 
+MOV AX, b4 
+MOV TV69, AX 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV71, CX
+ 
+MOV AX, TV69 
+CMP AX, TV71 
+JLE LB12 
+MOV AX, 0 
+JMP LB13
+LB12: 
+MOV AX, 1 
+LB13: 
+MOV TV72, AX 
+ 
+CMP TV72, 0 
+JZ LB15 
+MOV AX, b4 
+MOV TV74, AX 
+ 
+PUSH TV74 
+call ASMOUT 
+ 
+MOV AX, b4 
+MOV TV73, AX 
+INC b4 
+ 
+JMP LB14 
+LB15: 
+ 
+ 
+ 
+call h 
+MOV TV75, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+ 
+MOV TV76, 0
+ 
+MOV AX, TV76 
+MOV b4, AX 
+ 
+ 
+LB18: 
+MOV AX, b4 
+MOV TV77, AX 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV79, CX
+ 
+MOV AX, TV77 
+CMP AX, TV79 
+JL LB16 
+MOV AX, 0 
+JMP LB17
+LB16: 
+MOV AX, 1 
+LB17: 
+MOV TV80, AX 
+ 
+CMP TV80, 0 
+JZ LB19 
+MOV AX, b4 
+MOV TV81, AX 
+ 
+PUSH TV81 
+call ASMOUT 
+ 
+MOV AX, b4 
+MOV TV82, AX 
+ 
+MOV TV83, 2
+ 
+MOV BX, TV82 
+ADD BX, TV83 
+MOV TV84, BX 
+ 
+MOV AX, TV84 
+MOV b4, AX 
+ 
+ 
+JMP LB18 
+LB19: 
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV86, CX
+ 
+MOV TV87, 6
+ 
+MOV AX, TV86 
+CMP AX, TV87 
+JGE LB20 
+MOV AX, 0 
+JMP LB21
+LB20: 
+MOV AX, 1 
+LB21: 
+MOV TV88, AX 
+ 
+CMP TV88, 0 
+JE LB22 
+MOV TV89, 1
+ 
+PUSH TV89 
+call ASMOUT 
+ 
+ JMP LB23 
+LB22: 
+MOV TV90, 2
+ 
+PUSH TV90 
+call ASMOUT 
+ 
+ LB23: 
+ 
+ 
+MOV TV91, 0
+ 
+MOV AX, TV91 
+MOV b4, AX 
+ 
+LB30: 
+MOV AX, b4 
+MOV TV92, AX 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV94, CX
+ 
+MOV AX, TV92 
+CMP AX, TV94 
+JL LB24 
+MOV AX, 0 
+JMP LB25
+LB24: 
+MOV AX, 1 
+LB25: 
+MOV TV95, AX 
+ 
+CMP TV95, 0 
+JZ LB31 
+MOV TV97, 0
+ 
+MOV AX, TV97 
+MOV x4, AX 
+ 
+LB28: 
+MOV AX, x4 
+MOV TV98, AX 
+ 
+MOV TV99, 2
+ 
+MOV AX, TV98 
+CMP AX, TV99 
+JL LB26 
+MOV AX, 0 
+JMP LB27
+LB26: 
+MOV AX, 1 
+LB27: 
+MOV TV100, AX 
+ 
+CMP TV100, 0 
+JZ LB29 
+MOV AX, b4 
+MOV TV101, AX 
+ 
+MOV AX, x4 
+MOV TV102, AX 
+ 
+MOV AX, TV101 
+MUL TV102
+MOV TV103, AX 
+ 
+PUSH TV103 
+call ASMOUT 
+ 
+MOV AX, x4 
+MOV TV104, AX 
+INC x4 
+ 
+ 
+JMP LB28 
+LB29: 
+ 
+ 
+MOV AX, b4 
+MOV TV96, AX 
+INC b4 
+ 
+JMP LB30 
+LB31: 
+ 
+ 
+MOV AH, 4Ch 
+INT 21h 
+MAIN ENDP 
+
+Line No 89 -> program : program unit
+ 
+f PROC 
+POP TV6 
+POP a2
+ 
+PUSH AX 
+PUSH BX 
+PUSH CX 
+PUSH DX 
+PUSH SP 
+PUSH BP 										
+PUSH SI 
+PUSH DI 
+PUSHF 
+PUSH TV6 
+MOV TV0, 2
+ 
+MOV AX, a2 
+MOV TV1, AX 
+ 
+MOV AX, TV0 
+MUL TV1
+MOV TV2, AX 
+ 
+MOV DX, TV2 
+RET 
+ 
+MOV TV3, 1
+ 
+MOV AX, TV3 
+NEG AX 
+MOV TV4, AX 
+ 
+PUSH TV4 
+call ASMOUT 
+ 
+ 
+MOV TV5, 9
+ 
+MOV AX, TV5 
+MOV a2, AX 
+ 
+ 
+RET 
+f ENDP 
+ 
+g PROC 
+POP TV15 
+POP b3
+POP a3
+ 
+PUSH AX 
+PUSH BX 
+PUSH CX 
+PUSH DX 
+PUSH SP 
+PUSH BP 										
+PUSH SI 
+PUSH DI 
+PUSHF 
+PUSH TV15 
+ 
+MOV AX, a3 
+MOV TV8, AX 
+ 
+PUSH TV8 
+ 
+call f 
+MOV TV9, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+MOV AX, a3 
+MOV TV10, AX 
+ 
+MOV BX, TV9 
+ADD BX, TV10 
+MOV TV11, BX 
+ 
+MOV AX, b3 
+MOV TV12, AX 
+ 
+MOV BX, TV11 
+ADD BX, TV12 
+MOV TV13, BX 
+ 
+MOV AX, TV13 
+MOV x3, AX 
+ 
+ 
+MOV AX, x3 
+MOV TV14, AX 
+ 
+MOV DX, TV14 
+RET 
+ 
+ 
+RET 
+g ENDP 
+ 
+ 
+ 
+MAIN PROC 
+MOV DX, @DATA 
+MOV DS, DX 
+ 
+MOV TV17, 5
+ 
+MOV AX, TV17 
+MOV a4, AX 
+ 
+ 
+MOV TV18, 7
+ 
+MOV AX, TV18 
+MOV b4, AX 
+ 
+ 
+MOV AX, a4 
+MOV TV19, AX 
+ 
+PUSH TV19 
+ 
+MOV AX, b4 
+MOV TV20, AX 
+ 
+PUSH TV20 
+ 
+call g 
+MOV TV21, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+MOV AX, TV21 
+MOV x4, AX 
+ 
+ 
+MOV AX, x4 
+MOV TV22, AX 
+ 
+PUSH TV22 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV23, AX 
+ 
+MOV AX, b4 
+MOV TV24, AX 
+ 
+MOV BX, TV23 
+ADD BX, TV24 
+MOV TV25, BX 
+ 
+PUSH TV25 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV26, AX 
+ 
+MOV AX, b4 
+MOV TV27, AX 
+ 
+MOV BX, TV26 
+SUB BX, TV27 
+MOV TV28, BX 
+ 
+PUSH TV28 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV29, AX 
+ 
+MOV AX, b4 
+MOV TV30, AX 
+ 
+MOV AX, TV29 
+MUL TV30
+MOV TV31, AX 
+ 
+PUSH TV31 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV32, AX 
+ 
+MOV AX, b4 
+MOV TV33, AX 
+ 
+MOV AX, TV32 
+MOV BX, TV33 
+DIV BL
+XOR AH, AH 
+MOV TV34, AX 
+ 
+PUSH TV34 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV35, AX 
+ 
+MOV AX, b4 
+MOV TV36, AX 
+ 
+MOV AX, TV35 
+MOV BX, TV36 
+DIV BL
+MOV AL, AH 
+XOR AH, AH 
+MOV TV37, AX 
+ 
+PUSH TV37 
+call ASMOUT 
+ 
+ 
+MOV TV38, 0
+ 
+MOV AX, TV38 
+MOV b4, AX 
+ 
+ 
+MOV AX, a4 
+MOV TV39, AX 
+ 
+MOV AX, b4 
+MOV TV40, AX 
+ 
+MOV AX, TV39 
+CMP AX, 0 
+ JE LB0 
+MOV AX, TV40 
+CMP AX, 0 
+ JE LB0 
+MOV AX, 1 
+JMP LB2 
+LB0: 
+MOV AX, 0 
+LB2: 
+MOV TV41, AX 
+ 
+PUSH TV41 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV42, AX 
+ 
+MOV AX, b4 
+MOV TV43, AX 
+ 
+MOV AX, TV42 
+CMP AX, 0 
+ JNE LB4 
+MOV AX, TV43 
+CMP AX, 0 
+ JNE LB4 
+MOV AX, 0 
+JMP LB5 
+LB4: 
+MOV AX, 1 
+LB5: 
+MOV TV44, AX 
+ 
+PUSH TV44 
+call ASMOUT 
+ 
+ 
+ 
+ 
+MOV TV46, 4
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, TV46 
+MOV SI[BX], CX
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV48, CX
+ 
+PUSH TV48 
+ 
+call f 
+MOV TV49, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+PUSH TV49 
+call ASMOUT 
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV51, CX 
+INC CX 
+MOV SI[BX], CX 
+ 
+ 
+MOV TV53, 6
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, TV53 
+MOV SI[BX], CX
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV55, CX
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, SI[BX] 
+MOV TV57, CX
+ 
+MOV AX, TV55 
+MUL TV57
+MOV TV58, AX 
+ 
+PUSH TV58 
+call ASMOUT 
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV60, CX
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, SI[BX] 
+MOV TV62, CX
+ 
+MOV AX, TV60 
+CMP AX, TV62 
+JG LB6 
+MOV AX, 0 
+JMP LB7
+LB6: 
+MOV AX, 1 
+LB7: 
+MOV TV63, AX 
+
+CMP TV63, 0 
+JNZ LB8 
+MOV TV64, 1 
+JMP LB9 
+LB8: 
+MOV TV64, 0 
+LB9: 
+ 
+PUSH TV64 
+call ASMOUT 
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV66, CX
+
+CMP TV66, 0 
+JNZ LB10 
+MOV TV67, 1 
+JMP LB11 
+LB10: 
+MOV TV67, 0 
+LB11: 
+ 
+PUSH TV67 
+call ASMOUT 
+ 
+ 
+MOV TV68, 0
+ 
+MOV AX, TV68 
+MOV b4, AX 
+ 
+LB14: 
+MOV AX, b4 
+MOV TV69, AX 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV71, CX
+ 
+MOV AX, TV69 
+CMP AX, TV71 
+JLE LB12 
+MOV AX, 0 
+JMP LB13
+LB12: 
+MOV AX, 1 
+LB13: 
+MOV TV72, AX 
+ 
+CMP TV72, 0 
+JZ LB15 
+MOV AX, b4 
+MOV TV74, AX 
+ 
+PUSH TV74 
+call ASMOUT 
+ 
+MOV AX, b4 
+MOV TV73, AX 
+INC b4 
+ 
+JMP LB14 
+LB15: 
+ 
+ 
+ 
+call h 
+MOV TV75, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+ 
+MOV TV76, 0
+ 
+MOV AX, TV76 
+MOV b4, AX 
+ 
+ 
+LB18: 
+MOV AX, b4 
+MOV TV77, AX 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV79, CX
+ 
+MOV AX, TV77 
+CMP AX, TV79 
+JL LB16 
+MOV AX, 0 
+JMP LB17
+LB16: 
+MOV AX, 1 
+LB17: 
+MOV TV80, AX 
+ 
+CMP TV80, 0 
+JZ LB19 
+MOV AX, b4 
+MOV TV81, AX 
+ 
+PUSH TV81 
+call ASMOUT 
+ 
+MOV AX, b4 
+MOV TV82, AX 
+ 
+MOV TV83, 2
+ 
+MOV BX, TV82 
+ADD BX, TV83 
+MOV TV84, BX 
+ 
+MOV AX, TV84 
+MOV b4, AX 
+ 
+ 
+JMP LB18 
+LB19: 
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV86, CX
+ 
+MOV TV87, 6
+ 
+MOV AX, TV86 
+CMP AX, TV87 
+JGE LB20 
+MOV AX, 0 
+JMP LB21
+LB20: 
+MOV AX, 1 
+LB21: 
+MOV TV88, AX 
+ 
+CMP TV88, 0 
+JE LB22 
+MOV TV89, 1
+ 
+PUSH TV89 
+call ASMOUT 
+ 
+ JMP LB23 
+LB22: 
+MOV TV90, 2
+ 
+PUSH TV90 
+call ASMOUT 
+ 
+ LB23: 
+ 
+ 
+MOV TV91, 0
+ 
+MOV AX, TV91 
+MOV b4, AX 
+ 
+LB30: 
+MOV AX, b4 
+MOV TV92, AX 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV94, CX
+ 
+MOV AX, TV92 
+CMP AX, TV94 
+JL LB24 
+MOV AX, 0 
+JMP LB25
+LB24: 
+MOV AX, 1 
+LB25: 
+MOV TV95, AX 
+ 
+CMP TV95, 0 
+JZ LB31 
+MOV TV97, 0
+ 
+MOV AX, TV97 
+MOV x4, AX 
+ 
+LB28: 
+MOV AX, x4 
+MOV TV98, AX 
+ 
+MOV TV99, 2
+ 
+MOV AX, TV98 
+CMP AX, TV99 
+JL LB26 
+MOV AX, 0 
+JMP LB27
+LB26: 
+MOV AX, 1 
+LB27: 
+MOV TV100, AX 
+ 
+CMP TV100, 0 
+JZ LB29 
+MOV AX, b4 
+MOV TV101, AX 
+ 
+MOV AX, x4 
+MOV TV102, AX 
+ 
+MOV AX, TV101 
+MUL TV102
+MOV TV103, AX 
+ 
+PUSH TV103 
+call ASMOUT 
+ 
+MOV AX, x4 
+MOV TV104, AX 
+INC x4 
+ 
+ 
+JMP LB28 
+LB29: 
+ 
+ 
+MOV AX, b4 
+MOV TV96, AX 
+INC b4 
+ 
+JMP LB30 
+LB31: 
+ 
+ 
+MOV AH, 4Ch 
+INT 21h 
+MAIN ENDP  
+
+
+Line No 92 -> type_specifier : VOID
+
+
+Line No 93 -> type_specifier : INT
+
+
+Line No 93 -> declaration_list : ID
+
+
+Line No 93 -> var_declaration : type_specifier declaration_list SEMICOLON
+
+
+Line No 93 -> statement : var_declaration
+
+
+Line No 93 -> statements : statement
+
+
+Line No 94 -> variable : ID
+
+
+Line No 94 -> factor : CONST_INT
+MOV TV105, 2
+
+
+Line No 94 -> unary_expression : factor
+MOV TV105, 2
+
+
+Line No 94 -> term : unary_expression
+MOV TV105, 2
+
+
+Line No 94 -> simple_expression : term
+MOV TV105, 2
+
+
+Line No 94 -> rel_expression : simple_expression
+MOV TV105, 2
+
+
+Line No 94 -> logic_expression : rel_expression
+MOV TV105, 2
+
+
+Line No 94 -> expression : variable ASSIGNOP logic_expression
+MOV TV105, 2
+ 
+MOV AX, TV105 
+MOV x10, AX 
+
+
+Line No 94 -> expression_statement : expression SEMICOLON
+MOV TV105, 2
+ 
+MOV AX, TV105 
+MOV x10, AX 
+
+
+Line No 94 -> statement : expression_statement
+MOV TV105, 2
+ 
+MOV AX, TV105 
+MOV x10, AX 
+
+
+Line No 94 -> statements : statements statement
+ 
+MOV TV105, 2
+ 
+MOV AX, TV105 
+MOV x10, AX 
+ 
+
+
+Line No 95 -> variable : ID
+
+
+Line No 95 -> factor : variable
+MOV AX, x10 
+MOV TV106, AX 
+
+
+Line No 95 -> unary_expression : factor
+MOV AX, x10 
+MOV TV106, AX 
+
+
+Line No 95 -> unary_expression : ADDOP unary_expression
+MOV AX, x10 
+MOV TV106, AX 
+ 
+MOV AX, TV106 
+NEG AX 
+MOV TV107, AX 
+
+
+Line No 95 -> term : unary_expression
+MOV AX, x10 
+MOV TV106, AX 
+ 
+MOV AX, TV106 
+NEG AX 
+MOV TV107, AX 
+
+
+Line No 95 -> simple_expression : term
+MOV AX, x10 
+MOV TV106, AX 
+ 
+MOV AX, TV106 
+NEG AX 
+MOV TV107, AX 
+
+
+Line No 95 -> rel_expression : simple_expression
+MOV AX, x10 
+MOV TV106, AX 
+ 
+MOV AX, TV106 
+NEG AX 
+MOV TV107, AX 
+
+
+Line No 95 -> logic_expression : rel_expression
+MOV AX, x10 
+MOV TV106, AX 
+ 
+MOV AX, TV106 
+NEG AX 
+MOV TV107, AX 
+
+
+Line No 95 -> expression : logic_expression
+MOV AX, x10 
+MOV TV106, AX 
+ 
+MOV AX, TV106 
+NEG AX 
+MOV TV107, AX 
+
+
+Line No 95 -> statement : PRINTLN LPAREN expression RPAREN SEMICOLON
+MOV AX, x10 
+MOV TV106, AX 
+ 
+MOV AX, TV106 
+NEG AX 
+MOV TV107, AX 
+ 
+PUSH TV107 
+call ASMOUT 
+
+
+Line No 95 -> statements : statements statement
+ 
+MOV TV105, 2
+ 
+MOV AX, TV105 
+MOV x10, AX 
+ 
+ 
+MOV AX, x10 
+MOV TV106, AX 
+ 
+MOV AX, TV106 
+NEG AX 
+MOV TV107, AX 
+ 
+PUSH TV107 
+call ASMOUT 
+ 
+
+
+Line No 96 -> compound_statement : LCURL statements RCURL
+ 
+MOV TV105, 2
+ 
+MOV AX, TV105 
+MOV x10, AX 
+ 
+ 
+MOV AX, x10 
+MOV TV106, AX 
+ 
+MOV AX, TV106 
+NEG AX 
+MOV TV107, AX 
+ 
+PUSH TV107 
+call ASMOUT 
+ 
+
+
+Line No 96 -> func_definition : type_specifier ID LPAREN RPAREN compound_statement
+h PROC 
+POP TV108 
+PUSH AX 
+PUSH BX 
+PUSH CX 
+PUSH DX 										
+PUSH SP 
+PUSH BP 
+PUSH SI 
+PUSH DI 
+PUSHF 
+PUSH TV108 
+ 
+MOV TV105, 2
+ 
+MOV AX, TV105 
+MOV x10, AX 
+ 
+ 
+MOV AX, x10 
+MOV TV106, AX 
+ 
+MOV AX, TV106 
+NEG AX 
+MOV TV107, AX 
+ 
+PUSH TV107 
+call ASMOUT 
+ 
+ 
+RET 
+h ENDP
+
+Line No 96 -> unit : func_definition
+h PROC 
+POP TV108 
+PUSH AX 
+PUSH BX 
+PUSH CX 
+PUSH DX 										
+PUSH SP 
+PUSH BP 
+PUSH SI 
+PUSH DI 
+PUSHF 
+PUSH TV108 
+ 
+MOV TV105, 2
+ 
+MOV AX, TV105 
+MOV x10, AX 
+ 
+ 
+MOV AX, x10 
+MOV TV106, AX 
+ 
+MOV AX, TV106 
+NEG AX 
+MOV TV107, AX 
+ 
+PUSH TV107 
+call ASMOUT 
+ 
+ 
+RET 
+h ENDP
+
+Line No 96 -> program : program unit
+ 
+f PROC 
+POP TV6 
+POP a2
+ 
+PUSH AX 
+PUSH BX 
+PUSH CX 
+PUSH DX 
+PUSH SP 
+PUSH BP 										
+PUSH SI 
+PUSH DI 
+PUSHF 
+PUSH TV6 
+MOV TV0, 2
+ 
+MOV AX, a2 
+MOV TV1, AX 
+ 
+MOV AX, TV0 
+MUL TV1
+MOV TV2, AX 
+ 
+MOV DX, TV2 
+RET 
+ 
+MOV TV3, 1
+ 
+MOV AX, TV3 
+NEG AX 
+MOV TV4, AX 
+ 
+PUSH TV4 
+call ASMOUT 
+ 
+ 
+MOV TV5, 9
+ 
+MOV AX, TV5 
+MOV a2, AX 
+ 
+ 
+RET 
+f ENDP 
+ 
+g PROC 
+POP TV15 
+POP b3
+POP a3
+ 
+PUSH AX 
+PUSH BX 
+PUSH CX 
+PUSH DX 
+PUSH SP 
+PUSH BP 										
+PUSH SI 
+PUSH DI 
+PUSHF 
+PUSH TV15 
+ 
+MOV AX, a3 
+MOV TV8, AX 
+ 
+PUSH TV8 
+ 
+call f 
+MOV TV9, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+MOV AX, a3 
+MOV TV10, AX 
+ 
+MOV BX, TV9 
+ADD BX, TV10 
+MOV TV11, BX 
+ 
+MOV AX, b3 
+MOV TV12, AX 
+ 
+MOV BX, TV11 
+ADD BX, TV12 
+MOV TV13, BX 
+ 
+MOV AX, TV13 
+MOV x3, AX 
+ 
+ 
+MOV AX, x3 
+MOV TV14, AX 
+ 
+MOV DX, TV14 
+RET 
+ 
+ 
+RET 
+g ENDP 
+ 
+ 
+ 
+MAIN PROC 
+MOV DX, @DATA 
+MOV DS, DX 
+ 
+MOV TV17, 5
+ 
+MOV AX, TV17 
+MOV a4, AX 
+ 
+ 
+MOV TV18, 7
+ 
+MOV AX, TV18 
+MOV b4, AX 
+ 
+ 
+MOV AX, a4 
+MOV TV19, AX 
+ 
+PUSH TV19 
+ 
+MOV AX, b4 
+MOV TV20, AX 
+ 
+PUSH TV20 
+ 
+call g 
+MOV TV21, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+MOV AX, TV21 
+MOV x4, AX 
+ 
+ 
+MOV AX, x4 
+MOV TV22, AX 
+ 
+PUSH TV22 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV23, AX 
+ 
+MOV AX, b4 
+MOV TV24, AX 
+ 
+MOV BX, TV23 
+ADD BX, TV24 
+MOV TV25, BX 
+ 
+PUSH TV25 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV26, AX 
+ 
+MOV AX, b4 
+MOV TV27, AX 
+ 
+MOV BX, TV26 
+SUB BX, TV27 
+MOV TV28, BX 
+ 
+PUSH TV28 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV29, AX 
+ 
+MOV AX, b4 
+MOV TV30, AX 
+ 
+MOV AX, TV29 
+MUL TV30
+MOV TV31, AX 
+ 
+PUSH TV31 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV32, AX 
+ 
+MOV AX, b4 
+MOV TV33, AX 
+ 
+MOV AX, TV32 
+MOV BX, TV33 
+DIV BL
+XOR AH, AH 
+MOV TV34, AX 
+ 
+PUSH TV34 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV35, AX 
+ 
+MOV AX, b4 
+MOV TV36, AX 
+ 
+MOV AX, TV35 
+MOV BX, TV36 
+DIV BL
+MOV AL, AH 
+XOR AH, AH 
+MOV TV37, AX 
+ 
+PUSH TV37 
+call ASMOUT 
+ 
+ 
+MOV TV38, 0
+ 
+MOV AX, TV38 
+MOV b4, AX 
+ 
+ 
+MOV AX, a4 
+MOV TV39, AX 
+ 
+MOV AX, b4 
+MOV TV40, AX 
+ 
+MOV AX, TV39 
+CMP AX, 0 
+ JE LB0 
+MOV AX, TV40 
+CMP AX, 0 
+ JE LB0 
+MOV AX, 1 
+JMP LB2 
+LB0: 
+MOV AX, 0 
+LB2: 
+MOV TV41, AX 
+ 
+PUSH TV41 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV42, AX 
+ 
+MOV AX, b4 
+MOV TV43, AX 
+ 
+MOV AX, TV42 
+CMP AX, 0 
+ JNE LB4 
+MOV AX, TV43 
+CMP AX, 0 
+ JNE LB4 
+MOV AX, 0 
+JMP LB5 
+LB4: 
+MOV AX, 1 
+LB5: 
+MOV TV44, AX 
+ 
+PUSH TV44 
+call ASMOUT 
+ 
+ 
+ 
+ 
+MOV TV46, 4
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, TV46 
+MOV SI[BX], CX
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV48, CX
+ 
+PUSH TV48 
+ 
+call f 
+MOV TV49, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+PUSH TV49 
+call ASMOUT 
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV51, CX 
+INC CX 
+MOV SI[BX], CX 
+ 
+ 
+MOV TV53, 6
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, TV53 
+MOV SI[BX], CX
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV55, CX
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, SI[BX] 
+MOV TV57, CX
+ 
+MOV AX, TV55 
+MUL TV57
+MOV TV58, AX 
+ 
+PUSH TV58 
+call ASMOUT 
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV60, CX
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, SI[BX] 
+MOV TV62, CX
+ 
+MOV AX, TV60 
+CMP AX, TV62 
+JG LB6 
+MOV AX, 0 
+JMP LB7
+LB6: 
+MOV AX, 1 
+LB7: 
+MOV TV63, AX 
+
+CMP TV63, 0 
+JNZ LB8 
+MOV TV64, 1 
+JMP LB9 
+LB8: 
+MOV TV64, 0 
+LB9: 
+ 
+PUSH TV64 
+call ASMOUT 
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV66, CX
+
+CMP TV66, 0 
+JNZ LB10 
+MOV TV67, 1 
+JMP LB11 
+LB10: 
+MOV TV67, 0 
+LB11: 
+ 
+PUSH TV67 
+call ASMOUT 
+ 
+ 
+MOV TV68, 0
+ 
+MOV AX, TV68 
+MOV b4, AX 
+ 
+LB14: 
+MOV AX, b4 
+MOV TV69, AX 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV71, CX
+ 
+MOV AX, TV69 
+CMP AX, TV71 
+JLE LB12 
+MOV AX, 0 
+JMP LB13
+LB12: 
+MOV AX, 1 
+LB13: 
+MOV TV72, AX 
+ 
+CMP TV72, 0 
+JZ LB15 
+MOV AX, b4 
+MOV TV74, AX 
+ 
+PUSH TV74 
+call ASMOUT 
+ 
+MOV AX, b4 
+MOV TV73, AX 
+INC b4 
+ 
+JMP LB14 
+LB15: 
+ 
+ 
+ 
+call h 
+MOV TV75, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+ 
+MOV TV76, 0
+ 
+MOV AX, TV76 
+MOV b4, AX 
+ 
+ 
+LB18: 
+MOV AX, b4 
+MOV TV77, AX 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV79, CX
+ 
+MOV AX, TV77 
+CMP AX, TV79 
+JL LB16 
+MOV AX, 0 
+JMP LB17
+LB16: 
+MOV AX, 1 
+LB17: 
+MOV TV80, AX 
+ 
+CMP TV80, 0 
+JZ LB19 
+MOV AX, b4 
+MOV TV81, AX 
+ 
+PUSH TV81 
+call ASMOUT 
+ 
+MOV AX, b4 
+MOV TV82, AX 
+ 
+MOV TV83, 2
+ 
+MOV BX, TV82 
+ADD BX, TV83 
+MOV TV84, BX 
+ 
+MOV AX, TV84 
+MOV b4, AX 
+ 
+ 
+JMP LB18 
+LB19: 
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV86, CX
+ 
+MOV TV87, 6
+ 
+MOV AX, TV86 
+CMP AX, TV87 
+JGE LB20 
+MOV AX, 0 
+JMP LB21
+LB20: 
+MOV AX, 1 
+LB21: 
+MOV TV88, AX 
+ 
+CMP TV88, 0 
+JE LB22 
+MOV TV89, 1
+ 
+PUSH TV89 
+call ASMOUT 
+ 
+ JMP LB23 
+LB22: 
+MOV TV90, 2
+ 
+PUSH TV90 
+call ASMOUT 
+ 
+ LB23: 
+ 
+ 
+MOV TV91, 0
+ 
+MOV AX, TV91 
+MOV b4, AX 
+ 
+LB30: 
+MOV AX, b4 
+MOV TV92, AX 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV94, CX
+ 
+MOV AX, TV92 
+CMP AX, TV94 
+JL LB24 
+MOV AX, 0 
+JMP LB25
+LB24: 
+MOV AX, 1 
+LB25: 
+MOV TV95, AX 
+ 
+CMP TV95, 0 
+JZ LB31 
+MOV TV97, 0
+ 
+MOV AX, TV97 
+MOV x4, AX 
+ 
+LB28: 
+MOV AX, x4 
+MOV TV98, AX 
+ 
+MOV TV99, 2
+ 
+MOV AX, TV98 
+CMP AX, TV99 
+JL LB26 
+MOV AX, 0 
+JMP LB27
+LB26: 
+MOV AX, 1 
+LB27: 
+MOV TV100, AX 
+ 
+CMP TV100, 0 
+JZ LB29 
+MOV AX, b4 
+MOV TV101, AX 
+ 
+MOV AX, x4 
+MOV TV102, AX 
+ 
+MOV AX, TV101 
+MUL TV102
+MOV TV103, AX 
+ 
+PUSH TV103 
+call ASMOUT 
+ 
+MOV AX, x4 
+MOV TV104, AX 
+INC x4 
+ 
+ 
+JMP LB28 
+LB29: 
+ 
+ 
+MOV AX, b4 
+MOV TV96, AX 
+INC b4 
+ 
+JMP LB30 
+LB31: 
+ 
+ 
+MOV AH, 4Ch 
+INT 21h 
+MAIN ENDP  
+ 
+h PROC 
+POP TV108 
+PUSH AX 
+PUSH BX 
+PUSH CX 
+PUSH DX 										
+PUSH SP 
+PUSH BP 
+PUSH SI 
+PUSH DI 
+PUSHF 
+PUSH TV108 
+ 
+MOV TV105, 2
+ 
+MOV AX, TV105 
+MOV x10, AX 
+ 
+ 
+MOV AX, x10 
+MOV TV106, AX 
+ 
+MOV AX, TV106 
+NEG AX 
+MOV TV107, AX 
+ 
+PUSH TV107 
+call ASMOUT 
+ 
+ 
+RET 
+h ENDP 
+
+
+Line No 97 -> start : program
+ 
+f PROC 
+POP TV6 
+POP a2
+ 
+PUSH AX 
+PUSH BX 
+PUSH CX 
+PUSH DX 
+PUSH SP 
+PUSH BP 										
+PUSH SI 
+PUSH DI 
+PUSHF 
+PUSH TV6 
+MOV TV0, 2
+ 
+MOV AX, a2 
+MOV TV1, AX 
+ 
+MOV AX, TV0 
+MUL TV1
+MOV TV2, AX 
+ 
+MOV DX, TV2 
+RET 
+ 
+MOV TV3, 1
+ 
+MOV AX, TV3 
+NEG AX 
+MOV TV4, AX 
+ 
+PUSH TV4 
+call ASMOUT 
+ 
+ 
+MOV TV5, 9
+ 
+MOV AX, TV5 
+MOV a2, AX 
+ 
+ 
+RET 
+f ENDP 
+ 
+g PROC 
+POP TV15 
+POP b3
+POP a3
+ 
+PUSH AX 
+PUSH BX 
+PUSH CX 
+PUSH DX 
+PUSH SP 
+PUSH BP 										
+PUSH SI 
+PUSH DI 
+PUSHF 
+PUSH TV15 
+ 
+MOV AX, a3 
+MOV TV8, AX 
+ 
+PUSH TV8 
+ 
+call f 
+MOV TV9, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+MOV AX, a3 
+MOV TV10, AX 
+ 
+MOV BX, TV9 
+ADD BX, TV10 
+MOV TV11, BX 
+ 
+MOV AX, b3 
+MOV TV12, AX 
+ 
+MOV BX, TV11 
+ADD BX, TV12 
+MOV TV13, BX 
+ 
+MOV AX, TV13 
+MOV x3, AX 
+ 
+ 
+MOV AX, x3 
+MOV TV14, AX 
+ 
+MOV DX, TV14 
+RET 
+ 
+ 
+RET 
+g ENDP 
+ 
+ 
+ 
+MAIN PROC 
+MOV DX, @DATA 
+MOV DS, DX 
+ 
+MOV TV17, 5
+ 
+MOV AX, TV17 
+MOV a4, AX 
+ 
+ 
+MOV TV18, 7
+ 
+MOV AX, TV18 
+MOV b4, AX 
+ 
+ 
+MOV AX, a4 
+MOV TV19, AX 
+ 
+PUSH TV19 
+ 
+MOV AX, b4 
+MOV TV20, AX 
+ 
+PUSH TV20 
+ 
+call g 
+MOV TV21, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+MOV AX, TV21 
+MOV x4, AX 
+ 
+ 
+MOV AX, x4 
+MOV TV22, AX 
+ 
+PUSH TV22 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV23, AX 
+ 
+MOV AX, b4 
+MOV TV24, AX 
+ 
+MOV BX, TV23 
+ADD BX, TV24 
+MOV TV25, BX 
+ 
+PUSH TV25 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV26, AX 
+ 
+MOV AX, b4 
+MOV TV27, AX 
+ 
+MOV BX, TV26 
+SUB BX, TV27 
+MOV TV28, BX 
+ 
+PUSH TV28 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV29, AX 
+ 
+MOV AX, b4 
+MOV TV30, AX 
+ 
+MOV AX, TV29 
+MUL TV30
+MOV TV31, AX 
+ 
+PUSH TV31 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV32, AX 
+ 
+MOV AX, b4 
+MOV TV33, AX 
+ 
+MOV AX, TV32 
+MOV BX, TV33 
+DIV BL
+XOR AH, AH 
+MOV TV34, AX 
+ 
+PUSH TV34 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV35, AX 
+ 
+MOV AX, b4 
+MOV TV36, AX 
+ 
+MOV AX, TV35 
+MOV BX, TV36 
+DIV BL
+MOV AL, AH 
+XOR AH, AH 
+MOV TV37, AX 
+ 
+PUSH TV37 
+call ASMOUT 
+ 
+ 
+MOV TV38, 0
+ 
+MOV AX, TV38 
+MOV b4, AX 
+ 
+ 
+MOV AX, a4 
+MOV TV39, AX 
+ 
+MOV AX, b4 
+MOV TV40, AX 
+ 
+MOV AX, TV39 
+CMP AX, 0 
+ JE LB0 
+MOV AX, TV40 
+CMP AX, 0 
+ JE LB0 
+MOV AX, 1 
+JMP LB2 
+LB0: 
+MOV AX, 0 
+LB2: 
+MOV TV41, AX 
+ 
+PUSH TV41 
+call ASMOUT 
+ 
+ 
+MOV AX, a4 
+MOV TV42, AX 
+ 
+MOV AX, b4 
+MOV TV43, AX 
+ 
+MOV AX, TV42 
+CMP AX, 0 
+ JNE LB4 
+MOV AX, TV43 
+CMP AX, 0 
+ JNE LB4 
+MOV AX, 0 
+JMP LB5 
+LB4: 
+MOV AX, 1 
+LB5: 
+MOV TV44, AX 
+ 
+PUSH TV44 
+call ASMOUT 
+ 
+ 
+ 
+ 
+MOV TV46, 4
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, TV46 
+MOV SI[BX], CX
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV48, CX
+ 
+PUSH TV48 
+ 
+call f 
+MOV TV49, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+PUSH TV49 
+call ASMOUT 
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV51, CX 
+INC CX 
+MOV SI[BX], CX 
+ 
+ 
+MOV TV53, 6
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, TV53 
+MOV SI[BX], CX
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV55, CX
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, SI[BX] 
+MOV TV57, CX
+ 
+MOV AX, TV55 
+MUL TV57
+MOV TV58, AX 
+ 
+PUSH TV58 
+call ASMOUT 
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV60, CX
+ 
+LEA SI, c4 
+MOV BX, 1 
+ADD BX, 1 
+MOV CX, SI[BX] 
+MOV TV62, CX
+ 
+MOV AX, TV60 
+CMP AX, TV62 
+JG LB6 
+MOV AX, 0 
+JMP LB7
+LB6: 
+MOV AX, 1 
+LB7: 
+MOV TV63, AX 
+
+CMP TV63, 0 
+JNZ LB8 
+MOV TV64, 1 
+JMP LB9 
+LB8: 
+MOV TV64, 0 
+LB9: 
+ 
+PUSH TV64 
+call ASMOUT 
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV66, CX
+
+CMP TV66, 0 
+JNZ LB10 
+MOV TV67, 1 
+JMP LB11 
+LB10: 
+MOV TV67, 0 
+LB11: 
+ 
+PUSH TV67 
+call ASMOUT 
+ 
+ 
+MOV TV68, 0
+ 
+MOV AX, TV68 
+MOV b4, AX 
+ 
+LB14: 
+MOV AX, b4 
+MOV TV69, AX 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV71, CX
+ 
+MOV AX, TV69 
+CMP AX, TV71 
+JLE LB12 
+MOV AX, 0 
+JMP LB13
+LB12: 
+MOV AX, 1 
+LB13: 
+MOV TV72, AX 
+ 
+CMP TV72, 0 
+JZ LB15 
+MOV AX, b4 
+MOV TV74, AX 
+ 
+PUSH TV74 
+call ASMOUT 
+ 
+MOV AX, b4 
+MOV TV73, AX 
+INC b4 
+ 
+JMP LB14 
+LB15: 
+ 
+ 
+ 
+call h 
+MOV TV75, DX 
+POPF 
+POP DI 
+POP SI 
+POP BP 
+POP SP 
+POP DX 
+POP CX 
+POP BX 
+POP AX 
+ 
+MOV TV76, 0
+ 
+MOV AX, TV76 
+MOV b4, AX 
+ 
+ 
+LB18: 
+MOV AX, b4 
+MOV TV77, AX 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV79, CX
+ 
+MOV AX, TV77 
+CMP AX, TV79 
+JL LB16 
+MOV AX, 0 
+JMP LB17
+LB16: 
+MOV AX, 1 
+LB17: 
+MOV TV80, AX 
+ 
+CMP TV80, 0 
+JZ LB19 
+MOV AX, b4 
+MOV TV81, AX 
+ 
+PUSH TV81 
+call ASMOUT 
+ 
+MOV AX, b4 
+MOV TV82, AX 
+ 
+MOV TV83, 2
+ 
+MOV BX, TV82 
+ADD BX, TV83 
+MOV TV84, BX 
+ 
+MOV AX, TV84 
+MOV b4, AX 
+ 
+ 
+JMP LB18 
+LB19: 
+ 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV86, CX
+ 
+MOV TV87, 6
+ 
+MOV AX, TV86 
+CMP AX, TV87 
+JGE LB20 
+MOV AX, 0 
+JMP LB21
+LB20: 
+MOV AX, 1 
+LB21: 
+MOV TV88, AX 
+ 
+CMP TV88, 0 
+JE LB22 
+MOV TV89, 1
+ 
+PUSH TV89 
+call ASMOUT 
+ 
+ JMP LB23 
+LB22: 
+MOV TV90, 2
+ 
+PUSH TV90 
+call ASMOUT 
+ 
+ LB23: 
+ 
+ 
+MOV TV91, 0
+ 
+MOV AX, TV91 
+MOV b4, AX 
+ 
+LB30: 
+MOV AX, b4 
+MOV TV92, AX 
+ 
+LEA SI, c4 
+MOV BX, 2 
+ADD BX, 2 
+MOV CX, SI[BX] 
+MOV TV94, CX
+ 
+MOV AX, TV92 
+CMP AX, TV94 
+JL LB24 
+MOV AX, 0 
+JMP LB25
+LB24: 
+MOV AX, 1 
+LB25: 
+MOV TV95, AX 
+ 
+CMP TV95, 0 
+JZ LB31 
+MOV TV97, 0
+ 
+MOV AX, TV97 
+MOV x4, AX 
+ 
+LB28: 
+MOV AX, x4 
+MOV TV98, AX 
+ 
+MOV TV99, 2
+ 
+MOV AX, TV98 
+CMP AX, TV99 
+JL LB26 
+MOV AX, 0 
+JMP LB27
+LB26: 
+MOV AX, 1 
+LB27: 
+MOV TV100, AX 
+ 
+CMP TV100, 0 
+JZ LB29 
+MOV AX, b4 
+MOV TV101, AX 
+ 
+MOV AX, x4 
+MOV TV102, AX 
+ 
+MOV AX, TV101 
+MUL TV102
+MOV TV103, AX 
+ 
+PUSH TV103 
+call ASMOUT 
+ 
+MOV AX, x4 
+MOV TV104, AX 
+INC x4 
+ 
+ 
+JMP LB28 
+LB29: 
+ 
+ 
+MOV AX, b4 
+MOV TV96, AX 
+INC b4 
+ 
+JMP LB30 
+LB31: 
+ 
+ 
+MOV AH, 4Ch 
+INT 21h 
+MAIN ENDP  
+ 
+h PROC 
+POP TV108 
+PUSH AX 
+PUSH BX 
+PUSH CX 
+PUSH DX 										
+PUSH SP 
+PUSH BP 
+PUSH SI 
+PUSH DI 
+PUSHF 
+PUSH TV108 
+ 
+MOV TV105, 2
+ 
+MOV AX, TV105 
+MOV x10, AX 
+ 
+ 
+MOV AX, x10 
+MOV TV106, AX 
+ 
+MOV AX, TV106 
+NEG AX 
+MOV TV107, AX 
+ 
+PUSH TV107 
+call ASMOUT 
+ 
+ 
+RET 
+h ENDP 
+
+
