@@ -1,0 +1,20 @@
+Semantic Error : Line No 18 -> Identifier c already declared in  this scope
+Warning : Line No 19 -> FLOAT assigned to INT
+Semantic Error : Line No 20 -> Array index must be integer
+Semantic Error : Line No 21 -> FLOAT MODULUS NOT COMPATIBLE
+Warning : Line No 21 -> FLOAT assigned to INT
+Semantic Error : Line No 22 -> FLOAT MODULUS NOT COMPATIBLE
+Warning : Line No 22 -> FLOAT assigned to INT
+Semantic Error : Line No 23 -> Identifier a not a variable
+Semantic Error : Line No 24 -> Expression cannot be VOID
+Warning : Line No 24 -> FLOAT assigned to INT
+Semantic Error : Line No 26 -> Identifier b not declared in this scope
+Warning : Line No 26 -> INT assigned to FLOAT
+Semantic Error : Line No 27 -> Identifier a not a variable
+Warning : Line No 27 -> INT assigned to FLOAT
+Semantic Error : Line No 28 -> Identifier i not an array
+Warning : Line No 28 -> INT assigned to FLOAT
+Semantic Error : Line No 29 -> Function func() parameter number and argument number mismatch
+Semantic Error : Line No 30 -> Identifier i not a function
+
+Semantic error count = 11
