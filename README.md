@@ -8,3 +8,7 @@ Specifications are in "Assignment1_Jan_18.pdf"
 # CSE_310_Flex
 Lexical Analyzer using Flex  
 Specifications are in "CSE 310 Assignment 2.pdf"
+
+# CSE_310_Bison
+Compiler Syntax and Semanatic Analyzer using Bison  
+Specifications are in "Assignment_3.pdf"
