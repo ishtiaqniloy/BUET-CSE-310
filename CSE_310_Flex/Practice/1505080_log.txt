@@ -1,0 +1,31 @@
+
+Line no 1: TOKEN <CONST_CHAR> Lexeme 'a' found
+
+Scope Table # 1
+2 --> < 'a' : CONST_CHAR > 
+
+
+Line no 2: TOKEN <CONST_CHAR> Lexeme '\n' found
+
+Scope Table # 1
+2 --> < 'a' : CONST_CHAR > 
+9 --> < '\n' : CONST_CHAR > 
+
+
+Line no 3: TOKEN <CONST_CHAR> Lexeme '
+' found
+
+Scope Table # 1
+2 --> < 'a' : CONST_CHAR > 
+9 --> < '\n' : CONST_CHAR > < '
+' : CONST_CHAR > 
+
+
+Scope Table # 1
+2 --> < 'a' : CONST_CHAR > 
+9 --> < '\n' : CONST_CHAR > < '
+' : CONST_CHAR > 
+
+
+Total Lines: 3
+Total Errors: 0

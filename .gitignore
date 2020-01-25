@@ -30,6 +30,9 @@
 *.exe
 *.out
 *.app
+<<<<<<< HEAD
 
 #Extra 
 *.ini
+=======
+>>>>>>> repo-b/master

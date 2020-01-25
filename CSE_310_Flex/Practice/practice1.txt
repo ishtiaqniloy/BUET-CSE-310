@@ -1,0 +1,54 @@
+if else continue float double char for while int case switch
+++ + -- - * / % << <= < >> > >= == != = && || & | ^ ! ( ) { }  [ ] , ;
+(( }} [] ()  ,, //
+abc _abcd _9 9asassd asda_sada9asd
+bas&#SDAA 821saj$ashd
+101 101.232 3.1415 3.14159E-10 .314159 .314159E10 314159E10
+10.3E1.2 10E1.2 E1.2 10E-.2 .2E2.2 .2E.2
+10.2.1 10.22.11 10.2.3E10 10.2.3E-10.2 10..2 10..E2 10..2E3 10.2.3.4.E2 10.2.
+10. 3.  
+'a' 'b' '?'  'L' '0' '^' '`' '|' ',' ';' 
+'\n' '\t' '\\' '\'' '\a' '\f' '\r' '\b' '\v' '\0' '\"'
+'AB' 'ab' 's\' '?s' '   ' 'a s' ' a' 'a ' 
+''
+'ASDA
+'
+'\e '
+abcd abcd
+"A String" "Another\"" "A multi\
+line string\
+with 3 lines..."
+"String with \nnewline character"
+"String with \ttab character"
+"String with \\ slash"
+"String with \' single quote"
+"String with \" double quote"
+"sjdh
+"as^%^&%*$@#!$%ldkkja"
+"awsda\
+asda\
+asdad
+1212
+"absa"
+//as\da+*$#/dae1*/23/*1as
+//kjhs\kjadh/sdaad asdadad\
+asdad\
+asdaf
+1232
+/*laskjd
+asdkjas
+askdj*/
+12313/*sdf+-#$%a32424sda
+as\da
+asa
+*/
+12
+$ # #$
+/*as/as
+kd*/
+1231.23
+/*wqkje**2181dsa3
+asddj123%2*/
+123
+/*asdjha
+asdhhajs*/

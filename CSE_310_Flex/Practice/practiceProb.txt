@@ -1,0 +1,8 @@
+"A String" "Another\" "A multi\
+line string\
+with 3 lines..."
+"String with \nnewline character"
+"String with \ttab character"
+"String with \\ slash"
+"String with \' single quote"
+"String with \" double quote"
