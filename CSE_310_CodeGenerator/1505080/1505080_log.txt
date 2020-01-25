@@ -1,0 +1,3457 @@
+Line No 2 -> type_specifier : INT
+int
+
+Line No 2 -> declaration_list : ID
+a
+
+Line No 2 -> var_declaration : type_specifier declaration_list SEMICOLON
+int a;
+
+
+Line No 2 -> unit : var_declaration
+int a;
+
+
+Line No 2 -> program : unit
+int a;
+
+
+Line No 3 -> type_specifier : INT
+int
+
+Line No 3 -> type_specifier : INT
+int
+
+Line No 3 -> parameter_list : type_specifier ID
+int a
+
+Line No 4 -> ENTERED NEW SCOPE NO : 2
+Line No 4 -> factor : CONST_INT
+2
+
+Line No 4 -> unary_expression : factor
+2
+
+Line No 4 -> term : unary_expression
+2
+
+Line No 4 -> variable : ID
+a
+
+Line No 4 -> factor : variable
+a
+
+Line No 4 -> unary_expression : factor
+a
+
+Line No 4 -> term : term MULOP unary_expression
+2*a
+
+Calculated values: INT 0 0.000000
+
+Line No 4 -> simple_expression : term
+2*a
+
+Line No 4 -> rel_expression : simple_expression
+2*a
+
+Line No 4 -> logic_expression : rel_expression
+2*a
+
+Line No 4 -> expression : logic_expression
+2*a
+
+Line No 4 -> statement : RETURN expression SEMICOLON
+return 2*a;
+
+
+Line No 4 -> statements : statement
+return 2*a;
+
+
+Line No 5 -> factor : CONST_INT
+1
+
+Line No 5 -> unary_expression : factor
+1
+
+Line No 5 -> unary_expression : ADDOP unary_expression
+-1
+
+Line No 5 -> term : unary_expression
+-1
+
+Line No 5 -> simple_expression : term
+-1
+
+Line No 5 -> rel_expression : simple_expression
+-1
+
+Line No 5 -> logic_expression : rel_expression
+-1
+
+Line No 5 -> expression : logic_expression
+-1
+
+Line No 5 -> statement : PRINTLN LPAREN expression RPAREN SEMICOLON
+println(-1);
+
+
+Line No 5 -> statements : statements statement
+return 2*a;
+println(-1);
+
+
+Line No 6 -> variable : ID
+a
+
+Line No 6 -> factor : CONST_INT
+9
+
+Line No 6 -> unary_expression : factor
+9
+
+Line No 6 -> term : unary_expression
+9
+
+Line No 6 -> simple_expression : term
+9
+
+Line No 6 -> rel_expression : simple_expression
+9
+
+Line No 6 -> logic_expression : rel_expression
+9
+
+Line No 6 -> expression : variable ASSIGNOP logic_expression
+a=9
+
+Assigned values : INT 9 0.000000
+
+Line No 6 -> expression_statement : expression SEMICOLON
+a=9;
+
+
+Line No 6 -> statement : expression_statement
+a=9;
+
+
+Line No 6 -> statements : statements statement
+return 2*a;
+println(-1);
+a=9;
+
+
+Line No 7 -> compound_statement : LCURL statements RCURL
+{
+return 2*a;
+println(-1);
+a=9;
+}
+
+
+***PRINTING SYMBOL TABLE***
+
+Scope Table # 1
+11 --> < a : VAR,INT > 
+
+
+Scope Table # 2
+11 --> < a : VAR,INT > 
+
+Line No 7 -> func_definition : type_specifier ID LPAREN parameter_list RPAREN
+int f(int a){
+return 2*a;
+println(-1);
+a=9;
+}
+
+
+Line No 7 -> unit : func_definition
+int f(int a){
+return 2*a;
+println(-1);
+a=9;
+}
+
+
+Line No 7 -> program : program unit
+int a;
+int f(int a){
+return 2*a;
+println(-1);
+a=9;
+}
+
+
+Line No 9 -> type_specifier : INT
+int
+
+Line No 9 -> type_specifier : INT
+int
+
+Line No 9 -> parameter_list : type_specifier ID
+int a
+
+Line No 9 -> type_specifier : INT
+int
+
+Line No 9 -> parameter_list : parameter_list COMMA type_specifier ID
+int a, int b
+
+Line No 10 -> ENTERED NEW SCOPE NO : 3
+Line No 10 -> type_specifier : INT
+int
+
+Line No 10 -> declaration_list : ID
+x
+
+Line No 10 -> var_declaration : type_specifier declaration_list SEMICOLON
+int x;
+
+
+Line No 10 -> statement : var_declaration
+int x;
+
+
+Line No 10 -> statements : statement
+int x;
+
+
+Line No 11 -> variable : ID
+x
+
+Line No 11 -> variable : ID
+a
+
+Line No 11 -> factor : variable
+a
+
+Line No 11 -> unary_expression : factor
+a
+
+Line No 11 -> term : unary_expression
+a
+
+Line No 11 -> simple_expression : term
+a
+
+Line No 11 -> rel_expression : simple_expression
+a
+
+Line No 11 -> logic_expression : rel_expression
+a
+
+Line No 11 -> arguments : logic_expression
+a
+
+a
+
+Line No 11 -> argument_list : arguments
+a
+
+Line No 11 -> factor : ID LPAREN argument_list RPAREN
+f(a)
+
+Line No 11 -> unary_expression : factor
+f(a)
+
+Line No 11 -> term : unary_expression
+f(a)
+
+Line No 11 -> simple_expression : term
+f(a)
+
+Line No 11 -> variable : ID
+a
+
+Line No 11 -> factor : variable
+a
+
+Line No 11 -> unary_expression : factor
+a
+
+Line No 11 -> term : unary_expression
+a
+
+Line No 11 -> simple_expression : simple_expression ADDOP term
+f(a)+a
+
+Calculated values: INT 0 0.000000
+
+Line No 11 -> variable : ID
+b
+
+Line No 11 -> factor : variable
+b
+
+Line No 11 -> unary_expression : factor
+b
+
+Line No 11 -> term : unary_expression
+b
+
+Line No 11 -> simple_expression : simple_expression ADDOP term
+f(a)+a+b
+
+Calculated values: INT 0 0.000000
+
+Line No 11 -> rel_expression : simple_expression
+f(a)+a+b
+
+Line No 11 -> logic_expression : rel_expression
+f(a)+a+b
+
+Line No 11 -> expression : variable ASSIGNOP logic_expression
+x=f(a)+a+b
+
+Assigned values : INT 0 0.000000
+
+Line No 11 -> expression_statement : expression SEMICOLON
+x=f(a)+a+b;
+
+
+Line No 11 -> statement : expression_statement
+x=f(a)+a+b;
+
+
+Line No 11 -> statements : statements statement
+int x;
+x=f(a)+a+b;
+
+
+Line No 12 -> variable : ID
+x
+
+Line No 12 -> factor : variable
+x
+
+Line No 12 -> unary_expression : factor
+x
+
+Line No 12 -> term : unary_expression
+x
+
+Line No 12 -> simple_expression : term
+x
+
+Line No 12 -> rel_expression : simple_expression
+x
+
+Line No 12 -> logic_expression : rel_expression
+x
+
+Line No 12 -> expression : logic_expression
+x
+
+Line No 12 -> statement : RETURN expression SEMICOLON
+return x;
+
+
+Line No 12 -> statements : statements statement
+int x;
+x=f(a)+a+b;
+return x;
+
+
+Line No 13 -> compound_statement : LCURL statements RCURL
+{
+int x;
+x=f(a)+a+b;
+return x;
+}
+
+
+***PRINTING SYMBOL TABLE***
+
+Scope Table # 1
+10 --> < f : FUNC,INT > 
+11 --> < a : VAR,INT > 
+
+
+Scope Table # 3
+1 --> < b : VAR,INT > 
+10 --> < x : VAR,INT > 
+11 --> < a : VAR,INT > 
+
+Line No 13 -> func_definition : type_specifier ID LPAREN parameter_list RPAREN
+int g(int a, int b){
+int x;
+x=f(a)+a+b;
+return x;
+}
+
+
+Line No 13 -> unit : func_definition
+int g(int a, int b){
+int x;
+x=f(a)+a+b;
+return x;
+}
+
+
+Line No 13 -> program : program unit
+int a;
+int f(int a){
+return 2*a;
+println(-1);
+a=9;
+}
+int g(int a, int b){
+int x;
+x=f(a)+a+b;
+return x;
+}
+
+
+Line No 16 -> type_specifier : VOID
+void
+
+Line No 16 -> func_declaration : type_specifier ID LPAREN RPAREN SEMICOLON
+void h();
+
+
+Line No 16 -> unit : func_declaration
+void h();
+
+
+Line No 16 -> program : program unit
+int a;
+int f(int a){
+return 2*a;
+println(-1);
+a=9;
+}
+int g(int a, int b){
+int x;
+x=f(a)+a+b;
+return x;
+}
+void h();
+
+
+Line No 19 -> type_specifier : INT
+int
+
+Line No 21 -> ENTERED NEW SCOPE NO : 4
+Line No 21 -> type_specifier : INT
+int
+
+Line No 21 -> declaration_list : ID
+a
+
+Line No 21 -> declaration_list : declaration_list COMMA ID
+a,b
+
+Line No 21 -> declaration_list : declaration_list COMMA ID
+a,b,x
+
+Line No 21 -> var_declaration : type_specifier declaration_list SEMICOLON
+int a,b,x;
+
+
+Line No 21 -> statement : var_declaration
+int a,b,x;
+
+
+Line No 21 -> statements : statement
+int a,b,x;
+
+
+Line No 23 -> variable : ID
+a
+
+Line No 23 -> factor : CONST_INT
+5
+
+Line No 23 -> unary_expression : factor
+5
+
+Line No 23 -> term : unary_expression
+5
+
+Line No 23 -> simple_expression : term
+5
+
+Line No 23 -> rel_expression : simple_expression
+5
+
+Line No 23 -> logic_expression : rel_expression
+5
+
+Line No 23 -> expression : variable ASSIGNOP logic_expression
+a=5
+
+Assigned values : INT 5 0.000000
+
+Line No 23 -> expression_statement : expression SEMICOLON
+a=5;
+
+
+Line No 23 -> statement : expression_statement
+a=5;
+
+
+Line No 23 -> statements : statements statement
+int a,b,x;
+a=5;
+
+
+Line No 24 -> variable : ID
+b
+
+Line No 24 -> factor : CONST_INT
+7
+
+Line No 24 -> unary_expression : factor
+7
+
+Line No 24 -> term : unary_expression
+7
+
+Line No 24 -> simple_expression : term
+7
+
+Line No 24 -> rel_expression : simple_expression
+7
+
+Line No 24 -> logic_expression : rel_expression
+7
+
+Line No 24 -> expression : variable ASSIGNOP logic_expression
+b=7
+
+Assigned values : INT 7 0.000000
+
+Line No 24 -> expression_statement : expression SEMICOLON
+b=7;
+
+
+Line No 24 -> statement : expression_statement
+b=7;
+
+
+Line No 24 -> statements : statements statement
+int a,b,x;
+a=5;
+b=7;
+
+
+Line No 26 -> variable : ID
+x
+
+Line No 26 -> variable : ID
+a
+
+Line No 26 -> factor : variable
+a
+
+Line No 26 -> unary_expression : factor
+a
+
+Line No 26 -> term : unary_expression
+a
+
+Line No 26 -> simple_expression : term
+a
+
+Line No 26 -> rel_expression : simple_expression
+a
+
+Line No 26 -> logic_expression : rel_expression
+a
+
+Line No 26 -> arguments : logic_expression
+a
+
+a
+
+Line No 26 -> variable : ID
+b
+
+Line No 26 -> factor : variable
+b
+
+Line No 26 -> unary_expression : factor
+b
+
+Line No 26 -> term : unary_expression
+b
+
+Line No 26 -> simple_expression : term
+b
+
+Line No 26 -> rel_expression : simple_expression
+b
+
+Line No 26 -> logic_expression : rel_expression
+b
+
+Line No 26 -> arguments : arguments COMMA logic_expression
+a,b
+
+a,b
+
+Line No 26 -> argument_list : arguments
+a,b
+
+Line No 26 -> factor : ID LPAREN argument_list RPAREN
+g(a,b)
+
+Line No 26 -> unary_expression : factor
+g(a,b)
+
+Line No 26 -> term : unary_expression
+g(a,b)
+
+Line No 26 -> simple_expression : term
+g(a,b)
+
+Line No 26 -> rel_expression : simple_expression
+g(a,b)
+
+Line No 26 -> logic_expression : rel_expression
+g(a,b)
+
+Line No 26 -> expression : variable ASSIGNOP logic_expression
+x=g(a,b)
+
+Assigned values : INT 0 0.000000
+
+Line No 26 -> expression_statement : expression SEMICOLON
+x=g(a,b);
+
+
+Line No 26 -> statement : expression_statement
+x=g(a,b);
+
+
+Line No 26 -> statements : statements statement
+int a,b,x;
+a=5;
+b=7;
+x=g(a,b);
+
+
+Line No 27 -> variable : ID
+x
+
+Line No 27 -> factor : variable
+x
+
+Line No 27 -> unary_expression : factor
+x
+
+Line No 27 -> term : unary_expression
+x
+
+Line No 27 -> simple_expression : term
+x
+
+Line No 27 -> rel_expression : simple_expression
+x
+
+Line No 27 -> logic_expression : rel_expression
+x
+
+Line No 27 -> expression : logic_expression
+x
+
+Line No 27 -> statement : PRINTLN LPAREN expression RPAREN SEMICOLON
+println(x);
+
+
+Line No 27 -> statements : statements statement
+int a,b,x;
+a=5;
+b=7;
+x=g(a,b);
+println(x);
+
+
+Line No 30 -> variable : ID
+a
+
+Line No 30 -> factor : variable
+a
+
+Line No 30 -> unary_expression : factor
+a
+
+Line No 30 -> term : unary_expression
+a
+
+Line No 30 -> simple_expression : term
+a
+
+Line No 30 -> variable : ID
+b
+
+Line No 30 -> factor : variable
+b
+
+Line No 30 -> unary_expression : factor
+b
+
+Line No 30 -> term : unary_expression
+b
+
+Line No 30 -> simple_expression : simple_expression ADDOP term
+a+b
+
+Calculated values: INT 12 0.000000
+
+Line No 30 -> rel_expression : simple_expression
+a+b
+
+Line No 30 -> logic_expression : rel_expression
+a+b
+
+Line No 30 -> expression : logic_expression
+a+b
+
+Line No 30 -> statement : PRINTLN LPAREN expression RPAREN SEMICOLON
+println(a+b);
+
+
+Line No 30 -> statements : statements statement
+int a,b,x;
+a=5;
+b=7;
+x=g(a,b);
+println(x);
+println(a+b);
+
+
+Line No 31 -> variable : ID
+a
+
+Line No 31 -> factor : variable
+a
+
+Line No 31 -> unary_expression : factor
+a
+
+Line No 31 -> term : unary_expression
+a
+
+Line No 31 -> simple_expression : term
+a
+
+Line No 31 -> variable : ID
+b
+
+Line No 31 -> factor : variable
+b
+
+Line No 31 -> unary_expression : factor
+b
+
+Line No 31 -> term : unary_expression
+b
+
+Line No 31 -> simple_expression : simple_expression ADDOP term
+a-b
+
+Calculated values: INT -2 0.000000
+
+Line No 31 -> rel_expression : simple_expression
+a-b
+
+Line No 31 -> logic_expression : rel_expression
+a-b
+
+Line No 31 -> expression : logic_expression
+a-b
+
+Line No 31 -> statement : PRINTLN LPAREN expression RPAREN SEMICOLON
+println(a-b);
+
+
+Line No 31 -> statements : statements statement
+int a,b,x;
+a=5;
+b=7;
+x=g(a,b);
+println(x);
+println(a+b);
+println(a-b);
+
+
+Line No 32 -> variable : ID
+a
+
+Line No 32 -> factor : variable
+a
+
+Line No 32 -> unary_expression : factor
+a
+
+Line No 32 -> term : unary_expression
+a
+
+Line No 32 -> variable : ID
+b
+
+Line No 32 -> factor : variable
+b
+
+Line No 32 -> unary_expression : factor
+b
+
+Line No 32 -> term : term MULOP unary_expression
+a*b
+
+Calculated values: INT 35 0.000000
+
+Line No 32 -> simple_expression : term
+a*b
+
+Line No 32 -> rel_expression : simple_expression
+a*b
+
+Line No 32 -> logic_expression : rel_expression
+a*b
+
+Line No 32 -> expression : logic_expression
+a*b
+
+Line No 32 -> statement : PRINTLN LPAREN expression RPAREN SEMICOLON
+println(a*b);
+
+
+Line No 32 -> statements : statements statement
+int a,b,x;
+a=5;
+b=7;
+x=g(a,b);
+println(x);
+println(a+b);
+println(a-b);
+println(a*b);
+
+
+Line No 33 -> variable : ID
+a
+
+Line No 33 -> factor : variable
+a
+
+Line No 33 -> unary_expression : factor
+a
+
+Line No 33 -> term : unary_expression
+a
+
+Line No 33 -> variable : ID
+b
+
+Line No 33 -> factor : variable
+b
+
+Line No 33 -> unary_expression : factor
+b
+
+Line No 33 -> term : term MULOP unary_expression
+a/b
+
+Calculated values: INT 0 0.000000
+
+Line No 33 -> simple_expression : term
+a/b
+
+Line No 33 -> rel_expression : simple_expression
+a/b
+
+Line No 33 -> logic_expression : rel_expression
+a/b
+
+Line No 33 -> expression : logic_expression
+a/b
+
+Line No 33 -> statement : PRINTLN LPAREN expression RPAREN SEMICOLON
+println(a/b);
+
+
+Line No 33 -> statements : statements statement
+int a,b,x;
+a=5;
+b=7;
+x=g(a,b);
+println(x);
+println(a+b);
+println(a-b);
+println(a*b);
+println(a/b);
+
+
+Line No 34 -> variable : ID
+a
+
+Line No 34 -> factor : variable
+a
+
+Line No 34 -> unary_expression : factor
+a
+
+Line No 34 -> term : unary_expression
+a
+
+Line No 34 -> variable : ID
+b
+
+Line No 34 -> factor : variable
+b
+
+Line No 34 -> unary_expression : factor
+b
+
+Line No 34 -> term : term MULOP unary_expression
+a%b
+
+Calculated values: INT 5 0.000000
+
+Line No 34 -> simple_expression : term
+a%b
+
+Line No 34 -> rel_expression : simple_expression
+a%b
+
+Line No 34 -> logic_expression : rel_expression
+a%b
+
+Line No 34 -> expression : logic_expression
+a%b
+
+Line No 34 -> statement : PRINTLN LPAREN expression RPAREN SEMICOLON
+println(a%b);
+
+
+Line No 34 -> statements : statements statement
+int a,b,x;
+a=5;
+b=7;
+x=g(a,b);
+println(x);
+println(a+b);
+println(a-b);
+println(a*b);
+println(a/b);
+println(a%b);
+
+
+Line No 36 -> variable : ID
+b
+
+Line No 36 -> factor : CONST_INT
+0
+
+Line No 36 -> unary_expression : factor
+0
+
+Line No 36 -> term : unary_expression
+0
+
+Line No 36 -> simple_expression : term
+0
+
+Line No 36 -> rel_expression : simple_expression
+0
+
+Line No 36 -> logic_expression : rel_expression
+0
+
+Line No 36 -> expression : variable ASSIGNOP logic_expression
+b=0
+
+Assigned values : INT 0 0.000000
+
+Line No 36 -> expression_statement : expression SEMICOLON
+b=0;
+
+
+Line No 36 -> statement : expression_statement
+b=0;
+
+
+Line No 36 -> statements : statements statement
+int a,b,x;
+a=5;
+b=7;
+x=g(a,b);
+println(x);
+println(a+b);
+println(a-b);
+println(a*b);
+println(a/b);
+println(a%b);
+b=0;
+
+
+Line No 38 -> variable : ID
+a
+
+Line No 38 -> factor : variable
+a
+
+Line No 38 -> unary_expression : factor
+a
+
+Line No 38 -> term : unary_expression
+a
+
+Line No 38 -> simple_expression : term
+a
+
+Line No 38 -> rel_expression : simple_expression
+a
+
+Line No 38 -> variable : ID
+b
+
+Line No 38 -> factor : variable
+b
+
+Line No 38 -> unary_expression : factor
+b
+
+Line No 38 -> term : unary_expression
+b
+
+Line No 38 -> simple_expression : term
+b
+
+Line No 38 -> rel_expression : simple_expression
+b
+
+Line No 38 -> logic_expression : rel_expression LOGICOP rel_expression
+a&&b
+
+Line No 38 -> expression : logic_expression
+a&&b
+
+Line No 38 -> statement : PRINTLN LPAREN expression RPAREN SEMICOLON
+println(a&&b);
+
+
+Line No 38 -> statements : statements statement
+int a,b,x;
+a=5;
+b=7;
+x=g(a,b);
+println(x);
+println(a+b);
+println(a-b);
+println(a*b);
+println(a/b);
+println(a%b);
+b=0;
+println(a&&b);
+
+
+Line No 39 -> variable : ID
+a
+
+Line No 39 -> factor : variable
+a
+
+Line No 39 -> unary_expression : factor
+a
+
+Line No 39 -> term : unary_expression
+a
+
+Line No 39 -> simple_expression : term
+a
+
+Line No 39 -> rel_expression : simple_expression
+a
+
+Line No 39 -> variable : ID
+b
+
+Line No 39 -> factor : variable
+b
+
+Line No 39 -> unary_expression : factor
+b
+
+Line No 39 -> term : unary_expression
+b
+
+Line No 39 -> simple_expression : term
+b
+
+Line No 39 -> rel_expression : simple_expression
+b
+
+Line No 39 -> logic_expression : rel_expression LOGICOP rel_expression
+a||b
+
+Line No 39 -> expression : logic_expression
+a||b
+
+Line No 39 -> statement : PRINTLN LPAREN expression RPAREN SEMICOLON
+println(a||b);
+
+
+Line No 39 -> statements : statements statement
+int a,b,x;
+a=5;
+b=7;
+x=g(a,b);
+println(x);
+println(a+b);
+println(a-b);
+println(a*b);
+println(a/b);
+println(a%b);
+b=0;
+println(a&&b);
+println(a||b);
+
+
+Line No 41 -> type_specifier : INT
+int
+
+Line No 41 -> declaration_list : ID LTHIRD CONST_INT RTHIRD
+c[5]
+
+Line No 41 -> var_declaration : type_specifier declaration_list SEMICOLON
+int c[5];
+
+
+Line No 41 -> statement : var_declaration
+int c[5];
+
+
+Line No 41 -> statements : statements statement
+int a,b,x;
+a=5;
+b=7;
+x=g(a,b);
+println(x);
+println(a+b);
+println(a-b);
+println(a*b);
+println(a/b);
+println(a%b);
+b=0;
+println(a&&b);
+println(a||b);
+int c[5];
+
+
+Line No 42 -> factor : CONST_INT
+2
+
+Line No 42 -> unary_expression : factor
+2
+
+Line No 42 -> term : unary_expression
+2
+
+Line No 42 -> simple_expression : term
+2
+
+Line No 42 -> rel_expression : simple_expression
+2
+
+Line No 42 -> logic_expression : rel_expression
+2
+
+Line No 42 -> expression : logic_expression
+2
+
+Line No 42 -> variable : ID LTHIRD expression RTHIRD
+c[2]
+
+Line No 42 -> factor : CONST_INT
+4
+
+Line No 42 -> unary_expression : factor
+4
+
+Line No 42 -> term : unary_expression
+4
+
+Line No 42 -> simple_expression : term
+4
+
+Line No 42 -> rel_expression : simple_expression
+4
+
+Line No 42 -> logic_expression : rel_expression
+4
+
+Line No 42 -> expression : variable ASSIGNOP logic_expression
+c[2]=4
+
+Assigned values : INT 4 0.000000
+
+Line No 42 -> expression_statement : expression SEMICOLON
+c[2]=4;
+
+
+Line No 42 -> statement : expression_statement
+c[2]=4;
+
+
+Line No 42 -> statements : statements statement
+int a,b,x;
+a=5;
+b=7;
+x=g(a,b);
+println(x);
+println(a+b);
+println(a-b);
+println(a*b);
+println(a/b);
+println(a%b);
+b=0;
+println(a&&b);
+println(a||b);
+int c[5];
+c[2]=4;
+
+
+Line No 46 -> factor : CONST_INT
+2
+
+Line No 46 -> unary_expression : factor
+2
+
+Line No 46 -> term : unary_expression
+2
+
+Line No 46 -> simple_expression : term
+2
+
+Line No 46 -> rel_expression : simple_expression
+2
+
+Line No 46 -> logic_expression : rel_expression
+2
+
+Line No 46 -> expression : logic_expression
+2
+
+Line No 46 -> variable : ID LTHIRD expression RTHIRD
+c[2]
+
+Line No 46 -> factor : variable
+c[2]
+
+Line No 46 -> unary_expression : factor
+c[2]
+
+Line No 46 -> term : unary_expression
+c[2]
+
+Line No 46 -> simple_expression : term
+c[2]
+
+Line No 46 -> rel_expression : simple_expression
+c[2]
+
+Line No 46 -> logic_expression : rel_expression
+c[2]
+
+Line No 46 -> arguments : logic_expression
+c[2]
+
+c[2]
+
+Line No 46 -> argument_list : arguments
+c[2]
+
+Line No 46 -> factor : ID LPAREN argument_list RPAREN
+f(c[2])
+
+Line No 46 -> unary_expression : factor
+f(c[2])
+
+Line No 46 -> term : unary_expression
+f(c[2])
+
+Line No 46 -> simple_expression : term
+f(c[2])
+
+Line No 46 -> rel_expression : simple_expression
+f(c[2])
+
+Line No 46 -> logic_expression : rel_expression
+f(c[2])
+
+Line No 46 -> expression : logic_expression
+f(c[2])
+
+Line No 46 -> statement : PRINTLN LPAREN expression RPAREN SEMICOLON
+println(f(c[2]));
+
+
+Line No 46 -> statements : statements statement
+int a,b,x;
+a=5;
+b=7;
+x=g(a,b);
+println(x);
+println(a+b);
+println(a-b);
+println(a*b);
+println(a/b);
+println(a%b);
+b=0;
+println(a&&b);
+println(a||b);
+int c[5];
+c[2]=4;
+println(f(c[2]));
+
+
+Line No 49 -> factor : CONST_INT
+2
+
+Line No 49 -> unary_expression : factor
+2
+
+Line No 49 -> term : unary_expression
+2
+
+Line No 49 -> simple_expression : term
+2
+
+Line No 49 -> rel_expression : simple_expression
+2
+
+Line No 49 -> logic_expression : rel_expression
+2
+
+Line No 49 -> expression : logic_expression
+2
+
+Line No 49 -> variable : ID LTHIRD expression RTHIRD
+c[2]
+
+Line No 49 -> factor : variable INCOP
+c[2]++
+
+Line No 49 -> unary_expression : factor
+c[2]++
+
+Line No 49 -> term : unary_expression
+c[2]++
+
+Line No 49 -> simple_expression : term
+c[2]++
+
+Line No 49 -> rel_expression : simple_expression
+c[2]++
+
+Line No 49 -> logic_expression : rel_expression
+c[2]++
+
+Line No 49 -> expression : logic_expression
+c[2]++
+
+Line No 49 -> expression_statement : expression SEMICOLON
+c[2]++;
+
+
+Line No 49 -> statement : expression_statement
+c[2]++;
+
+
+Line No 49 -> statements : statements statement
+int a,b,x;
+a=5;
+b=7;
+x=g(a,b);
+println(x);
+println(a+b);
+println(a-b);
+println(a*b);
+println(a/b);
+println(a%b);
+b=0;
+println(a&&b);
+println(a||b);
+int c[5];
+c[2]=4;
+println(f(c[2]));
+c[2]++;
+
+
+Line No 51 -> factor : CONST_INT
+1
+
+Line No 51 -> unary_expression : factor
+1
+
+Line No 51 -> term : unary_expression
+1
+
+Line No 51 -> simple_expression : term
+1
+
+Line No 51 -> rel_expression : simple_expression
+1
+
+Line No 51 -> logic_expression : rel_expression
+1
+
+Line No 51 -> expression : logic_expression
+1
+
+Line No 51 -> variable : ID LTHIRD expression RTHIRD
+c[1]
+
+Line No 51 -> factor : CONST_INT
+6
+
+Line No 51 -> unary_expression : factor
+6
+
+Line No 51 -> term : unary_expression
+6
+
+Line No 51 -> simple_expression : term
+6
+
+Line No 51 -> rel_expression : simple_expression
+6
+
+Line No 51 -> logic_expression : rel_expression
+6
+
+Line No 51 -> expression : variable ASSIGNOP logic_expression
+c[1]=6
+
+Assigned values : INT 6 0.000000
+
+Line No 51 -> expression_statement : expression SEMICOLON
+c[1]=6;
+
+
+Line No 51 -> statement : expression_statement
+c[1]=6;
+
+
+Line No 51 -> statements : statements statement
+int a,b,x;
+a=5;
+b=7;
+x=g(a,b);
+println(x);
+println(a+b);
+println(a-b);
+println(a*b);
+println(a/b);
+println(a%b);
+b=0;
+println(a&&b);
+println(a||b);
+int c[5];
+c[2]=4;
+println(f(c[2]));
+c[2]++;
+c[1]=6;
+
+
+Line No 53 -> factor : CONST_INT
+2
+
+Line No 53 -> unary_expression : factor
+2
+
+Line No 53 -> term : unary_expression
+2
+
+Line No 53 -> simple_expression : term
+2
+
+Line No 53 -> rel_expression : simple_expression
+2
+
+Line No 53 -> logic_expression : rel_expression
+2
+
+Line No 53 -> expression : logic_expression
+2
+
+Line No 53 -> variable : ID LTHIRD expression RTHIRD
+c[2]
+
+Line No 53 -> factor : variable
+c[2]
+
+Line No 53 -> unary_expression : factor
+c[2]
+
+Line No 53 -> term : unary_expression
+c[2]
+
+Line No 53 -> factor : CONST_INT
+1
+
+Line No 53 -> unary_expression : factor
+1
+
+Line No 53 -> term : unary_expression
+1
+
+Line No 53 -> simple_expression : term
+1
+
+Line No 53 -> rel_expression : simple_expression
+1
+
+Line No 53 -> logic_expression : rel_expression
+1
+
+Line No 53 -> expression : logic_expression
+1
+
+Line No 53 -> variable : ID LTHIRD expression RTHIRD
+c[1]
+
+Line No 53 -> factor : variable
+c[1]
+
+Line No 53 -> unary_expression : factor
+c[1]
+
+Line No 53 -> term : term MULOP unary_expression
+c[2]*c[1]
+
+Calculated values: INT 30 0.000000
+
+Line No 53 -> simple_expression : term
+c[2]*c[1]
+
+Line No 53 -> rel_expression : simple_expression
+c[2]*c[1]
+
+Line No 53 -> logic_expression : rel_expression
+c[2]*c[1]
+
+Line No 53 -> expression : logic_expression
+c[2]*c[1]
+
+Line No 53 -> statement : PRINTLN LPAREN expression RPAREN SEMICOLON
+println(c[2]*c[1]);
+
+
+Line No 53 -> statements : statements statement
+int a,b,x;
+a=5;
+b=7;
+x=g(a,b);
+println(x);
+println(a+b);
+println(a-b);
+println(a*b);
+println(a/b);
+println(a%b);
+b=0;
+println(a&&b);
+println(a||b);
+int c[5];
+c[2]=4;
+println(f(c[2]));
+c[2]++;
+c[1]=6;
+println(c[2]*c[1]);
+
+
+Line No 54 -> factor : CONST_INT
+2
+
+Line No 54 -> unary_expression : factor
+2
+
+Line No 54 -> term : unary_expression
+2
+
+Line No 54 -> simple_expression : term
+2
+
+Line No 54 -> rel_expression : simple_expression
+2
+
+Line No 54 -> logic_expression : rel_expression
+2
+
+Line No 54 -> expression : logic_expression
+2
+
+Line No 54 -> variable : ID LTHIRD expression RTHIRD
+c[2]
+
+Line No 54 -> factor : variable
+c[2]
+
+Line No 54 -> unary_expression : factor
+c[2]
+
+Line No 54 -> term : unary_expression
+c[2]
+
+Line No 54 -> simple_expression : term
+c[2]
+
+Line No 54 -> factor : CONST_INT
+1
+
+Line No 54 -> unary_expression : factor
+1
+
+Line No 54 -> term : unary_expression
+1
+
+Line No 54 -> simple_expression : term
+1
+
+Line No 54 -> rel_expression : simple_expression
+1
+
+Line No 54 -> logic_expression : rel_expression
+1
+
+Line No 54 -> expression : logic_expression
+1
+
+Line No 54 -> variable : ID LTHIRD expression RTHIRD
+c[1]
+
+Line No 54 -> factor : variable
+c[1]
+
+Line No 54 -> unary_expression : factor
+c[1]
+
+Line No 54 -> term : unary_expression
+c[1]
+
+Line No 54 -> simple_expression : term
+c[1]
+
+Line No 54 -> rel_expression : simple_expression RELOP simple_expression
+c[2]>c[1]
+
+Line No 54 -> logic_expression : rel_expression
+c[2]>c[1]
+
+Line No 54 -> expression : logic_expression
+c[2]>c[1]
+
+Line No 54 -> factor : LPAREN expression RPAREN
+(c[2]>c[1])
+
+Line No 54 -> unary_expression : factor
+(c[2]>c[1])
+
+Line No 54 -> unary_expression : NOT unary_expression
+!(c[2]>c[1])
+
+Line No 54 -> term : unary_expression
+!(c[2]>c[1])
+
+Line No 54 -> simple_expression : term
+!(c[2]>c[1])
+
+Line No 54 -> rel_expression : simple_expression
+!(c[2]>c[1])
+
+Line No 54 -> logic_expression : rel_expression
+!(c[2]>c[1])
+
+Line No 54 -> expression : logic_expression
+!(c[2]>c[1])
+
+Line No 54 -> statement : PRINTLN LPAREN expression RPAREN SEMICOLON
+println(!(c[2]>c[1]));
+
+
+Line No 54 -> statements : statements statement
+int a,b,x;
+a=5;
+b=7;
+x=g(a,b);
+println(x);
+println(a+b);
+println(a-b);
+println(a*b);
+println(a/b);
+println(a%b);
+b=0;
+println(a&&b);
+println(a||b);
+int c[5];
+c[2]=4;
+println(f(c[2]));
+c[2]++;
+c[1]=6;
+println(c[2]*c[1]);
+println(!(c[2]>c[1]));
+
+
+Line No 56 -> factor : CONST_INT
+2
+
+Line No 56 -> unary_expression : factor
+2
+
+Line No 56 -> term : unary_expression
+2
+
+Line No 56 -> simple_expression : term
+2
+
+Line No 56 -> rel_expression : simple_expression
+2
+
+Line No 56 -> logic_expression : rel_expression
+2
+
+Line No 56 -> expression : logic_expression
+2
+
+Line No 56 -> variable : ID LTHIRD expression RTHIRD
+c[2]
+
+Line No 56 -> factor : variable
+c[2]
+
+Line No 56 -> unary_expression : factor
+c[2]
+
+Line No 56 -> unary_expression : NOT unary_expression
+!c[2]
+
+Line No 56 -> term : unary_expression
+!c[2]
+
+Line No 56 -> simple_expression : term
+!c[2]
+
+Line No 56 -> rel_expression : simple_expression
+!c[2]
+
+Line No 56 -> logic_expression : rel_expression
+!c[2]
+
+Line No 56 -> expression : logic_expression
+!c[2]
+
+Line No 56 -> statement : PRINTLN LPAREN expression RPAREN SEMICOLON
+println(!c[2]);
+
+
+Line No 56 -> statements : statements statement
+int a,b,x;
+a=5;
+b=7;
+x=g(a,b);
+println(x);
+println(a+b);
+println(a-b);
+println(a*b);
+println(a/b);
+println(a%b);
+b=0;
+println(a&&b);
+println(a||b);
+int c[5];
+c[2]=4;
+println(f(c[2]));
+c[2]++;
+c[1]=6;
+println(c[2]*c[1]);
+println(!(c[2]>c[1]));
+println(!c[2]);
+
+
+Line No 58 -> variable : ID
+b
+
+Line No 58 -> factor : CONST_INT
+0
+
+Line No 58 -> unary_expression : factor
+0
+
+Line No 58 -> term : unary_expression
+0
+
+Line No 58 -> simple_expression : term
+0
+
+Line No 58 -> rel_expression : simple_expression
+0
+
+Line No 58 -> logic_expression : rel_expression
+0
+
+Line No 58 -> expression : variable ASSIGNOP logic_expression
+b=0
+
+Assigned values : INT 0 3439992832.000000
+
+Line No 58 -> expression_statement : expression SEMICOLON
+b=0;
+
+
+Line No 58 -> variable : ID
+b
+
+Line No 58 -> factor : variable
+b
+
+Line No 58 -> unary_expression : factor
+b
+
+Line No 58 -> term : unary_expression
+b
+
+Line No 58 -> simple_expression : term
+b
+
+Line No 58 -> factor : CONST_INT
+2
+
+Line No 58 -> unary_expression : factor
+2
+
+Line No 58 -> term : unary_expression
+2
+
+Line No 58 -> simple_expression : term
+2
+
+Line No 58 -> rel_expression : simple_expression
+2
+
+Line No 58 -> logic_expression : rel_expression
+2
+
+Line No 58 -> expression : logic_expression
+2
+
+Line No 58 -> variable : ID LTHIRD expression RTHIRD
+c[2]
+
+Line No 58 -> factor : variable
+c[2]
+
+Line No 58 -> unary_expression : factor
+c[2]
+
+Line No 58 -> term : unary_expression
+c[2]
+
+Line No 58 -> simple_expression : term
+c[2]
+
+Line No 58 -> rel_expression : simple_expression RELOP simple_expression
+b<=c[2]
+
+Line No 58 -> logic_expression : rel_expression
+b<=c[2]
+
+Line No 58 -> expression : logic_expression
+b<=c[2]
+
+Line No 58 -> expression_statement : expression SEMICOLON
+b<=c[2];
+
+
+Line No 58 -> variable : ID
+b
+
+Line No 58 -> factor : variable INCOP
+b++
+
+Line No 58 -> unary_expression : factor
+b++
+
+Line No 58 -> term : unary_expression
+b++
+
+Line No 58 -> simple_expression : term
+b++
+
+Line No 58 -> rel_expression : simple_expression
+b++
+
+Line No 58 -> logic_expression : rel_expression
+b++
+
+Line No 58 -> expression : logic_expression
+b++
+
+Line No 59 -> variable : ID
+b
+
+Line No 59 -> factor : variable
+b
+
+Line No 59 -> unary_expression : factor
+b
+
+Line No 59 -> term : unary_expression
+b
+
+Line No 59 -> simple_expression : term
+b
+
+Line No 59 -> rel_expression : simple_expression
+b
+
+Line No 59 -> logic_expression : rel_expression
+b
+
+Line No 59 -> expression : logic_expression
+b
+
+Line No 59 -> statement : PRINTLN LPAREN expression RPAREN SEMICOLON
+println(b);
+
+
+Line No 59 -> statement : FOR LPAREN expression_statement expression_statement expression RPAREN statement
+for(b=0;
+;b<=c[2];
+;b++)println(b);
+
+
+Line No 59 -> statements : statements statement
+int a,b,x;
+a=5;
+b=7;
+x=g(a,b);
+println(x);
+println(a+b);
+println(a-b);
+println(a*b);
+println(a/b);
+println(a%b);
+b=0;
+println(a&&b);
+println(a||b);
+int c[5];
+c[2]=4;
+println(f(c[2]));
+c[2]++;
+c[1]=6;
+println(c[2]*c[1]);
+println(!(c[2]>c[1]));
+println(!c[2]);
+for(b=0;
+;b<=c[2];
+;b++)println(b);
+
+
+Line No 62 -> argument_list : <empty>
+
+
+Line No 62 -> factor : ID LPAREN argument_list RPAREN
+h()
+
+Line No 62 -> unary_expression : factor
+h()
+
+Line No 62 -> term : unary_expression
+h()
+
+Line No 62 -> simple_expression : term
+h()
+
+Line No 62 -> rel_expression : simple_expression
+h()
+
+Line No 62 -> logic_expression : rel_expression
+h()
+
+Line No 62 -> expression : logic_expression
+h()
+
+Line No 62 -> expression_statement : expression SEMICOLON
+h();
+
+
+Line No 62 -> statement : expression_statement
+h();
+
+
+Line No 62 -> statements : statements statement
+int a,b,x;
+a=5;
+b=7;
+x=g(a,b);
+println(x);
+println(a+b);
+println(a-b);
+println(a*b);
+println(a/b);
+println(a%b);
+b=0;
+println(a&&b);
+println(a||b);
+int c[5];
+c[2]=4;
+println(f(c[2]));
+c[2]++;
+c[1]=6;
+println(c[2]*c[1]);
+println(!(c[2]>c[1]));
+println(!c[2]);
+for(b=0;
+;b<=c[2];
+;b++)println(b);
+h();
+
+
+Line No 64 -> variable : ID
+b
+
+Line No 64 -> factor : CONST_INT
+0
+
+Line No 64 -> unary_expression : factor
+0
+
+Line No 64 -> term : unary_expression
+0
+
+Line No 64 -> simple_expression : term
+0
+
+Line No 64 -> rel_expression : simple_expression
+0
+
+Line No 64 -> logic_expression : rel_expression
+0
+
+Line No 64 -> expression : variable ASSIGNOP logic_expression
+b=0
+
+Assigned values : INT 0 2754571141120.000000
+
+Line No 64 -> expression_statement : expression SEMICOLON
+b=0;
+
+
+Line No 64 -> statement : expression_statement
+b=0;
+
+
+Line No 64 -> statements : statements statement
+int a,b,x;
+a=5;
+b=7;
+x=g(a,b);
+println(x);
+println(a+b);
+println(a-b);
+println(a*b);
+println(a/b);
+println(a%b);
+b=0;
+println(a&&b);
+println(a||b);
+int c[5];
+c[2]=4;
+println(f(c[2]));
+c[2]++;
+c[1]=6;
+println(c[2]*c[1]);
+println(!(c[2]>c[1]));
+println(!c[2]);
+for(b=0;
+;b<=c[2];
+;b++)println(b);
+h();
+b=0;
+
+
+Line No 65 -> variable : ID
+b
+
+Line No 65 -> factor : variable
+b
+
+Line No 65 -> unary_expression : factor
+b
+
+Line No 65 -> term : unary_expression
+b
+
+Line No 65 -> simple_expression : term
+b
+
+Line No 65 -> factor : CONST_INT
+2
+
+Line No 65 -> unary_expression : factor
+2
+
+Line No 65 -> term : unary_expression
+2
+
+Line No 65 -> simple_expression : term
+2
+
+Line No 65 -> rel_expression : simple_expression
+2
+
+Line No 65 -> logic_expression : rel_expression
+2
+
+Line No 65 -> expression : logic_expression
+2
+
+Line No 65 -> variable : ID LTHIRD expression RTHIRD
+c[2]
+
+Line No 65 -> factor : variable
+c[2]
+
+Line No 65 -> unary_expression : factor
+c[2]
+
+Line No 65 -> term : unary_expression
+c[2]
+
+Line No 65 -> simple_expression : term
+c[2]
+
+Line No 65 -> rel_expression : simple_expression RELOP simple_expression
+b<c[2]
+
+Line No 65 -> logic_expression : rel_expression
+b<c[2]
+
+Line No 65 -> expression : logic_expression
+b<c[2]
+
+Line No 66 -> ENTERED NEW SCOPE NO : 5
+Line No 66 -> variable : ID
+b
+
+Line No 66 -> factor : variable
+b
+
+Line No 66 -> unary_expression : factor
+b
+
+Line No 66 -> term : unary_expression
+b
+
+Line No 66 -> simple_expression : term
+b
+
+Line No 66 -> rel_expression : simple_expression
+b
+
+Line No 66 -> logic_expression : rel_expression
+b
+
+Line No 66 -> expression : logic_expression
+b
+
+Line No 66 -> statement : PRINTLN LPAREN expression RPAREN SEMICOLON
+println(b);
+
+
+Line No 66 -> statements : statement
+println(b);
+
+
+Line No 67 -> variable : ID
+b
+
+Line No 67 -> variable : ID
+b
+
+Line No 67 -> factor : variable
+b
+
+Line No 67 -> unary_expression : factor
+b
+
+Line No 67 -> term : unary_expression
+b
+
+Line No 67 -> simple_expression : term
+b
+
+Line No 67 -> factor : CONST_INT
+2
+
+Line No 67 -> unary_expression : factor
+2
+
+Line No 67 -> term : unary_expression
+2
+
+Line No 67 -> simple_expression : simple_expression ADDOP term
+b+2
+
+Calculated values: INT 2 2754571141120.000000
+
+Line No 67 -> rel_expression : simple_expression
+b+2
+
+Line No 67 -> logic_expression : rel_expression
+b+2
+
+Line No 67 -> expression : variable ASSIGNOP logic_expression
+b=b+2
+
+Assigned values : INT 2 2754571141120.000000
+
+Line No 67 -> expression_statement : expression SEMICOLON
+b=b+2;
+
+
+Line No 67 -> statement : expression_statement
+b=b+2;
+
+
+Line No 67 -> statements : statements statement
+println(b);
+b=b+2;
+
+
+Line No 68 -> compound_statement : LCURL statements RCURL
+{
+println(b);
+b=b+2;
+}
+
+
+***PRINTING SYMBOL TABLE***
+
+Scope Table # 1
+7 --> < h : FUNC,VOID > 
+9 --> < g : FUNC,INT > 
+10 --> < f : FUNC,INT > 
+11 --> < a : VAR,INT > 
+
+
+Scope Table # 4
+0 --> < c : ARR,INT > 
+1 --> < b : VAR,INT > 
+10 --> < x : VAR,INT > 
+11 --> < a : VAR,INT > 
+
+
+Scope Table # 5
+
+Line No 68 -> statement : compound_statement
+{
+println(b);
+b=b+2;
+}
+
+
+Line No 68 -> statement : WHILE LPAREN expression RPAREN statement
+while(b<c[2]){
+println(b);
+b=b+2;
+}
+
+
+Line No 68 -> statements : statements statement
+int a,b,x;
+a=5;
+b=7;
+x=g(a,b);
+println(x);
+println(a+b);
+println(a-b);
+println(a*b);
+println(a/b);
+println(a%b);
+b=0;
+println(a&&b);
+println(a||b);
+int c[5];
+c[2]=4;
+println(f(c[2]));
+c[2]++;
+c[1]=6;
+println(c[2]*c[1]);
+println(!(c[2]>c[1]));
+println(!c[2]);
+for(b=0;
+;b<=c[2];
+;b++)println(b);
+h();
+b=0;
+while(b<c[2]){
+println(b);
+b=b+2;
+}
+
+
+Line No 70 -> factor : CONST_INT
+2
+
+Line No 70 -> unary_expression : factor
+2
+
+Line No 70 -> term : unary_expression
+2
+
+Line No 70 -> simple_expression : term
+2
+
+Line No 70 -> rel_expression : simple_expression
+2
+
+Line No 70 -> logic_expression : rel_expression
+2
+
+Line No 70 -> expression : logic_expression
+2
+
+Line No 70 -> variable : ID LTHIRD expression RTHIRD
+c[2]
+
+Line No 70 -> factor : variable
+c[2]
+
+Line No 70 -> unary_expression : factor
+c[2]
+
+Line No 70 -> term : unary_expression
+c[2]
+
+Line No 70 -> simple_expression : term
+c[2]
+
+Line No 70 -> factor : CONST_INT
+6
+
+Line No 70 -> unary_expression : factor
+6
+
+Line No 70 -> term : unary_expression
+6
+
+Line No 70 -> simple_expression : term
+6
+
+Line No 70 -> rel_expression : simple_expression RELOP simple_expression
+c[2]>=6
+
+Line No 70 -> logic_expression : rel_expression
+c[2]>=6
+
+Line No 70 -> expression : logic_expression
+c[2]>=6
+
+Line No 71 -> ENTERED NEW SCOPE NO : 6
+Line No 71 -> factor : CONST_INT
+1
+
+Line No 71 -> unary_expression : factor
+1
+
+Line No 71 -> term : unary_expression
+1
+
+Line No 71 -> simple_expression : term
+1
+
+Line No 71 -> rel_expression : simple_expression
+1
+
+Line No 71 -> logic_expression : rel_expression
+1
+
+Line No 71 -> expression : logic_expression
+1
+
+Line No 71 -> statement : PRINTLN LPAREN expression RPAREN SEMICOLON
+println(1);
+
+
+Line No 71 -> statements : statement
+println(1);
+
+
+Line No 72 -> compound_statement : LCURL statements RCURL
+{
+println(1);
+}
+
+
+***PRINTING SYMBOL TABLE***
+
+Scope Table # 1
+7 --> < h : FUNC,VOID > 
+9 --> < g : FUNC,INT > 
+10 --> < f : FUNC,INT > 
+11 --> < a : VAR,INT > 
+
+
+Scope Table # 4
+0 --> < c : ARR,INT > 
+1 --> < b : VAR,INT > 
+10 --> < x : VAR,INT > 
+11 --> < a : VAR,INT > 
+
+
+Scope Table # 6
+
+Line No 72 -> statement : compound_statement
+{
+println(1);
+}
+
+
+Line No 74 -> ENTERED NEW SCOPE NO : 7
+Line No 74 -> factor : CONST_INT
+2
+
+Line No 74 -> unary_expression : factor
+2
+
+Line No 74 -> term : unary_expression
+2
+
+Line No 74 -> simple_expression : term
+2
+
+Line No 74 -> rel_expression : simple_expression
+2
+
+Line No 74 -> logic_expression : rel_expression
+2
+
+Line No 74 -> expression : logic_expression
+2
+
+Line No 74 -> statement : PRINTLN LPAREN expression RPAREN SEMICOLON
+println(2);
+
+
+Line No 74 -> statements : statement
+println(2);
+
+
+Line No 75 -> compound_statement : LCURL statements RCURL
+{
+println(2);
+}
+
+
+***PRINTING SYMBOL TABLE***
+
+Scope Table # 1
+7 --> < h : FUNC,VOID > 
+9 --> < g : FUNC,INT > 
+10 --> < f : FUNC,INT > 
+11 --> < a : VAR,INT > 
+
+
+Scope Table # 4
+0 --> < c : ARR,INT > 
+1 --> < b : VAR,INT > 
+10 --> < x : VAR,INT > 
+11 --> < a : VAR,INT > 
+
+
+Scope Table # 7
+
+Line No 75 -> statement : compound_statement
+{
+println(2);
+}
+
+
+Line No 75 -> statement : IF LPAREN expression RPAREN statement ELSE statement
+if(c[2]>=6){
+println(1);
+}
+else{
+println(2);
+}
+
+
+Line No 75 -> statements : statements statement
+int a,b,x;
+a=5;
+b=7;
+x=g(a,b);
+println(x);
+println(a+b);
+println(a-b);
+println(a*b);
+println(a/b);
+println(a%b);
+b=0;
+println(a&&b);
+println(a||b);
+int c[5];
+c[2]=4;
+println(f(c[2]));
+c[2]++;
+c[1]=6;
+println(c[2]*c[1]);
+println(!(c[2]>c[1]));
+println(!c[2]);
+for(b=0;
+;b<=c[2];
+;b++)println(b);
+h();
+b=0;
+while(b<c[2]){
+println(b);
+b=b+2;
+}
+if(c[2]>=6){
+println(1);
+}
+else{
+println(2);
+}
+
+
+Line No 77 -> variable : ID
+b
+
+Line No 77 -> factor : CONST_INT
+0
+
+Line No 77 -> unary_expression : factor
+0
+
+Line No 77 -> term : unary_expression
+0
+
+Line No 77 -> simple_expression : term
+0
+
+Line No 77 -> rel_expression : simple_expression
+0
+
+Line No 77 -> logic_expression : rel_expression
+0
+
+Line No 77 -> expression : variable ASSIGNOP logic_expression
+b=0
+
+Assigned values : INT 0 3439992832.000000
+
+Line No 77 -> expression_statement : expression SEMICOLON
+b=0;
+
+
+Line No 77 -> variable : ID
+b
+
+Line No 77 -> factor : variable
+b
+
+Line No 77 -> unary_expression : factor
+b
+
+Line No 77 -> term : unary_expression
+b
+
+Line No 77 -> simple_expression : term
+b
+
+Line No 77 -> factor : CONST_INT
+2
+
+Line No 77 -> unary_expression : factor
+2
+
+Line No 77 -> term : unary_expression
+2
+
+Line No 77 -> simple_expression : term
+2
+
+Line No 77 -> rel_expression : simple_expression
+2
+
+Line No 77 -> logic_expression : rel_expression
+2
+
+Line No 77 -> expression : logic_expression
+2
+
+Line No 77 -> variable : ID LTHIRD expression RTHIRD
+c[2]
+
+Line No 77 -> factor : variable
+c[2]
+
+Line No 77 -> unary_expression : factor
+c[2]
+
+Line No 77 -> term : unary_expression
+c[2]
+
+Line No 77 -> simple_expression : term
+c[2]
+
+Line No 77 -> rel_expression : simple_expression RELOP simple_expression
+b<c[2]
+
+Line No 77 -> logic_expression : rel_expression
+b<c[2]
+
+Line No 77 -> expression : logic_expression
+b<c[2]
+
+Line No 77 -> expression_statement : expression SEMICOLON
+b<c[2];
+
+
+Line No 77 -> variable : ID
+b
+
+Line No 77 -> factor : variable INCOP
+b++
+
+Line No 77 -> unary_expression : factor
+b++
+
+Line No 77 -> term : unary_expression
+b++
+
+Line No 77 -> simple_expression : term
+b++
+
+Line No 77 -> rel_expression : simple_expression
+b++
+
+Line No 77 -> logic_expression : rel_expression
+b++
+
+Line No 77 -> expression : logic_expression
+b++
+
+Line No 78 -> ENTERED NEW SCOPE NO : 8
+Line No 78 -> variable : ID
+x
+
+Line No 78 -> factor : CONST_INT
+0
+
+Line No 78 -> unary_expression : factor
+0
+
+Line No 78 -> term : unary_expression
+0
+
+Line No 78 -> simple_expression : term
+0
+
+Line No 78 -> rel_expression : simple_expression
+0
+
+Line No 78 -> logic_expression : rel_expression
+0
+
+Line No 78 -> expression : variable ASSIGNOP logic_expression
+x=0
+
+Assigned values : INT 0 0.000000
+
+Line No 78 -> expression_statement : expression SEMICOLON
+x=0;
+
+
+Line No 78 -> statement : expression_statement
+x=0;
+
+
+Line No 78 -> statements : statement
+x=0;
+
+
+Line No 79 -> variable : ID
+x
+
+Line No 79 -> factor : variable
+x
+
+Line No 79 -> unary_expression : factor
+x
+
+Line No 79 -> term : unary_expression
+x
+
+Line No 79 -> simple_expression : term
+x
+
+Line No 79 -> factor : CONST_INT
+2
+
+Line No 79 -> unary_expression : factor
+2
+
+Line No 79 -> term : unary_expression
+2
+
+Line No 79 -> simple_expression : term
+2
+
+Line No 79 -> rel_expression : simple_expression RELOP simple_expression
+x<2
+
+Line No 79 -> logic_expression : rel_expression
+x<2
+
+Line No 79 -> expression : logic_expression
+x<2
+
+Line No 80 -> ENTERED NEW SCOPE NO : 9
+Line No 80 -> variable : ID
+b
+
+Line No 80 -> factor : variable
+b
+
+Line No 80 -> unary_expression : factor
+b
+
+Line No 80 -> term : unary_expression
+b
+
+Line No 80 -> variable : ID
+x
+
+Line No 80 -> factor : variable
+x
+
+Line No 80 -> unary_expression : factor
+x
+
+Line No 80 -> term : term MULOP unary_expression
+b*x
+
+Calculated values: INT 0 0.000000
+
+Line No 80 -> simple_expression : term
+b*x
+
+Line No 80 -> rel_expression : simple_expression
+b*x
+
+Line No 80 -> logic_expression : rel_expression
+b*x
+
+Line No 80 -> expression : logic_expression
+b*x
+
+Line No 80 -> statement : PRINTLN LPAREN expression RPAREN SEMICOLON
+println(b*x);
+
+
+Line No 80 -> statements : statement
+println(b*x);
+
+
+Line No 81 -> variable : ID
+x
+
+Line No 81 -> factor : variable INCOP
+x++
+
+Line No 81 -> unary_expression : factor
+x++
+
+Line No 81 -> term : unary_expression
+x++
+
+Line No 81 -> simple_expression : term
+x++
+
+Line No 81 -> rel_expression : simple_expression
+x++
+
+Line No 81 -> logic_expression : rel_expression
+x++
+
+Line No 81 -> expression : logic_expression
+x++
+
+Line No 81 -> expression_statement : expression SEMICOLON
+x++;
+
+
+Line No 81 -> statement : expression_statement
+x++;
+
+
+Line No 81 -> statements : statements statement
+println(b*x);
+x++;
+
+
+Line No 82 -> compound_statement : LCURL statements RCURL
+{
+println(b*x);
+x++;
+}
+
+
+***PRINTING SYMBOL TABLE***
+
+Scope Table # 1
+7 --> < h : FUNC,VOID > 
+9 --> < g : FUNC,INT > 
+10 --> < f : FUNC,INT > 
+11 --> < a : VAR,INT > 
+
+
+Scope Table # 4
+0 --> < c : ARR,INT > 
+1 --> < b : VAR,INT > 
+10 --> < x : VAR,INT > 
+11 --> < a : VAR,INT > 
+
+
+Scope Table # 8
+
+
+Scope Table # 9
+
+Line No 82 -> statement : compound_statement
+{
+println(b*x);
+x++;
+}
+
+
+Line No 82 -> statement : WHILE LPAREN expression RPAREN statement
+while(x<2){
+println(b*x);
+x++;
+}
+
+
+Line No 82 -> statements : statements statement
+x=0;
+while(x<2){
+println(b*x);
+x++;
+}
+
+
+Line No 83 -> compound_statement : LCURL statements RCURL
+{
+x=0;
+while(x<2){
+println(b*x);
+x++;
+}
+}
+
+
+***PRINTING SYMBOL TABLE***
+
+Scope Table # 1
+7 --> < h : FUNC,VOID > 
+9 --> < g : FUNC,INT > 
+10 --> < f : FUNC,INT > 
+11 --> < a : VAR,INT > 
+
+
+Scope Table # 4
+0 --> < c : ARR,INT > 
+1 --> < b : VAR,INT > 
+10 --> < x : VAR,INT > 
+11 --> < a : VAR,INT > 
+
+
+Scope Table # 8
+
+Line No 83 -> statement : compound_statement
+{
+x=0;
+while(x<2){
+println(b*x);
+x++;
+}
+}
+
+
+Line No 83 -> statement : FOR LPAREN expression_statement expression_statement expression RPAREN statement
+for(b=0;
+;b<c[2];
+;b++){
+x=0;
+while(x<2){
+println(b*x);
+x++;
+}
+}
+
+
+Line No 83 -> statements : statements statement
+int a,b,x;
+a=5;
+b=7;
+x=g(a,b);
+println(x);
+println(a+b);
+println(a-b);
+println(a*b);
+println(a/b);
+println(a%b);
+b=0;
+println(a&&b);
+println(a||b);
+int c[5];
+c[2]=4;
+println(f(c[2]));
+c[2]++;
+c[1]=6;
+println(c[2]*c[1]);
+println(!(c[2]>c[1]));
+println(!c[2]);
+for(b=0;
+;b<=c[2];
+;b++)println(b);
+h();
+b=0;
+while(b<c[2]){
+println(b);
+b=b+2;
+}
+if(c[2]>=6){
+println(1);
+}
+else{
+println(2);
+}
+for(b=0;
+;b<c[2];
+;b++){
+x=0;
+while(x<2){
+println(b*x);
+x++;
+}
+}
+
+
+Line No 89 -> compound_statement : LCURL statements RCURL
+{
+int a,b,x;
+a=5;
+b=7;
+x=g(a,b);
+println(x);
+println(a+b);
+println(a-b);
+println(a*b);
+println(a/b);
+println(a%b);
+b=0;
+println(a&&b);
+println(a||b);
+int c[5];
+c[2]=4;
+println(f(c[2]));
+c[2]++;
+c[1]=6;
+println(c[2]*c[1]);
+println(!(c[2]>c[1]));
+println(!c[2]);
+for(b=0;
+;b<=c[2];
+;b++)println(b);
+h();
+b=0;
+while(b<c[2]){
+println(b);
+b=b+2;
+}
+if(c[2]>=6){
+println(1);
+}
+else{
+println(2);
+}
+for(b=0;
+;b<c[2];
+;b++){
+x=0;
+while(x<2){
+println(b*x);
+x++;
+}
+}
+}
+
+
+***PRINTING SYMBOL TABLE***
+
+Scope Table # 1
+7 --> < h : FUNC,VOID > 
+9 --> < g : FUNC,INT > 
+10 --> < f : FUNC,INT > 
+11 --> < a : VAR,INT > 
+
+
+Scope Table # 4
+0 --> < c : ARR,INT > 
+1 --> < b : VAR,INT > 
+10 --> < x : VAR,INT > 
+11 --> < a : VAR,INT > 
+
+Line No 89 -> func_definition : type_specifier ID LPAREN RPAREN compound_statement
+int main(){
+int a,b,x;
+a=5;
+b=7;
+x=g(a,b);
+println(x);
+println(a+b);
+println(a-b);
+println(a*b);
+println(a/b);
+println(a%b);
+b=0;
+println(a&&b);
+println(a||b);
+int c[5];
+c[2]=4;
+println(f(c[2]));
+c[2]++;
+c[1]=6;
+println(c[2]*c[1]);
+println(!(c[2]>c[1]));
+println(!c[2]);
+for(b=0;
+;b<=c[2];
+;b++)println(b);
+h();
+b=0;
+while(b<c[2]){
+println(b);
+b=b+2;
+}
+if(c[2]>=6){
+println(1);
+}
+else{
+println(2);
+}
+for(b=0;
+;b<c[2];
+;b++){
+x=0;
+while(x<2){
+println(b*x);
+x++;
+}
+}
+}
+
+
+Line No 89 -> unit : func_definition
+int main(){
+int a,b,x;
+a=5;
+b=7;
+x=g(a,b);
+println(x);
+println(a+b);
+println(a-b);
+println(a*b);
+println(a/b);
+println(a%b);
+b=0;
+println(a&&b);
+println(a||b);
+int c[5];
+c[2]=4;
+println(f(c[2]));
+c[2]++;
+c[1]=6;
+println(c[2]*c[1]);
+println(!(c[2]>c[1]));
+println(!c[2]);
+for(b=0;
+;b<=c[2];
+;b++)println(b);
+h();
+b=0;
+while(b<c[2]){
+println(b);
+b=b+2;
+}
+if(c[2]>=6){
+println(1);
+}
+else{
+println(2);
+}
+for(b=0;
+;b<c[2];
+;b++){
+x=0;
+while(x<2){
+println(b*x);
+x++;
+}
+}
+}
+
+
+Line No 89 -> program : program unit
+int a;
+int f(int a){
+return 2*a;
+println(-1);
+a=9;
+}
+int g(int a, int b){
+int x;
+x=f(a)+a+b;
+return x;
+}
+void h();
+int main(){
+int a,b,x;
+a=5;
+b=7;
+x=g(a,b);
+println(x);
+println(a+b);
+println(a-b);
+println(a*b);
+println(a/b);
+println(a%b);
+b=0;
+println(a&&b);
+println(a||b);
+int c[5];
+c[2]=4;
+println(f(c[2]));
+c[2]++;
+c[1]=6;
+println(c[2]*c[1]);
+println(!(c[2]>c[1]));
+println(!c[2]);
+for(b=0;
+;b<=c[2];
+;b++)println(b);
+h();
+b=0;
+while(b<c[2]){
+println(b);
+b=b+2;
+}
+if(c[2]>=6){
+println(1);
+}
+else{
+println(2);
+}
+for(b=0;
+;b<c[2];
+;b++){
+x=0;
+while(x<2){
+println(b*x);
+x++;
+}
+}
+}
+
+
+Line No 92 -> type_specifier : VOID
+void
+
+Line No 93 -> ENTERED NEW SCOPE NO : 10
+Line No 93 -> type_specifier : INT
+int
+
+Line No 93 -> declaration_list : ID
+x
+
+Line No 93 -> var_declaration : type_specifier declaration_list SEMICOLON
+int x;
+
+
+Line No 93 -> statement : var_declaration
+int x;
+
+
+Line No 93 -> statements : statement
+int x;
+
+
+Line No 94 -> variable : ID
+x
+
+Line No 94 -> factor : CONST_INT
+2
+
+Line No 94 -> unary_expression : factor
+2
+
+Line No 94 -> term : unary_expression
+2
+
+Line No 94 -> simple_expression : term
+2
+
+Line No 94 -> rel_expression : simple_expression
+2
+
+Line No 94 -> logic_expression : rel_expression
+2
+
+Line No 94 -> expression : variable ASSIGNOP logic_expression
+x=2
+
+Assigned values : INT 2 0.000000
+
+Line No 94 -> expression_statement : expression SEMICOLON
+x=2;
+
+
+Line No 94 -> statement : expression_statement
+x=2;
+
+
+Line No 94 -> statements : statements statement
+int x;
+x=2;
+
+
+Line No 95 -> variable : ID
+x
+
+Line No 95 -> factor : variable
+x
+
+Line No 95 -> unary_expression : factor
+x
+
+Line No 95 -> unary_expression : ADDOP unary_expression
+-x
+
+Line No 95 -> term : unary_expression
+-x
+
+Line No 95 -> simple_expression : term
+-x
+
+Line No 95 -> rel_expression : simple_expression
+-x
+
+Line No 95 -> logic_expression : rel_expression
+-x
+
+Line No 95 -> expression : logic_expression
+-x
+
+Line No 95 -> statement : PRINTLN LPAREN expression RPAREN SEMICOLON
+println(-x);
+
+
+Line No 95 -> statements : statements statement
+int x;
+x=2;
+println(-x);
+
+
+Line No 96 -> compound_statement : LCURL statements RCURL
+{
+int x;
+x=2;
+println(-x);
+}
+
+
+***PRINTING SYMBOL TABLE***
+
+Scope Table # 1
+4 --> < MAIN : FUNC,INT > 
+7 --> < h : FUNC,VOID > 
+9 --> < g : FUNC,INT > 
+10 --> < f : FUNC,INT > 
+11 --> < a : VAR,INT > 
+
+
+Scope Table # 10
+10 --> < x : VAR,INT > 
+
+Line No 96 -> func_definition : type_specifier ID LPAREN RPAREN compound_statement
+void h(){
+int x;
+x=2;
+println(-x);
+}
+
+
+Line No 96 -> unit : func_definition
+void h(){
+int x;
+x=2;
+println(-x);
+}
+
+
+Line No 96 -> program : program unit
+int a;
+int f(int a){
+return 2*a;
+println(-1);
+a=9;
+}
+int g(int a, int b){
+int x;
+x=f(a)+a+b;
+return x;
+}
+void h();
+int main(){
+int a,b,x;
+a=5;
+b=7;
+x=g(a,b);
+println(x);
+println(a+b);
+println(a-b);
+println(a*b);
+println(a/b);
+println(a%b);
+b=0;
+println(a&&b);
+println(a||b);
+int c[5];
+c[2]=4;
+println(f(c[2]));
+c[2]++;
+c[1]=6;
+println(c[2]*c[1]);
+println(!(c[2]>c[1]));
+println(!c[2]);
+for(b=0;
+;b<=c[2];
+;b++)println(b);
+h();
+b=0;
+while(b<c[2]){
+println(b);
+b=b+2;
+}
+if(c[2]>=6){
+println(1);
+}
+else{
+println(2);
+}
+for(b=0;
+;b<c[2];
+;b++){
+x=0;
+while(x<2){
+println(b*x);
+x++;
+}
+}
+}
+void h(){
+int x;
+x=2;
+println(-x);
+}
+
+
+Line No 97 -> start : program
+int a;
+int f(int a){
+return 2*a;
+println(-1);
+a=9;
+}
+int g(int a, int b){
+int x;
+x=f(a)+a+b;
+return x;
+}
+void h();
+int main(){
+int a,b,x;
+a=5;
+b=7;
+x=g(a,b);
+println(x);
+println(a+b);
+println(a-b);
+println(a*b);
+println(a/b);
+println(a%b);
+b=0;
+println(a&&b);
+println(a||b);
+int c[5];
+c[2]=4;
+println(f(c[2]));
+c[2]++;
+c[1]=6;
+println(c[2]*c[1]);
+println(!(c[2]>c[1]));
+println(!c[2]);
+for(b=0;
+;b<=c[2];
+;b++)println(b);
+h();
+b=0;
+while(b<c[2]){
+println(b);
+b=b+2;
+}
+if(c[2]>=6){
+println(1);
+}
+else{
+println(2);
+}
+for(b=0;
+;b<c[2];
+;b++){
+x=0;
+while(x<2){
+println(b*x);
+x++;
+}
+}
+}
+void h(){
+int x;
+x=2;
+println(-x);
+}
+
+
+***PRINTING SYMBOL TABLE***
+
+Scope Table # 1
+4 --> < MAIN : FUNC,INT > 
+7 --> < h : FUNC,VOID > 
+9 --> < g : FUNC,INT > 
+10 --> < f : FUNC,INT > 
+11 --> < a : VAR,INT > 
+
+
+
+Line count = 97
+Lexical error count = 0
+Semantic error count = 0

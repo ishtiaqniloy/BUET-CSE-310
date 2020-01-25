@@ -12,3 +12,9 @@ Specifications are in "CSE 310 Assignment 2.pdf"
 ## CSE_310_Bison
 Compiler Syntax and Semanatic Analyzer using Bison  
 Specifications are in "Assignment_3.pdf"
+
+## CSE_310_CodeGenerator
+Compiler Intermediate Code Generator  
+Specifications are in "Assignment_4_jan_18.pdf"
+
+
